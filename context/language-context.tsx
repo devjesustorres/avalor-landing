@@ -18,6 +18,7 @@ const translations = {
     "nav.methodology": "Metodología",
     "nav.benefits": "Beneficios",
     "nav.models": "Modalidades",
+    "nav.faq": "Preguntas",
     "nav.contact": "Contacto",
     "nav.schedule": "Agendar Llamada",
     "nav.quote": "Cotizar Proyecto",
@@ -156,6 +157,21 @@ const translations = {
     "pricing.t3.f5": "Asesoría en infraestructura cloud",
     "pricing.t3.cta": "Hablar con un Especialista",
 
+    // FAQ Section
+    "faq.badge": "Preguntas Frecuentes",
+    "faq.title": "Todo lo que necesitas saber antes de iniciar",
+    "faq.subtitle": "Resolvemos las dudas más habituales sobre nuestro proceso de desarrollo, contratos y garantías.",
+    "faq.q1": "¿Cuánto tiempo toma desarrollar un software a la medida?",
+    "faq.a1": "Depende de la complejidad y alcance. Un MVP o sistema inicial suele desarrollarse en 4 a 8 semanas, mientras que plataformas complejas o ERPs avanzados toman entre 8 y 16 semanas con entregas funcionales quincenales.",
+    "faq.q2": "¿El código fuente y la propiedad intelectual me pertenecen al 100%?",
+    "faq.a2": "Sí, absolutamente. Al finalizar cada etapa y el proyecto, te transferimos todos los derechos de autor, repositorios de código, esquemas de bases de datos y accesos directos sin dependencias ni regalías.",
+    "faq.q3": "¿Firman acuerdos de confidencialidad (NDA)?",
+    "faq.a3": "Sí. Antes de cualquier análisis técnico o reunión de descubrimiento detallada, firmamos un Acuerdo de Confidencialidad y No Divulgación (NDA) para proteger tu idea, datos y procesos comerciales.",
+    "faq.q4": "¿Qué tecnologías utilizan para el desarrollo?",
+    "faq.a4": "Trabajamos con el stack tecnológico más robusto y moderno: React, Next.js, TypeScript, Tailwind CSS en el frontend; Node.js, Python, PostgreSQL, MySQL y Redis en el backend; y despliegues en AWS, Google Cloud, Azure o Vercel.",
+    "faq.q5": "¿Ofrecen garantía y soporte después del lanzamiento?",
+    "faq.a5": "Sí. Todos nuestros proyectos incluyen garantía técnica post-entrega contra bugs o inconsistencias. Además, ofrecemos planes de soporte preventivo, monitoreo de infraestructura y evolución continua por bolsa de horas.",
+
     // CTA Section
     "cta.title": "Hagamos Realidad el Software que tu Empresa Necesita",
     "cta.subtitle": "Cuéntanos sobre tu proyecto o necesidad operativa y te entregamos un diagnóstico y propuesta técnica a la medida en menos de 24 horas.",
@@ -166,6 +182,9 @@ const translations = {
 
     // Footer
     "footer.copyright": "Avelor Software Solutions. Todos los derechos reservados.",
+    "footer.privacy": "Política de Privacidad",
+    "footer.terms": "Términos del Servicio",
+    "footer.security": "Seguridad & Confidencialidad",
     "footer.status": "Servicios y Soporte Activo",
   },
   en: {
@@ -174,6 +193,7 @@ const translations = {
     "nav.methodology": "Methodology",
     "nav.benefits": "Benefits",
     "nav.models": "Engagement Models",
+    "nav.faq": "FAQ",
     "nav.contact": "Contact",
     "nav.schedule": "Book a Call",
     "nav.quote": "Get a Quote",
@@ -312,6 +332,21 @@ const translations = {
     "pricing.t3.f5": "Cloud infrastructure optimization consulting",
     "pricing.t3.cta": "Talk to a Specialist",
 
+    // FAQ Section
+    "faq.badge": "Frequently Asked Questions",
+    "faq.title": "Everything you need to know before starting",
+    "faq.subtitle": "Clear answers regarding our software engineering lifecycle, IP ownership, and guarantees.",
+    "faq.q1": "How long does it take to develop a custom software project?",
+    "faq.a1": "Timelines depend on scope. An initial MVP or targeted business system typically takes 4 to 8 weeks, while full enterprise platforms or comprehensive ERPs take 8 to 16 weeks with bi-weekly demonstrable sprints.",
+    "faq.q2": "Do I own 100% of the source code and intellectual property?",
+    "faq.a2": "Yes, absolutely. Upon milestone completion and final delivery, all intellectual property, git repositories, database schemas, and infrastructure credentials are fully handed over to you with zero recurring vendor lock-in.",
+    "faq.q3": "Do you sign Non-Disclosure Agreements (NDAs)?",
+    "faq.a3": "Yes. Prior to reviewing your internal workflows, proprietary algorithms, or data models, we execute a bilateral Non-Disclosure Agreement (NDA) to safeguard your confidentiality.",
+    "faq.q4": "Which technology stack do you specialize in?",
+    "faq.a4": "We build on modern, enterprise-proven stacks: React, Next.js, TypeScript, and Tailwind CSS on frontend; Node.js, Python, PostgreSQL, MySQL, and Redis on backend; deployed seamlessly on AWS, Google Cloud, Azure, or Vercel.",
+    "faq.q5": "What kind of post-launch warranty and maintenance do you offer?",
+    "faq.a5": "Every custom build includes a dedicated post-launch warranty against bugs. In addition, we provide proactive monthly maintenance, cloud monitoring, and retainer hours for ongoing feature enhancements.",
+
     // CTA Section
     "cta.title": "Let's Build the Custom Software Your Enterprise Deserves",
     "cta.subtitle": "Tell us about your project or operational requirements and receive a comprehensive technical proposal within 24 hours.",
@@ -322,6 +357,9 @@ const translations = {
 
     // Footer
     "footer.copyright": "Avelor Software Solutions. All rights reserved.",
+    "footer.privacy": "Privacy Policy",
+    "footer.terms": "Terms of Service",
+    "footer.security": "Security & NDA",
     "footer.status": "All Systems & Support Active",
   },
 };

@@ -1,0 +1,63 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0f172a" />
+      <stop offset="50%" stop-color="#1e293b" />
+      <stop offset="100%" stop-color="#090d16" />
+    </linearGradient>
+    <linearGradient id="blueGrad" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#3b82f6" />
+      <stop offset="100%" stop-color="#60a5fa" />
+    </linearGradient>
+  </defs>
+
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#bg)" />
+
+  <!-- Ambient Glow -->
+  <circle cx="200" cy="150" r="300" fill="#2563eb" opacity="0.25" filter="blur(80px)" />
+  <circle cx="1050" cy="480" r="350" fill="#3b82f6" opacity="0.2" filter="blur(90px)" />
+
+  <!-- Top Pill -->
+  <g transform="translate(100, 100)">
+    <rect width="450" height="42" rx="21" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <circle cx="24" cy="21" r="6" fill="#3b82f6" />
+    <text x="42" y="27" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">INGENIERÍA DE SOFTWARE &amp; CLOUD</text>
+  </g>
+
+  <!-- Main Headline -->
+  <text x="100" y="220" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" letter-spacing="-1">
+    Desarrollo de Software
+  </text>
+  <text x="100" y="290" fill="url(#blueGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" letter-spacing="-1">
+    a la Medida para Empresas
+  </text>
+
+  <!-- Description Subtitle -->
+  <text x="100" y="360" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400">
+    ERPs, Plataformas Web, Apps Móviles &amp; Arquitectura Cloud Escalable.
+  </text>
+  <text x="100" y="395" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400">
+    Código 100% Propio • Acuerdos NDA • Soporte y Garantía Post-Lanzamiento
+  </text>
+
+  <!-- Tech Badges Bar -->
+  <g transform="translate(100, 470)">
+    <rect width="180" height="50" rx="12" fill="#1e293b" stroke="#334155" />
+    <text x="90" y="31" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">React &amp; Next.js</text>
+
+    <rect x="200" width="180" height="50" rx="12" fill="#1e293b" stroke="#334155" />
+    <text x="290" y="31" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">Node &amp; Python</text>
+
+    <rect x="400" width="180" height="50" rx="12" fill="#1e293b" stroke="#334155" />
+    <text x="490" y="31" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">PostgreSQL &amp; SQL</text>
+
+    <rect x="600" width="180" height="50" rx="12" fill="#1e293b" stroke="#334155" />
+    <text x="690" y="31" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">AWS &amp; DevOps</text>
+  </g>
+
+  <!-- URL Brand Footer -->
+  <text x="100" y="575" fill="#3b82f6" font-family="system-ui, sans-serif" font-size="20" font-weight="800">
+    avelorglobal.com
+  </text>
+</svg>

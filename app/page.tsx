@@ -6,6 +6,7 @@ import { StatsCards } from "@/components/stats-cards";
 import { DashboardPreview } from "@/components/dashboard-preview";
 import { SolutionsSection } from "@/components/solutions";
 import { PricingSection } from "@/components/pricing";
+import { FaqSection } from "@/components/faq-section";
 import { CtaSection } from "@/components/cta-section";
 import { Footer } from "@/components/footer";
 
@@ -29,6 +30,7 @@ export default function Home() {
         <DashboardPreview />
         <SolutionsSection />
         <PricingSection />
+        <FaqSection />
         <CtaSection />
       </main>
 

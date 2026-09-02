@@ -48,13 +48,19 @@ export function FloatingNavbar() {
             {t("nav.benefits")}
           </a>
           <a
-            href="#modelos"
+            href="/#modelos"
             className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
           >
             {t("nav.models")}
           </a>
           <a
-            href="#contacto"
+            href="/#faq"
+            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
+          >
+            {t("nav.faq")}
+          </a>
+          <a
+            href="/#contacto"
             className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
           >
             {t("nav.contact")}

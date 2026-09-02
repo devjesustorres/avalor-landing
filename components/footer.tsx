@@ -27,12 +27,14 @@ export function Footer() {
             </span>
           </div>
 
-          <div className="flex items-center gap-6 text-xs font-semibold text-slate-500">
-            <a href="#servicios" className="hover:text-slate-900 transition-colors">{t("nav.services")}</a>
-            <a href="#metodologia" className="hover:text-slate-900 transition-colors">{t("nav.methodology")}</a>
-            <a href="#beneficios" className="hover:text-slate-900 transition-colors">{t("nav.benefits")}</a>
-            <a href="#modelos" className="hover:text-slate-900 transition-colors">{t("nav.models")}</a>
-            <a href="#contacto" className="hover:text-slate-900 transition-colors">{t("nav.contact")}</a>
+          <div className="flex flex-wrap items-center justify-center gap-5 sm:gap-6 text-xs font-semibold text-slate-500">
+            <a href="/#servicios" className="hover:text-slate-900 transition-colors">{t("nav.services")}</a>
+            <a href="/#metodologia" className="hover:text-slate-900 transition-colors">{t("nav.methodology")}</a>
+            <a href="/#beneficios" className="hover:text-slate-900 transition-colors">{t("nav.benefits")}</a>
+            <a href="/#modelos" className="hover:text-slate-900 transition-colors">{t("nav.models")}</a>
+            <a href="/#faq" className="hover:text-slate-900 transition-colors">{t("nav.faq")}</a>
+            <a href="/privacy" className="hover:text-slate-900 transition-colors">{t("footer.privacy")}</a>
+            <a href="/terms" className="hover:text-slate-900 transition-colors">{t("footer.terms")}</a>
           </div>
 
           <div className="flex items-center gap-2 text-xs font-bold text-emerald-600 neu-badge px-3.5 py-1.5 rounded-full">
