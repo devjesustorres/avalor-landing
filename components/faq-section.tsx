@@ -108,3 +108,4 @@ export function FaqSection() {
     </section>
   );
 }
+
