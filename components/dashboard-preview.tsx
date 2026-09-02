@@ -8,24 +8,27 @@ import {
   GitCommit,
   Cpu,
   Shield,
-  ShieldAlert,
-  Sparkles,
+  ShieldCheck,
+  CheckCircle2,
+  Lock,
 } from "lucide-react";
+import { useLanguage } from "@/context/language-context";
 
 export function DashboardPreview() {
-  const [selectedTab, setSelectedTab] = useState("agents");
+  const { t } = useLanguage();
+  const [selectedTab, setSelectedTab] = useState("backend");
 
   return (
-    <section id="platform" className="mt-28 sm:mt-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="metodologia" className="mt-28 sm:mt-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center max-w-3xl mx-auto mb-14">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full neu-badge text-xs font-bold text-brand-600 mb-3 uppercase tracking-wider">
-          <Terminal className="w-3.5 h-3.5" /> Live Control Center
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full neu-badge text-xs font-bold text-brand-700 mb-3 uppercase tracking-wider">
+          <Terminal className="w-3.5 h-3.5" /> {t("method.badge")}
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          The Autonomous Nervous System for SaaS Infrastructure
+          {t("method.title")}
         </h2>
         <p className="text-slate-600 mt-4 text-base sm:text-lg">
-          Monitor, orchestrate, and audit self-healing neural agents with real-time telemetry.
+          {t("method.subtitle")}
         </p>
       </div>
 
@@ -43,13 +46,13 @@ export function DashboardPreview() {
             <div className="h-4 w-[1px] bg-slate-300 mx-2 hidden sm:block" />
             <div className="text-xs font-bold text-slate-700 flex items-center gap-1.5 font-mono">
               <GitBranch className="w-4 h-4 text-brand-600" />
-              cluster-us-east-1 // neural-orchestrator-prod
+              avelor-core // production-architecture
             </div>
           </div>
 
           {/* HeroUI Tabs */}
           <Tabs
-            aria-label="Dashboard Control Modes"
+            aria-label="Metodología de Desarrollo"
             selectedKey={selectedTab}
             onSelectionChange={(key) => setSelectedTab(key as string)}
             radius="full"
@@ -61,9 +64,9 @@ export function DashboardPreview() {
               tabContent: "group-data-[selected=true]:text-brand-600 group-data-[selected=true]:font-bold",
             }}
           >
-            <Tab key="agents" title="Autonomous Agents" />
-            <Tab key="pipelines" title="Pipeline Latency" />
-            <Tab key="security" title="Zero-Trust Guard" />
+            <Tab key="backend" title={t("method.tab1")} />
+            <Tab key="frontend" title={t("method.tab2")} />
+            <Tab key="qa" title={t("method.tab3")} />
           </Tabs>
         </div>
 
@@ -77,14 +80,14 @@ export function DashboardPreview() {
             <div className="grid grid-cols-1 sm:grid-cols-3 gap-4">
               <div className="neu-pressed rounded-2xl p-4">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">
-                  Throughput Rate
+                  {t("method.metric1.label")}
                 </div>
                 <div className="text-2xl font-extrabold text-slate-800">
-                  428.4k <span className="text-xs font-semibold text-brand-600">tps</span>
+                  &lt; 45 <span className="text-xs font-semibold text-brand-600">{t("method.metric1.badge")}</span>
                 </div>
                 <Progress
-                  aria-label="Throughput Progress"
-                  value={78}
+                  aria-label="Latencia de APIs"
+                  value={92}
                   size="sm"
                   color="primary"
                   className="mt-3"
@@ -97,14 +100,14 @@ export function DashboardPreview() {
 
               <div className="neu-pressed rounded-2xl p-4">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">
-                  Active Neural Nodes
+                  {t("method.metric2.label")}
                 </div>
                 <div className="text-2xl font-extrabold text-slate-800">
-                  1,842 <span className="text-xs font-semibold text-emerald-600">Healthy</span>
+                  99.9% <span className="text-xs font-semibold text-emerald-600">{t("method.metric2.badge")}</span>
                 </div>
                 <Progress
-                  aria-label="Nodes Health Progress"
-                  value={94}
+                  aria-label="Disponibilidad"
+                  value={99}
                   size="sm"
                   color="success"
                   className="mt-3"
@@ -117,14 +120,14 @@ export function DashboardPreview() {
 
               <div className="neu-pressed rounded-2xl p-4">
                 <div className="text-[11px] font-bold uppercase tracking-wider text-slate-400 mb-1">
-                  Avg Inference Latency
+                  {t("method.metric3.label")}
                 </div>
                 <div className="text-2xl font-extrabold text-slate-800">
-                  11.2 <span className="text-xs font-semibold text-slate-500">ms</span>
+                  100% <span className="text-xs font-semibold text-indigo-600">{t("method.metric3.badge")}</span>
                 </div>
                 <Progress
-                  aria-label="Inference Latency Progress"
-                  value={42}
+                  aria-label="Cobertura QA"
+                  value={100}
                   size="sm"
                   color="secondary"
                   className="mt-3"
@@ -140,8 +143,8 @@ export function DashboardPreview() {
             <div className="neu-extruded rounded-2xl p-6 bg-gradient-to-b from-[#e8edf3] to-[#e4eaf1]">
               <div className="flex items-center justify-between mb-4">
                 <div>
-                  <h4 className="font-extrabold text-slate-900 text-sm">Dynamic Neural Dispatcher</h4>
-                  <p className="text-xs text-slate-500">Autonomous self-balancing execution graph</p>
+                  <h4 className="font-extrabold text-slate-900 text-sm">{t("method.flow.title")}</h4>
+                  <p className="text-xs text-slate-500">{t("method.flow.subtitle")}</p>
                 </div>
                 <Chip
                   variant="flat"
@@ -150,7 +153,7 @@ export function DashboardPreview() {
                   className="neu-badge font-bold text-[11px] bg-transparent text-emerald-600"
                 >
                   <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse mr-1.5 inline-block" />
-                  Synchronized
+                  {t("method.flow.chip")}
                 </Chip>
               </div>
 
@@ -159,12 +162,12 @@ export function DashboardPreview() {
                 <div className="flex items-center justify-between p-3 rounded-xl neu-pressed">
                   <div className="flex items-center gap-3">
                     <GitCommit className="w-4 h-4 text-brand-600" />
-                    <span className="font-bold text-slate-800">ingest_telemetry_stream()</span>
+                    <span className="font-bold text-slate-800">{t("method.flow.step1_title")}</span>
                   </div>
                   <div className="flex items-center gap-4 text-slate-500">
-                    <span>4,200 msg/sec</span>
+                    <span>{t("method.flow.step1_desc")}</span>
                     <span className="text-emerald-600 font-bold bg-emerald-100 px-2 py-0.5 rounded text-[10px]">
-                      100% Passed
+                      {t("method.flow.step1_badge")}
                     </span>
                   </div>
                 </div>
@@ -172,12 +175,12 @@ export function DashboardPreview() {
                 <div className="flex items-center justify-between p-3 rounded-xl neu-pressed">
                   <div className="flex items-center gap-3">
                     <Cpu className="w-4 h-4 text-brand-600" />
-                    <span className="font-bold text-slate-800">semantic_reasoning_kernel_v4</span>
+                    <span className="font-bold text-slate-800">{t("method.flow.step2_title")}</span>
                   </div>
                   <div className="flex items-center gap-4 text-slate-500">
-                    <span>fp16 quantized</span>
+                    <span>{t("method.flow.step2_desc")}</span>
                     <span className="text-brand-600 font-bold bg-brand-100 px-2 py-0.5 rounded text-[10px]">
-                      9.4 ms avg
+                      {t("method.flow.step2_badge")}
                     </span>
                   </div>
                 </div>
@@ -185,12 +188,12 @@ export function DashboardPreview() {
                 <div className="flex items-center justify-between p-3 rounded-xl neu-pressed">
                   <div className="flex items-center gap-3">
                     <Shield className="w-4 h-4 text-brand-600" />
-                    <span className="font-bold text-slate-800">guardrail_validator.dispatch()</span>
+                    <span className="font-bold text-slate-800">{t("method.flow.step3_title")}</span>
                   </div>
                   <div className="flex items-center gap-4 text-slate-500">
-                    <span>0 vulnerabilities</span>
+                    <span>{t("method.flow.step3_desc")}</span>
                     <span className="text-indigo-600 font-bold bg-indigo-100 px-2 py-0.5 rounded text-[10px]">
-                      Encrypted
+                      {t("method.flow.step3_badge")}
                     </span>
                   </div>
                 </div>
@@ -202,48 +205,48 @@ export function DashboardPreview() {
           {/* Right Column (4 cols) */}
           <div className="lg:col-span-4 flex flex-col gap-6 justify-between">
             
-            {/* Status Card */}
+            {/* Security & Guarantees Card */}
             <div className="neu-extruded rounded-2xl p-6">
               <div className="flex items-center justify-between mb-4">
-                <h4 className="font-bold text-slate-900 text-sm">Security Vector</h4>
-                <ShieldAlert className="w-4 h-4 text-slate-400" />
+                <h4 className="font-bold text-slate-900 text-sm">{t("method.status.title")}</h4>
+                <ShieldCheck className="w-4 h-4 text-emerald-600" />
               </div>
               <div className="neu-pressed rounded-xl p-4 mb-4 text-center">
-                <div className="text-3xl font-extrabold text-slate-900">0</div>
-                <div className="text-xs font-semibold text-slate-500 mt-1">Anomalies Detected in 24h</div>
+                <div className="text-3xl font-extrabold text-slate-900">{t("method.status.val")}</div>
+                <div className="text-xs font-semibold text-slate-500 mt-1">{t("method.status.sub")}</div>
               </div>
               <div className="space-y-2 text-xs text-slate-600">
                 <div className="flex justify-between py-1 border-b border-slate-200">
-                  <span>Zero-Trust Attestation</span>
-                  <span className="font-bold text-emerald-600">Active</span>
+                  <span className="flex items-center gap-1"><Lock className="w-3.5 h-3.5 text-slate-400" /> {t("method.status.item1_l")}</span>
+                  <span className="font-bold text-emerald-600">{t("method.status.item1_r")}</span>
                 </div>
                 <div className="flex justify-between py-1 border-b border-slate-200">
-                  <span>Multi-Region Failover</span>
-                  <span className="font-bold text-slate-800">Standby</span>
+                  <span className="flex items-center gap-1"><CheckCircle2 className="w-3.5 h-3.5 text-slate-400" /> {t("method.status.item2_l")}</span>
+                  <span className="font-bold text-slate-800">{t("method.status.item2_r")}</span>
                 </div>
                 <div className="flex justify-between py-1">
-                  <span>Token Rate Limiter</span>
-                  <span className="font-bold text-slate-800">Auto-Scaling</span>
+                  <span className="flex items-center gap-1"><Shield className="w-3.5 h-3.5 text-slate-400" /> {t("method.status.item3_l")}</span>
+                  <span className="font-bold text-brand-600">{t("method.status.item3_r")}</span>
                 </div>
               </div>
             </div>
 
-            {/* Quick Action Deploy Box */}
+            {/* Quick Consultation Box */}
             <div className="neu-pressed rounded-2xl p-6 text-center">
               <div className="w-10 h-10 rounded-full neu-extruded flex items-center justify-center mx-auto mb-3 text-brand-600">
-                <Sparkles className="w-5 h-5" />
+                <CheckCircle2 className="w-5 h-5" />
               </div>
-              <h5 className="text-sm font-bold text-slate-900 mb-1">Deploy in Your VPC</h5>
-              <p className="text-xs text-slate-500 mb-4">One-click Helm charts for AWS, GCP, and Azure.</p>
+              <h5 className="text-sm font-bold text-slate-900 mb-1">{t("method.callout.title")}</h5>
+              <p className="text-xs text-slate-500 mb-4">{t("method.callout.desc")}</p>
               <Button
                 as="a"
-                href="#get-started"
+                href="#contacto"
                 color="primary"
                 radius="full"
                 size="sm"
                 className="w-full font-bold text-xs bg-brand-600 hover:bg-brand-500 shadow-neu-btn-blue text-white"
               >
-                Generate Deployment Manifest
+                {t("method.callout.btn")}
               </Button>
             </div>
 
@@ -255,4 +258,3 @@ export function DashboardPreview() {
     </section>
   );
 }
-

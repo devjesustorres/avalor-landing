@@ -3,139 +3,148 @@
 import React from "react";
 import { Card, CardBody, CardFooter, Button, Chip } from "@heroui/react";
 import { Check, CheckCircle2 } from "lucide-react";
+import { useLanguage } from "@/context/language-context";
 
 export function PricingSection() {
+  const { t } = useLanguage();
+
   return (
-    <section id="pricing" className="mt-28 sm:mt-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="modelos" className="mt-28 sm:mt-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center max-w-3xl mx-auto mb-16">
-        <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full neu-badge text-xs font-bold text-brand-600 mb-3 uppercase tracking-wider">
-          Transparent Scaling
+        <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full neu-badge text-xs font-bold text-brand-700 mb-3 uppercase tracking-wider">
+          {t("pricing.badge")}
         </div>
         <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
-          Flexible Plans for Every Stage
+          {t("pricing.title")}
         </h2>
         <p className="text-slate-600 mt-4 text-base sm:text-lg">
-          Predictable pricing based on compute orchestration with zero hidden egress fees.
+          {t("pricing.subtitle")}
         </p>
       </div>
 
       <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-6xl mx-auto items-stretch">
         
-        {/* Starter Tier */}
+        {/* Tier 1: Proyecto Llave en Mano */}
         <Card className="neu-extruded rounded-3xl p-3 border-none bg-transparent shadow-none flex flex-col justify-between">
           <CardBody className="p-6">
-            <h3 className="text-xl font-bold text-slate-900">Developer Cloud</h3>
-            <p className="text-xs text-slate-500 mt-1">Ideal for fast prototyping and agile AI development.</p>
+            <h3 className="text-xl font-bold text-slate-900">{t("pricing.t1.title")}</h3>
+            <p className="text-xs text-slate-500 mt-1">{t("pricing.t1.desc")}</p>
             <div className="my-6">
-              <span className="text-4xl font-extrabold text-slate-900">$499</span>
-              <span className="text-xs font-semibold text-slate-500">/ month</span>
+              <span className="text-4xl font-extrabold text-slate-900">{t("pricing.t1.price")}</span>
+              <span className="text-xs font-semibold text-slate-500 block mt-1">{t("pricing.t1.period")}</span>
             </div>
             <ul className="space-y-3 text-xs font-medium text-slate-700">
               <li className="flex items-center gap-2.5">
-                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> Up to 10 Autonomous Agents
+                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t1.f1")}
               </li>
               <li className="flex items-center gap-2.5">
-                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> 5M Inference Tokens / mo
+                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t1.f2")}
               </li>
               <li className="flex items-center gap-2.5">
-                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> Community Slack Support
+                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t1.f3")}
               </li>
               <li className="flex items-center gap-2.5">
-                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> Standard Vector DB Connectors
+                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t1.f4")}
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t1.f5")}
               </li>
             </ul>
           </CardBody>
           <CardFooter className="p-6 pt-0">
             <Button
               as="a"
-              href="#get-started"
+              href="#contacto"
               radius="full"
               variant="flat"
               className="w-full py-3 neu-extruded neu-extruded-hover text-xs font-bold text-slate-800 bg-transparent"
             >
-              Get Started
+              {t("pricing.t1.cta")}
             </Button>
           </CardFooter>
         </Card>
 
-        {/* Pro/Enterprise Tier (Highlighted) */}
+        {/* Tier 2: Dedicated Squad (Highlighted) */}
         <Card className="neu-extruded rounded-3xl p-3 border-2 border-brand-600 relative bg-gradient-to-b from-[#e8edf3] via-[#e2e8f0] to-[#e8edf3] shadow-xl flex flex-col justify-between overflow-visible">
           <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20">
             <Chip color="primary" size="sm" className="font-extrabold text-[11px] uppercase shadow-md px-3 bg-brand-600 text-white">
-              Most Popular
+              {t("pricing.t2.badge")}
             </Chip>
           </div>
           <CardBody className="p-6">
-            <h3 className="text-xl font-bold text-slate-900">Enterprise Growth</h3>
-            <p className="text-xs text-slate-500 mt-1">Full autonomous workflow mesh for scaling teams.</p>
+            <h3 className="text-xl font-bold text-slate-900">{t("pricing.t2.title")}</h3>
+            <p className="text-xs text-slate-500 mt-1">{t("pricing.t2.desc")}</p>
             <div className="my-6">
-              <span className="text-4xl font-extrabold text-slate-900">$1,890</span>
-              <span className="text-xs font-semibold text-slate-500">/ month</span>
+              <span className="text-4xl font-extrabold text-slate-900">{t("pricing.t2.price")}</span>
+              <span className="text-xs font-semibold text-slate-500 block mt-1">{t("pricing.t2.period")}</span>
             </div>
             <ul className="space-y-3 text-xs font-medium text-slate-700">
               <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-brand-600 flex-shrink-0" /> Unlimited Autonomous Agents
+                <CheckCircle2 className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t2.f1")}
               </li>
               <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-brand-600 flex-shrink-0" /> 50M Inference Tokens / mo
+                <CheckCircle2 className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t2.f2")}
               </li>
               <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-brand-600 flex-shrink-0" /> Dedicated Solution Architect
+                <CheckCircle2 className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t2.f3")}
               </li>
               <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-brand-600 flex-shrink-0" /> SOC2 & GDPR Compliance Vault
+                <CheckCircle2 className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t2.f4")}
               </li>
               <li className="flex items-center gap-2.5">
-                <CheckCircle2 className="w-4 h-4 text-brand-600 flex-shrink-0" /> 99.99% SLA Guarantee
+                <CheckCircle2 className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t2.f5")}
               </li>
             </ul>
           </CardBody>
           <CardFooter className="p-6 pt-0">
             <Button
               as="a"
-              href="#get-started"
+              href="#contacto"
               color="primary"
               radius="full"
               className="w-full py-3.5 font-bold text-xs bg-brand-600 hover:bg-brand-500 shadow-neu-btn-blue text-white"
             >
-              Start 14-Day Free Trial
+              {t("pricing.t2.cta")}
             </Button>
           </CardFooter>
         </Card>
 
-        {/* Custom Scale Tier */}
+        {/* Tier 3: Support & Consulting */}
         <Card className="neu-extruded rounded-3xl p-3 border-none bg-transparent shadow-none flex flex-col justify-between">
           <CardBody className="p-6">
-            <h3 className="text-xl font-bold text-slate-900">Sovereign Custom</h3>
-            <p className="text-xs text-slate-500 mt-1">Dedicated bare-metal instances & custom fine-tuning.</p>
+            <h3 className="text-xl font-bold text-slate-900">{t("pricing.t3.title")}</h3>
+            <p className="text-xs text-slate-500 mt-1">{t("pricing.t3.desc")}</p>
             <div className="my-6">
-              <span className="text-4xl font-extrabold text-slate-900">Custom</span>
-              <span className="text-xs font-semibold text-slate-500">/ tailored</span>
+              <span className="text-4xl font-extrabold text-slate-900">{t("pricing.t3.price")}</span>
+              <span className="text-xs font-semibold text-slate-500 block mt-1">{t("pricing.t3.period")}</span>
             </div>
             <ul className="space-y-3 text-xs font-medium text-slate-700">
               <li className="flex items-center gap-2.5">
-                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> On-Premises Air-Gapped Deployment
+                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t3.f1")}
               </li>
               <li className="flex items-center gap-2.5">
-                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> Custom LLM Weight Fine-Tuning
+                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t3.f2")}
               </li>
               <li className="flex items-center gap-2.5">
-                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> 24/7 Dedicated Engineering Pod
+                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t3.f3")}
               </li>
               <li className="flex items-center gap-2.5">
-                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> Custom Security Compliance Audits
+                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t3.f4")}
+              </li>
+              <li className="flex items-center gap-2.5">
+                <Check className="w-4 h-4 text-brand-600 flex-shrink-0" /> {t("pricing.t3.f5")}
               </li>
             </ul>
           </CardBody>
           <CardFooter className="p-6 pt-0">
             <Button
               as="a"
-              href="#get-started"
+              href="#contacto"
               radius="full"
               variant="flat"
               className="w-full py-3 neu-extruded neu-extruded-hover text-xs font-bold text-slate-800 bg-transparent"
             >
-              Contact Enterprise Sales
+              {t("pricing.t3.cta")}
             </Button>
           </CardFooter>
         </Card>
@@ -144,4 +153,3 @@ export function PricingSection() {
     </section>
   );
 }
-

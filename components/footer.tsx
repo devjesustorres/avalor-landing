@@ -2,8 +2,11 @@
 
 import React from "react";
 import Image from "next/image";
+import { useLanguage } from "@/context/language-context";
 
 export function Footer() {
+  const { t } = useLanguage();
+
   return (
     <footer className="mt-28 border-t border-slate-300/40 py-12 relative z-10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -20,20 +23,21 @@ export function Footer() {
               />
             </div>
             <span className="text-xs text-slate-400 ml-2">
-              © {new Date().getFullYear()} Avelor Software Solutions. All rights reserved.
+              © {new Date().getFullYear()} {t("footer.copyright")}
             </span>
           </div>
 
           <div className="flex items-center gap-6 text-xs font-semibold text-slate-500">
-            <a href="#" className="hover:text-slate-900 transition-colors">Privacy Policy</a>
-            <a href="#" className="hover:text-slate-900 transition-colors">Terms of Service</a>
-            <a href="#" className="hover:text-slate-900 transition-colors">Security & Trust</a>
-            <a href="#" className="hover:text-slate-900 transition-colors">Status</a>
+            <a href="#servicios" className="hover:text-slate-900 transition-colors">{t("nav.services")}</a>
+            <a href="#metodologia" className="hover:text-slate-900 transition-colors">{t("nav.methodology")}</a>
+            <a href="#beneficios" className="hover:text-slate-900 transition-colors">{t("nav.benefits")}</a>
+            <a href="#modelos" className="hover:text-slate-900 transition-colors">{t("nav.models")}</a>
+            <a href="#contacto" className="hover:text-slate-900 transition-colors">{t("nav.contact")}</a>
           </div>
 
           <div className="flex items-center gap-2 text-xs font-bold text-emerald-600 neu-badge px-3.5 py-1.5 rounded-full">
             <span className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse" />
-            All Systems Operational
+            {t("footer.status")}
           </div>
 
         </div>

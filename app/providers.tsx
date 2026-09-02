@@ -2,13 +2,16 @@
 
 import { HeroUIProvider } from "@heroui/react";
 import { useRouter } from "next/navigation";
+import { LanguageProvider } from "@/context/language-context";
 
 export function Providers({ children }: { children: React.ReactNode }) {
   const router = useRouter();
 
   return (
     <HeroUIProvider navigate={router.push}>
-      {children}
+      <LanguageProvider>
+        {children}
+      </LanguageProvider>
     </HeroUIProvider>
   );
 }
