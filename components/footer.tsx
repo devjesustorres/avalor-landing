@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Sparkles } from "lucide-react";
+import Image from "next/image";
 
 export function Footer() {
   return (
@@ -10,14 +10,17 @@ export function Footer() {
         <div className="flex flex-col md:flex-row items-center justify-between gap-6">
           
           <div className="flex items-center gap-3">
-            <div className="w-8 h-8 rounded-full neu-extruded flex items-center justify-center text-brand-600">
-              <Sparkles className="w-4 h-4" />
+            <div className="relative h-7 w-auto flex items-center">
+              <Image
+                src="/logo.png"
+                alt="Avelor Software Solutions"
+                width={140}
+                height={35}
+                className="h-7 w-auto object-contain"
+              />
             </div>
-            <span className="font-extrabold text-slate-900 tracking-tight">
-              Avaro<span className="text-brand-600">.ai</span>
-            </span>
             <span className="text-xs text-slate-400 ml-2">
-              © {new Date().getFullYear()} Avaro Technologies, Inc. All rights reserved.
+              © {new Date().getFullYear()} Avelor Software Solutions. All rights reserved.
             </span>
           </div>
 
@@ -38,4 +41,3 @@ export function Footer() {
     </footer>
   );
 }
-

@@ -1,25 +1,25 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Button } from "@heroui/react";
-import { Sparkles, ArrowRight } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 export function FloatingNavbar() {
   return (
     <header className="fixed top-5 inset-x-0 z-50 flex justify-center px-4 sm:px-6">
       <nav className="neu-pill-nav rounded-full py-2.5 px-4 sm:px-6 w-full max-w-5xl flex items-center justify-between transition-all duration-300">
         {/* Brand Logo */}
-        <a href="#" className="flex items-center gap-3 group">
-          <div className="w-9 h-9 rounded-full neu-extruded flex items-center justify-center text-brand-600 group-hover:scale-105 transition-transform">
-            <Sparkles className="w-5 h-5 text-brand-600 fill-brand-600/20" />
-          </div>
-          <div className="flex flex-col">
-            <span className="font-extrabold text-lg tracking-tight text-slate-900 leading-none">
-              Avaro<span className="text-brand-600">.ai</span>
-            </span>
-            <span className="text-[9px] font-semibold uppercase tracking-wider text-slate-400">
-              Enterprise SaaS
-            </span>
+        <a href="#" className="flex items-center group">
+          <div className="relative h-8 sm:h-9 w-auto flex items-center">
+            <Image
+              src="/logo.png"
+              alt="Avelor Software Solutions Logo"
+              width={160}
+              height={40}
+              priority
+              className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105"
+            />
           </div>
         </a>
 
@@ -85,4 +85,3 @@ export function FloatingNavbar() {
     </header>
   );
 }
-
