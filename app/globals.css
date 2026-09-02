@@ -1,0 +1,61 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  background-color: #e8edf3;
+  color: #1e293b;
+  overflow-x: hidden;
+}
+
+/* Neumorphic Extruded & Inset Utility Styles */
+.neu-extruded {
+  background: #e8edf3;
+  box-shadow: 9px 9px 20px #cad5e2, -9px -9px 20px #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.75);
+}
+
+.neu-extruded-hover {
+  transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+}
+.neu-extruded-hover:hover {
+  transform: translateY(-3px);
+  box-shadow: 13px 13px 26px #c4d0df, -13px -13px 26px #ffffff;
+}
+
+.neu-pressed {
+  background: #e4e9ef;
+  box-shadow: inset 4px 4px 8px #cad5e2, inset -4px -4px 8px #ffffff;
+}
+
+.neu-pill-nav {
+  background: rgba(232, 237, 243, 0.88);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  box-shadow: 8px 8px 24px #cad5e2, -8px -8px 24px #ffffff;
+  border: 1px solid rgba(255, 255, 255, 0.85);
+}
+
+.neu-badge {
+  background: #e8edf3;
+  box-shadow: inset 2px 2px 4px #cad5e2, inset -2px -2px 4px #ffffff;
+}
+
+.neural-glow {
+  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12) 0%, rgba(232, 237, 243, 0) 70%);
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #e8edf3;
+}
+::-webkit-scrollbar-thumb {
+  background: #cad5e2;
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #a3b1c6;
+}
+
