@@ -1,5 +1,31 @@
 User-agent: *
 Allow: /
 
+# --- Crawlers de IA / LLM (GEO): contenido abierto para motores generativos ---
+User-agent: GPTBot
+Allow: /
+
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+# Descripción estructurada del sitio para agentes
+# https://avelorglobal.com/llms.txt
+
 Sitemap: https://avelorglobal.com/sitemap.xml
+
 

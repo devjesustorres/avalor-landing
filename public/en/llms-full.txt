@@ -1,0 +1,66 @@
+# Saventi — Extended description for agents / LLMs
+
+Full English version of the content at https://avelorglobal.com/en for generative models and agents.
+Summary version: https://avelorglobal.com/en/llms.txt · Spanish site: https://avelorglobal.com · Spanish extended version: https://avelorglobal.com/llms-full.txt
+_Last updated: September 2026._
+
+## Who we are
+Saventi is a software engineering company based in Venezuela (service area: Venezuela and remote worldwide) that designs and builds custom software for growing companies: management systems and ERPs, web platforms and SaaS applications, iOS and Android mobile apps, API integrations, legacy system modernization, and cloud architecture consulting.
+
+Differentiating proposition:
+- 100% bespoke: every function, screen and database is modeled around your business rules — no templates or off-the-shelf software.
+- Full ownership: on completion of each stage and of the project, all copyright, code repositories, database schemas and access are transferred to you, with no dependencies or royalties.
+- Confidentiality: a non-disclosure agreement (NDA) is signed before any technical analysis or discovery meeting.
+- Warranty & support: post-delivery technical warranty included, plus preventive support and monitoring plans.
+
+## Services
+1. Bespoke ERPs and Management Systems: centralize inventory, orders, invoicing, purchasing, HR and operations in a private application tailored to your business flows.
+2. Web Platforms and SaaS Applications: fast, scalable web solutions with modern admin dashboards and optimized UX.
+3. Mobile Apps (iOS & Android): native and hybrid apps with real-time data sync and push notifications.
+4. API Integrations and Automation: connect with payment gateways (Stripe, PayPal, local banks), WhatsApp Business API, CRMs and third-party services.
+5. System Modernization and Data Migration: move obsolete or slow software to cloud architectures, improving security, speed and usability.
+6. Technical Consulting and Cloud Architecture: architecture design advisory, infrastructure selection (AWS, Azure, Google Cloud) and cost optimization.
+
+## Technologies
+- Frontend: React, Next.js, TypeScript, Tailwind CSS.
+- Backend: Node.js, Python.
+- Data: PostgreSQL, MySQL, Redis.
+- Cloud & deployment: AWS, Google Cloud, Azure, Vercel.
+- QA coverage: quality testing, security audits and stress tests before deployment.
+
+## Engagement models (pricing)
+1. Turnkey Project: fixed budget, milestone payments. Ideal for new systems, MVPs or digitalizations with a defined scope. Includes technical discovery and UX/UI design, full-stack development, testing and cloud deployment, full code transfer and post-launch warranty.
+2. Dedicated Team (Squad): monthly fee, agile sprints with weekly deliveries, direct communication (Slack/Teams), QA and code review, flexibility to scale.
+3. Support & Consulting (Hours Package): continuous monitoring and backups, security patches, hours bank for new features, response SLA and infrastructure advisory.
+
+## Process and timelines
+- Free technical assessment and closed scope before quoting (no hidden costs).
+- Agile sprints with regular functional deliveries.
+- MVP or initial system: 4 to 8 weeks.
+- ERPs or complex platforms: 8 to 16 weeks, with biweekly functional deliveries.
+- Contact response within 24 business hours.
+
+## FAQ (with answers)
+1. How long does custom software take? It depends on complexity and scope: an MVP or initial system usually takes 4–8 weeks; advanced ERPs or platforms 8–16 weeks with biweekly deliveries.
+2. Do I own the code and IP 100%? Yes: all copyright, repositories, database schemas and access are transferred with no dependencies or royalties.
+3. Do you sign NDAs? Yes, before any detailed technical analysis or discovery meeting.
+4. What technologies do you use? React, Next.js, TypeScript, Tailwind CSS; Node.js, Python; PostgreSQL, MySQL, Redis; deployments on AWS, Google Cloud, Azure or Vercel.
+5. Do you offer warranty and support after launch? Yes: post-delivery technical warranty against bugs, plus preventive support, monitoring and ongoing evolution via hours packages.
+6. How is cost calculated and paid? Three models: turnkey (fixed budget and milestones), dedicated squad (monthly fee) and support by hours package. A free technical assessment with closed scope is done before quoting.
+7. Can you integrate with my current systems? Yes: payment gateways (Stripe, PayPal, local banks), WhatsApp Business API, CRMs, accounting systems and existing ERPs, with synchronization and workflow automation.
+
+## URLs
+- Home (en): https://avelorglobal.com/en
+- Home (es): https://avelorglobal.com
+- Privacy Policy: https://avelorglobal.com/en/privacy (ES: https://avelorglobal.com/privacy)
+- Terms of Service: https://avelorglobal.com/en/terms (ES: https://avelorglobal.com/terms)
+
+## Dedicated topic pages (indexable, citable content)
+- Software development services: https://avelorglobal.com/en/services (ES: /servicios). Overview of the 6 services: bespoke ERPs, web/SaaS platforms, mobile apps, API integrations, modernization and cloud architecture.
+- Custom ERP development: https://avelorglobal.com/en/custom-erp-development (ES: /desarrollo-erp). What a bespoke ERP is, typical modules (inventory, sales & invoicing, purchasing, HR, accounting), benefits, data migration and integrations, timelines and cost.
+- Mobile app development (iOS/Android): https://avelorglobal.com/en/mobile-app-development (ES: /aplicaciones-moviles). Native and cross-platform apps, push notifications, real-time sync, app store publishing, timelines and maintenance.
+- Pricing & engagement models: https://avelorglobal.com/en/pricing (ES: /precios). How custom software cost is estimated, models (turnkey, dedicated squad, hours retainer) and payment structures.
+
+## Contact
+- Form: https://avelorglobal.com/en#contacto
+- Reply within 24 business hours · 100% confidential under NDA agreement.

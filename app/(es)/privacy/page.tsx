@@ -20,5 +20,3 @@ export const metadata: Metadata = {
 export default function Privacy() {
   return <PrivacyPage />;
 }
-
-

@@ -1,96 +1,12 @@
-import type { Metadata, Viewport } from "next";
-import { Plus_Jakarta_Sans } from "next/font/google";
-import "./globals.css";
-import { Providers } from "./providers";
-
-const plusJakartaSans = Plus_Jakarta_Sans({
-  subsets: ["latin"],
-  variable: "--font-plus-jakarta",
-  weight: ["300", "400", "500", "600", "700", "800"],
-  display: "swap",
-});
-
-export const viewport: Viewport = {
-  themeColor: "#2563eb",
-  width: "device-width",
-  initialScale: 1,
-  maximumScale: 5,
-};
-
-export const metadata: Metadata = {
-  metadataBase: new URL("https://avelorglobal.com"),
-  title: {
-    default: "Saventi — Desarrollo de Software a la Medida & Soluciones Digitales",
-    template: "%s | Saventi",
-  },
-  description:
-    "Desarrollamos sistemas a la medida, ERPs, plataformas web y aplicaciones móviles para empresas en crecimiento. Código 100% propio, acuerdos NDA, arquitectura escalable y soporte garantizado.",
-  keywords: [
-    "desarrollo de software a la medida",
-    "software empresarial",
-    "desarrollo web profesional",
-    "creacion de aplicaciones moviles",
-    "ERP a medida",
-    "sistemas de gestion",
-    "custom software development",
-    "software engineering agency",
-    "arquitectura cloud",
-    "Saventi",
-  ],
-  authors: [{ name: "Saventi", url: "https://avelorglobal.com" }],
-  creator: "Saventi",
-  publisher: "Saventi",
-  alternates: {
-    canonical: "https://avelorglobal.com",
-    languages: {
-      es: "https://avelorglobal.com",
-      en: "https://avelorglobal.com/en",
-    },
-  },
-  openGraph: {
-    type: "website",
-    locale: "es_ES",
-    alternateLocale: ["en_US"],
-    url: "https://avelorglobal.com",
-    siteName: "Saventi",
-    title: "Saventi — Desarrollo de Software a la Medida para Empresas",
-    description:
-      "Transformamos los procesos de tu empresa en software a la medida, plataformas web robustas y aplicaciones móviles de alto rendimiento.",
-    images: [
-      {
-        url: "/og-image.png",
-        width: 1200,
-        height: 630,
-        alt: "Saventi — Desarrollo de Software a la Medida",
-      },
-    ],
-  },
-  twitter: {
-    card: "summary_large_image",
-    title: "Saventi — Desarrollo de Software a la Medida para Empresas",
-    description:
-      "Sistemas a la medida, plataformas web y aplicaciones móviles escalables para empresas en crecimiento.",
-    images: ["/og-image.png"],
-  },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
-  icons: {
-    icon: "/logo.png",
-    shortcut: "/logo.png",
-    apple: "/logo.png",
-  },
-};
-
-const jsonLd = {
+// Datos estructurados (JSON-LD) compartidos por ambos root layouts (es/en).
+// GEO incluido: address/geo (Valencia, sin dirección exacta), openingHours,
+// priceRange, foundingDate.
+// TODO GEO pendiente (cuando existan datos reales):
+//   - sameAs: perfiles oficiales de LinkedIn / Instagram de Saventi
+//     (hoy solo hay un repo de GitHub de referencia).
+//   - contactPoint con telephone/email públicos (hoy solo formulario).
+//   - legalName / RIF si se decide publicarlos.
+export const jsonLd = {
   "@context": "https://schema.org",
   "@graph": [
     {
@@ -100,6 +16,7 @@ const jsonLd = {
       "url": "https://avelorglobal.com",
       "logo": "https://avelorglobal.com/logo.png",
       "description": "Empresa especializada en desarrollo de software a la medida, sistemas empresariales, plataformas SaaS y aplicaciones móviles.",
+      "foundingDate": "2026",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
@@ -116,7 +33,8 @@ const jsonLd = {
       "url": "https://avelorglobal.com",
       "name": "Saventi",
       "publisher": { "@id": "https://avelorglobal.com/#organization" },
-      "inLanguage": ["es", "en"]
+      "inLanguage": ["es", "en"],
+      "dateModified": "2026-09-03"
     },
     {
       "@type": "FAQPage",
@@ -188,9 +106,39 @@ const jsonLd = {
       "url": "https://avelorglobal.com",
       "image": "https://avelorglobal.com/logo.png",
       "description": "Empresa de ingeniería de software que diseña y desarrolla sistemas a la medida, ERPs, plataformas web, aplicaciones móviles e integraciones en la nube para empresas en crecimiento.",
-      "areaServed": { "@type": "Place", "name": "Venezuela" },
-      // TODO GEO: añadir cuando existan datos reales: address/geo (ubicación),
-      // openingHours, priceRange, telefono/email y perfiles de LinkedIn/Instagram en sameAs.
+      "foundingDate": "2026",
+      "areaServed": [
+        { "@type": "Place", "name": "Valencia, Carabobo" },
+        { "@type": "Place", "name": "Venezuela" },
+        { "@type": "Place", "name": "Internacional (remoto)" }
+      ],
+      "address": {
+        "@type": "PostalAddress",
+        "addressLocality": "Valencia",
+        "addressRegion": "Carabobo",
+        "postalCode": "2015",
+        "addressCountry": "VE"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 10.162,
+        "longitude": -68.0077
+      },
+      "openingHoursSpecification": [
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Monday", "Tuesday", "Wednesday", "Thursday", "Friday"],
+          "opens": "09:00",
+          "closes": "18:00"
+        },
+        {
+          "@type": "OpeningHoursSpecification",
+          "dayOfWeek": ["Saturday"],
+          "opens": "09:00",
+          "closes": "13:00"
+        }
+      ],
+      "priceRange": "Desde $1.500 USD por proyecto",
       "hasOfferCatalog": {
         "@type": "OfferCatalog",
         "name": "Servicios de Software a la Medida",
@@ -254,38 +202,3 @@ const jsonLd = {
     }
   ]
 };
-
-export default function RootLayout({
-  children,
-}: Readonly<{
-  children: React.ReactNode;
-}>) {
-  return (
-    <html lang="es" className="scroll-smooth">
-      <head>
-        {/* Google tag (gtag.js) */}
-        <script
-          async
-          src="https://www.googletagmanager.com/gtag/js?id=G-8346W6GKF9"
-        />
-        <script
-          dangerouslySetInnerHTML={{
-            __html: `
-              window.dataLayer = window.dataLayer || [];
-              function gtag(){dataLayer.push(arguments);}
-              gtag('js', new Date());
-              gtag('config', 'G-8346W6GKF9');
-            `,
-          }}
-        />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
-        />
-      </head>
-      <body className={`${plusJakartaSans.variable} font-sans antialiased selection:bg-brand-600 selection:text-white`}>
-        <Providers>{children}</Providers>
-      </body>
-    </html>
-  );
-}

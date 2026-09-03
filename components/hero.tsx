@@ -1,7 +1,7 @@
 "use client";
 
 import React from "react";
-import { Button, Chip } from "@heroui/react";
+import { Button } from "@heroui/react";
 import { Zap, ArrowRight, Cpu, ShieldCheck, Globe, Layers, Database } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 
@@ -11,18 +11,6 @@ export function HeroSection() {
   return (
     <section className="relative z-10 pt-36 pb-16 sm:pt-44 sm:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
-        
-        {/* Hero Pill Badge */}
-        <div className="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full neu-badge text-xs font-semibold text-slate-700 mb-8 border border-white/60">
-          <span className="flex h-2 w-2 relative">
-            <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-brand-400 opacity-75"></span>
-            <span className="relative inline-flex rounded-full h-2 w-2 bg-brand-600"></span>
-          </span>
-          <span className="tracking-wide">{t("hero.badge")}</span>
-          <Chip size="sm" color="primary" variant="flat" className="text-[10px] font-bold uppercase h-5 bg-brand-100 text-brand-700">
-            {t("hero.badge_chip")}
-          </Chip>
-        </div>
 
         {/* Hero Headline */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.08] mb-6">

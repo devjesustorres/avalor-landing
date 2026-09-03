@@ -12,17 +12,28 @@ export function FloatingNavbar() {
 
   return (
     <header className="fixed top-5 inset-x-0 z-50 flex justify-center px-4 sm:px-6">
-      <nav className="neu-pill-nav rounded-full py-2.5 px-4 sm:px-6 w-full max-w-5xl flex items-center justify-between transition-all duration-300">
-        {/* Brand Logo */}
+      <div className="flex w-full max-w-6xl items-center justify-center gap-2 sm:gap-3">
+        <nav className="neu-pill-nav rounded-full py-4 pl-4 sm:pl-6 pr-4 sm:pr-6 flex-1 min-w-0 flex items-center justify-between transition-all duration-300">
+        {/* Brand Logo (solo texto SAVENTI; versión blanca en modo oscuro) */}
         <a href="#" className="flex items-center group">
-          <div className="relative h-8 sm:h-9 w-auto flex items-center">
+          <div className="relative h-5 sm:h-6 w-auto flex items-center">
             <Image
-              src="/logo.png"
-              alt="Saventi Logo"
-              width={160}
-              height={40}
+              src="/saventi-text.png"
+              alt="Saventi"
+              width={400}
+              height={54}
               priority
-              className="h-8 sm:h-9 w-auto object-contain transition-transform group-hover:scale-105"
+              quality={100}
+              className="h-5 sm:h-6 w-auto object-contain transition-transform group-hover:scale-105 dark:hidden"
+            />
+            <Image
+              src="/saventi-text-white.png"
+              alt="Saventi"
+              width={400}
+              height={54}
+              priority
+              quality={100}
+              className="hidden h-5 sm:h-6 w-auto object-contain transition-transform group-hover:scale-105 dark:block"
             />
           </div>
         </a>
@@ -67,20 +78,8 @@ export function FloatingNavbar() {
           </a>
         </div>
 
-        {/* Language Selector & Actions */}
+        {/* CTA */}
         <div className="flex items-center gap-2 sm:gap-3">
-          <LanguageSelector />
-
-          <Button
-            as="a"
-            href="#contacto"
-            variant="light"
-            radius="full"
-            size="sm"
-            className="hidden lg:inline-flex text-xs font-bold text-slate-700 hover:text-slate-900 hover:bg-slate-200/50"
-          >
-            {t("nav.schedule")}
-          </Button>
           <Button
             as="a"
             href="#contacto"
@@ -93,7 +92,12 @@ export function FloatingNavbar() {
             {t("nav.quote")}
           </Button>
         </div>
-      </nav>
+        </nav>
+        {/* Selector de idioma: fuera del pill del navbar, a su derecha */}
+        <div className="shrink-0">
+          <LanguageSelector />
+        </div>
+      </div>
     </header>
   );
 }

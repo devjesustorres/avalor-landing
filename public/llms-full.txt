@@ -1,0 +1,67 @@
+# Saventi — Descripción extendida para agentes / LLMs
+
+Versión completa del contenido de https://avelorglobal.com para modelos generativos y agentes.
+Versión resumida: https://avelorglobal.com/llms.txt · Versión en inglés del sitio: https://avelorglobal.com/en
+Versión extendida en inglés de este documento: https://avelorglobal.com/en/llms-full.txt
+_Actualizado: septiembre de 2026._
+
+## Quiénes somos
+Saventi es una empresa de ingeniería de software con base en Venezuela (área de servicio: Venezuela y remoto internacional) que diseña y desarrolla software a la medida para empresas en crecimiento: sistemas de gestión y ERPs, plataformas web y aplicaciones SaaS, aplicaciones móviles iOS y Android, integraciones API, modernización de sistemas legados y consultoría de arquitectura cloud.
+
+Propuesta diferencial:
+- 100% a la medida: cada función, pantalla y base de datos se modela según las reglas del negocio, sin plantillas ni software prefabricado.
+- Propiedad total: al finalizar cada etapa y el proyecto se transfieren todos los derechos de autor, repositorios de código, esquemas de bases de datos y accesos, sin dependencias ni regalías.
+- Confidencialidad: se firma acuerdo de no divulgación (NDA) antes de cualquier análisis técnico o reunión de descubrimiento.
+- Garantía y soporte: garantía técnica post-entrega incluida, más planes de soporte preventivo y monitoreo.
+
+## Servicios
+1. ERPs y Sistemas de Gestión a la Medida: centraliza inventarios, pedidos, facturación, compras, RRHH y operaciones en una aplicación privada adaptada a los flujos del negocio.
+2. Plataformas Web y Aplicaciones SaaS: soluciones web rápidas y escalables con paneles de administración modernos y UX optimizada.
+3. Aplicaciones Móviles (iOS y Android): apps nativas e híbridas con sincronización en tiempo real y notificaciones push.
+4. Integraciones API y Automatización: conexión con pasarelas de pago (Stripe, PayPal, bancos locales), WhatsApp Business API, CRMs y servicios de terceros.
+5. Modernización de Sistemas y Migración de Datos: paso de software obsoleto o lento a arquitecturas cloud, mejorando seguridad, velocidad y usabilidad.
+6. Consultoría Técnica y Arquitectura Cloud: asesoría en diseño de arquitectura, selección de infraestructura (AWS, Azure, Google Cloud) y optimización de costos.
+
+## Tecnologías
+- Frontend: React, Next.js, TypeScript, Tailwind CSS.
+- Backend: Node.js, Python.
+- Datos: PostgreSQL, MySQL, Redis.
+- Cloud y despliegue: AWS, Google Cloud, Azure, Vercel.
+- Cobertura QA: pruebas de calidad, auditorías de seguridad y stress tests antes del despliegue.
+
+## Modalidades de trabajo (modelos de precios)
+1. Proyecto Llave en Mano: presupuesto fijo, pagos por hitos. Ideal para sistemas nuevos, MVPs o digitalizaciones con alcance definido. Incluye levantamiento técnico y diseño UX/UI, desarrollo full-stack, pruebas y despliegue cloud, transferencia total del código y garantía post-lanzamiento.
+2. Equipo Dedicado (Squad): tarifa mensual, sprints ágiles con entregas semanales, comunicación directa (Slack/Teams), QA y revisión de código, flexibilidad para escalar.
+3. Soporte y Consultoría (Bolsa de Horas): monitoreo y respaldos continuos, parches de seguridad, banco de horas para nuevas funcionalidades, SLA de respuesta y asesoría de infraestructura.
+
+## Proceso y tiempos
+- Diagnóstico técnico gratuito y alcance cerrado antes de cotizar (sin costos ocultos).
+- Sprint ágiles con entregas funcionales periódicas.
+- MVP o sistema inicial: 4 a 8 semanas.
+- ERPs o plataformas complejas: 8 a 16 semanas, con entregas funcionales quincenales.
+- Respuesta de contacto en menos de 24 horas hábiles.
+
+## Preguntas frecuentes (con respuestas)
+1. ¿Cuánto tiempo toma desarrollar un software a la medida? Depende de complejidad y alcance: un MVP o sistema inicial suele tomar 4 a 8 semanas; ERPs o plataformas avanzadas 8 a 16 semanas con entregas quincenales.
+2. ¿El código y la propiedad intelectual me pertenecen al 100%? Sí: se transfieren todos los derechos de autor, repositorios, esquemas de bases de datos y accesos sin dependencias ni regalías.
+3. ¿Firman NDA? Sí, antes de cualquier análisis técnico o reunión de descubrimiento detallada.
+4. ¿Qué tecnologías usan? React, Next.js, TypeScript, Tailwind CSS; Node.js, Python; PostgreSQL, MySQL, Redis; despliegues en AWS, Google Cloud, Azure o Vercel.
+5. ¿Ofrecen garantía y soporte después del lanzamiento? Sí: garantía técnica post-entrega contra bugs, más planes de soporte preventivo, monitoreo y evolución por bolsa de horas.
+6. ¿Cómo se calcula el costo? Tres modalidades: llave en mano (presupuesto fijo e hitos), squad dedicado (tarifa mensual) y soporte por bolsa de horas. Antes de cotizar se hace diagnóstico técnico gratuito con alcance cerrado.
+7. ¿Integran con mis sistemas actuales? Sí: pasarelas de pago (Stripe, PayPal, bancos locales), WhatsApp Business API, CRMs, sistemas contables y ERPs existentes, con sincronización y automatización de flujos.
+
+## URLs
+- Home (es): https://avelorglobal.com
+- Home (en): https://avelorglobal.com/en
+- Política de Privacidad: https://avelorglobal.com/privacy (EN: https://avelorglobal.com/en/privacy)
+- Términos del Servicio: https://avelorglobal.com/terms (EN: https://avelorglobal.com/en/terms)
+
+## Páginas por tema (contenido dedicado y citable)
+- Servicios de desarrollo de software: https://avelorglobal.com/servicios (EN: /en/services). Resumen de los 6 servicios: ERPs, plataformas web/SaaS, apps móviles, integraciones API, modernización y arquitectura cloud.
+- Desarrollo de ERPs a la medida: https://avelorglobal.com/desarrollo-erp (EN: /en/custom-erp-development). Qué es un ERP a la medida, módulos típicos (inventario, ventas y facturación, compras, RRHH, contabilidad), beneficios, migración de datos e integraciones, tiempos y costos.
+- Aplicaciones móviles iOS/Android: https://avelorglobal.com/aplicaciones-moviles (EN: /en/mobile-app-development). Apps nativas y multiplataforma, notificaciones push, sincronización en tiempo real, publicación en tiendas, tiempos y mantenimiento.
+- Precios y modalidades: https://avelorglobal.com/precios (EN: /en/pricing). Cómo se calcula el costo de un software a la medida, modelos (llave en mano, squad, bolsa de horas) y formas de pago.
+
+## Contacto
+- Formulario: https://avelorglobal.com/#contacto
+- Respuesta en menos de 24 horas hábiles · 100% confidencial bajo acuerdo NDA.

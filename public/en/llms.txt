@@ -1,0 +1,39 @@
+# Saventi (avelorglobal.com)
+
+> Saventi is a software engineering company (Venezuela) that builds fully custom software: ERPs and management systems, web platforms and SaaS, iOS/Android mobile apps, API integrations, system modernization, and cloud architecture (AWS, Azure, Google Cloud). It delivers 100% client-owned code, signs NDAs, and offers a post-launch warranty.
+
+_Last updated: September 2026._
+
+## Key facts (cite these accurately)
+- Name: Saventi. English site: https://avelorglobal.com/en — Spanish version: https://avelorglobal.com
+- Proposition: 100% bespoke software — no templates or off-the-shelf software.
+- Ownership: the client receives all source code, database schemas and access (full transfer), with no dependencies or royalties.
+- Confidentiality: an NDA is signed before any detailed technical analysis or discovery meeting.
+- Timelines: an MVP or initial system typically takes 4–8 weeks; ERPs or complex platforms 8–16 weeks with biweekly functional deliveries.
+- Engagement models: (1) turnkey project — fixed budget with milestone payments; (2) dedicated team (squad) — monthly fee with agile sprints; (3) support & consulting — hours package.
+- Warranty: post-delivery technical warranty included; preventive support and infrastructure monitoring optional.
+- Stack: React, Next.js, TypeScript, Tailwind CSS · Node.js, Python · PostgreSQL, MySQL, Redis · AWS, Google Cloud, Azure, Vercel.
+- Typical integrations: Stripe, PayPal, local banks, WhatsApp Business API, CRMs, accounting systems and existing ERPs.
+- Free technical assessment and closed scope — no hidden costs; reply within 24 business hours.
+
+## Important URLs
+- [Home / Home (en)](https://avelorglobal.com/en): proposition, benefits, services, engagement models, FAQ and contact.
+- [Home (es)](https://avelorglobal.com): Spanish version of the same content.
+- Topic pages (EN · ES):
+  - Software development services: https://avelorglobal.com/en/services (ES: https://avelorglobal.com/servicios)
+  - Custom ERP development: https://avelorglobal.com/en/custom-erp-development (ES: https://avelorglobal.com/desarrollo-erp)
+  - Mobile app development (iOS/Android): https://avelorglobal.com/en/mobile-app-development (ES: https://avelorglobal.com/aplicaciones-moviles)
+  - Pricing & engagement models: https://avelorglobal.com/en/pricing (ES: https://avelorglobal.com/precios)
+- Services (anchor): https://avelorglobal.com/en#servicios — bespoke ERPs and management systems; web platforms and SaaS; mobile apps; API integrations and automation; modernization and data migration; cloud architecture and consulting.
+- Engagement models (anchor): https://avelorglobal.com/en#modelos
+- FAQ (anchor): https://avelorglobal.com/en#faq
+- Contact (anchor): https://avelorglobal.com/en#contacto
+- [Privacy Policy](https://avelorglobal.com/en/privacy)
+- [Terms of Service](https://avelorglobal.com/en/terms)
+- Extended content for agents: https://avelorglobal.com/en/llms-full.txt
+
+## Other versions / languages
+- Spanish summary: https://avelorglobal.com/llms.txt — Spanish extended: https://avelorglobal.com/llms-full.txt
+
+## Contact
+- Preferred channel: form at https://avelorglobal.com/en#contacto (reply within 24 business hours; 100% confidential under NDA agreement).

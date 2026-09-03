@@ -106,11 +106,24 @@ export function FaqSection() {
                 </div>
               </button>
 
-              {isOpen && (
-                <div className="mt-4 pt-4 border-t border-slate-300/40 pl-0 sm:pl-14 text-sm sm:text-base text-slate-600 leading-relaxed animate-in fade-in duration-300">
-                  {faq.answer}
+              {/* Las respuestas SIEMPRE están en el DOM (SEO/GEO: las ven los
+                  crawlers que no ejecutan JS). El colapso es solo visual con CSS. */}
+              <div
+                className={`grid transition-all duration-300 ease-in-out ${
+                  isOpen ? "grid-rows-[1fr] opacity-100" : "grid-rows-[0fr] opacity-0"
+                }`}
+                aria-hidden={!isOpen}
+              >
+                <div className="overflow-hidden min-h-0">
+                  <div
+                    className={`${
+                      isOpen ? "mt-4 pt-4 border-t border-slate-300/40" : ""
+                    } pl-0 sm:pl-14 text-sm sm:text-base text-slate-600 leading-relaxed`}
+                  >
+                    {faq.answer}
+                  </div>
                 </div>
-              )}
+              </div>
             </div>
           );
         })}
