@@ -46,7 +46,7 @@ export function DashboardPreview() {
             <div className="h-4 w-[1px] bg-slate-300 mx-2 hidden sm:block" />
             <div className="text-xs font-bold text-slate-700 flex items-center gap-1.5 font-mono">
               <GitBranch className="w-4 h-4 text-brand-600" />
-              avelor-core // production-architecture
+              saventi-core // production-architecture
             </div>
           </div>
 

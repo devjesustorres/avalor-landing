@@ -18,7 +18,7 @@ export function FloatingNavbar() {
           <div className="relative h-8 sm:h-9 w-auto flex items-center">
             <Image
               src="/logo.png"
-              alt="Avelor Software Solutions Logo"
+              alt="Saventi Logo"
               width={160}
               height={40}
               priority
@@ -48,19 +48,19 @@ export function FloatingNavbar() {
             {t("nav.benefits")}
           </a>
           <a
-            href="/#modelos"
+            href="#modelos"
             className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
           >
             {t("nav.models")}
           </a>
           <a
-            href="/#faq"
+            href="#faq"
             className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
           >
             {t("nav.faq")}
           </a>
           <a
-            href="/#contacto"
+            href="#contacto"
             className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
           >
             {t("nav.contact")}

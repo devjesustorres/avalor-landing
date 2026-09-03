@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { ChevronDown, HelpCircle, ShieldCheck, Code, Clock, Lock, Sparkles } from "lucide-react";
+import { ChevronDown, HelpCircle, ShieldCheck, Code, Clock, Lock, Sparkles, Wallet, Plug } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 
 export function FaqSection() {
@@ -33,6 +33,16 @@ export function FaqSection() {
       icon: ShieldCheck,
       question: t("faq.q5"),
       answer: t("faq.a5"),
+    },
+    {
+      icon: Wallet,
+      question: t("faq.q6"),
+      answer: t("faq.a6"),
+    },
+    {
+      icon: Plug,
+      question: t("faq.q7"),
+      answer: t("faq.a7"),
     },
   ];
 

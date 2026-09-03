@@ -4,11 +4,11 @@ import TermsPage from "@/components/terms-page";
 const baseUrl = "https://avelorglobal.com";
 
 export const metadata: Metadata = {
-  title: "Términos del Servicio",
+  title: "Terms of Service",
   description:
-    "Términos del Servicio de Saventi: alcance de los servicios de ingeniería de software, garantías y entrega de código a la medida.",
+    "Saventi terms of service: scope of custom software engineering services, warranties and code handover.",
   alternates: {
-    canonical: `${baseUrl}/terms`,
+    canonical: `${baseUrl}/en/terms`,
     languages: {
       es: `${baseUrl}/terms`,
       en: `${baseUrl}/en/terms`,
@@ -17,8 +17,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function Terms() {
+export default function TermsEn() {
   return <TermsPage />;
 }
-
-

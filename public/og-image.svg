@@ -18,31 +18,32 @@
   <circle cx="200" cy="150" r="300" fill="#2563eb" opacity="0.25" filter="blur(80px)" />
   <circle cx="1050" cy="480" r="350" fill="#3b82f6" opacity="0.2" filter="blur(90px)" />
 
-  <!-- Top Pill -->
-  <g transform="translate(100, 100)">
-    <rect width="450" height="42" rx="21" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
-    <circle cx="24" cy="21" r="6" fill="#3b82f6" />
-    <text x="42" y="27" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">INGENIERÍA DE SOFTWARE &amp; CLOUD</text>
+  <!-- Brand + Top Pill -->
+  <g transform="translate(100, 70)">
+    <text x="0" y="0" fill="#60a5fa" font-family="system-ui, -apple-system, sans-serif" font-size="34" font-weight="800" letter-spacing="1">Saventi</text>
+    <rect x="0" y="30" width="470" height="42" rx="21" fill="#1e293b" stroke="#334155" stroke-width="1.5" />
+    <circle cx="24" cy="51" r="6" fill="#3b82f6" />
+    <text x="42" y="57" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="14" font-weight="700" letter-spacing="1">INGENIERÍA DE SOFTWARE &amp; SOLUCIONES DIGITALES</text>
   </g>
 
   <!-- Main Headline -->
-  <text x="100" y="220" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" letter-spacing="-1">
+  <text x="100" y="248" fill="#ffffff" font-family="system-ui, -apple-system, sans-serif" font-size="54" font-weight="800" letter-spacing="-1">
     Desarrollo de Software
   </text>
-  <text x="100" y="290" fill="url(#blueGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="56" font-weight="800" letter-spacing="-1">
+  <text x="100" y="318" fill="url(#blueGrad)" font-family="system-ui, -apple-system, sans-serif" font-size="54" font-weight="800" letter-spacing="-1">
     a la Medida para Empresas
   </text>
 
   <!-- Description Subtitle -->
-  <text x="100" y="360" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400">
+  <text x="100" y="388" fill="#94a3b8" font-family="system-ui, -apple-system, sans-serif" font-size="22" font-weight="400">
     ERPs, Plataformas Web, Apps Móviles &amp; Arquitectura Cloud Escalable.
   </text>
-  <text x="100" y="395" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400">
+  <text x="100" y="423" fill="#64748b" font-family="system-ui, -apple-system, sans-serif" font-size="18" font-weight="400">
     Código 100% Propio • Acuerdos NDA • Soporte y Garantía Post-Lanzamiento
   </text>
 
   <!-- Tech Badges Bar -->
-  <g transform="translate(100, 470)">
+  <g transform="translate(100, 480)">
     <rect width="180" height="50" rx="12" fill="#1e293b" stroke="#334155" />
     <text x="90" y="31" fill="#cbd5e1" font-family="system-ui, sans-serif" font-size="15" font-weight="700" text-anchor="middle">React &amp; Next.js</text>
 
@@ -57,8 +58,8 @@
   </g>
 
   <!-- URL Brand Footer -->
-  <text x="100" y="575" fill="#3b82f6" font-family="system-ui, sans-serif" font-size="20" font-weight="800">
-    avelorglobal.com
+  <text x="100" y="585" fill="#3b82f6" font-family="system-ui, sans-serif" font-size="22" font-weight="800">
+    Saventi · avelorglobal.com
   </text>
 </svg>
 

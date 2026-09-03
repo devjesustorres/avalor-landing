@@ -4,11 +4,11 @@ import PrivacyPage from "@/components/privacy-page";
 const baseUrl = "https://avelorglobal.com";
 
 export const metadata: Metadata = {
-  title: "Política de Privacidad",
+  title: "Privacy Policy",
   description:
-    "Política de Privacidad de Saventi: compromiso de confidencialidad, acuerdos NDA y propiedad total del código y datos de nuestros clientes.",
+    "Saventi privacy policy: confidentiality commitment, NDA agreements and full ownership of our clients' source code and data.",
   alternates: {
-    canonical: `${baseUrl}/privacy`,
+    canonical: `${baseUrl}/en/privacy`,
     languages: {
       es: `${baseUrl}/privacy`,
       en: `${baseUrl}/en/privacy`,
@@ -17,8 +17,6 @@ export const metadata: Metadata = {
   robots: { index: true, follow: true },
 };
 
-export default function Privacy() {
+export default function PrivacyEn() {
   return <PrivacyPage />;
 }
-
-

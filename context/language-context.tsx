@@ -1,6 +1,7 @@
 "use client";
 
 import React, { createContext, useContext, useState, useEffect } from "react";
+import { usePathname } from "next/navigation";
 
 export type Language = "es" | "en";
 
@@ -171,6 +172,10 @@ const translations = {
     "faq.a4": "Trabajamos con el stack tecnológico más robusto y moderno: React, Next.js, TypeScript, Tailwind CSS en el frontend; Node.js, Python, PostgreSQL, MySQL y Redis en el backend; y despliegues en AWS, Google Cloud, Azure o Vercel.",
     "faq.q5": "¿Ofrecen garantía y soporte después del lanzamiento?",
     "faq.a5": "Sí. Todos nuestros proyectos incluyen garantía técnica post-entrega contra bugs o inconsistencias. Además, ofrecemos planes de soporte preventivo, monitoreo de infraestructura y evolución continua por bolsa de horas.",
+    "faq.q6": "¿Cómo se calcula el costo de un proyecto y cómo se paga?",
+    "faq.a6": "Ofrecemos tres modalidades claras: proyecto llave en mano con presupuesto fijo y pagos por hitos, squad dedicado con tarifa mensual y sprints ágiles, y planes de soporte por bolsa de horas. Antes de cotizar hacemos un diagnóstico técnico gratuito y entregamos un alcance cerrado, sin costos ocultos.",
+    "faq.q7": "¿Pueden integrar el software con mis sistemas o herramientas actuales?",
+    "faq.a7": "Sí. Integramos pasarelas de pago (Stripe, PayPal y bancos locales), WhatsApp Business API, CRMs, sistemas contables y ERPs existentes, además de sincronizar bases de datos y automatizar flujos. Documentamos cada integración para que tu equipo la gestione sin dependencias técnicas.",
 
     // CTA Section
     "cta.title": "Hagamos Realidad el Software que tu Empresa Necesita",
@@ -181,7 +186,7 @@ const translations = {
     "cta.disclaimer": "Respuesta en menos de 24 horas hábiles. 100% confidencial bajo acuerdo NDA.",
 
     // Footer
-    "footer.copyright": "Avelor Software Solutions. Todos los derechos reservados.",
+    "footer.copyright": "Saventi. Todos los derechos reservados.",
     "footer.privacy": "Política de Privacidad",
     "footer.terms": "Términos del Servicio",
     "footer.security": "Seguridad & Confidencialidad",
@@ -346,6 +351,10 @@ const translations = {
     "faq.a4": "We build on modern, enterprise-proven stacks: React, Next.js, TypeScript, and Tailwind CSS on frontend; Node.js, Python, PostgreSQL, MySQL, and Redis on backend; deployed seamlessly on AWS, Google Cloud, Azure, or Vercel.",
     "faq.q5": "What kind of post-launch warranty and maintenance do you offer?",
     "faq.a5": "Every custom build includes a dedicated post-launch warranty against bugs. In addition, we provide proactive monthly maintenance, cloud monitoring, and retainer hours for ongoing feature enhancements.",
+    "faq.q6": "How do you structure project cost and payments?",
+    "faq.a6": "We offer three transparent models: turnkey projects with a fixed budget paid by milestones, a dedicated squad billed monthly with agile sprints, and support retainers with allocated hour buckets. We start with a free technical diagnosis and a closed scope with no hidden fees.",
+    "faq.q7": "Can you integrate the software with my current systems or tools?",
+    "faq.a7": "Yes. We connect payment gateways (Stripe, PayPal, local banks), the WhatsApp Business API, CRMs, accounting systems and existing ERPs, plus database synchronization and workflow automation. Every integration is documented so your team manages it with no vendor lock-in.",
 
     // CTA Section
     "cta.title": "Let's Build the Custom Software Your Enterprise Deserves",
@@ -356,7 +365,7 @@ const translations = {
     "cta.disclaimer": "Fast turnaround in under 24 business hours. 100% confidential under NDA.",
 
     // Footer
-    "footer.copyright": "Avelor Software Solutions. All rights reserved.",
+    "footer.copyright": "Saventi. All rights reserved.",
     "footer.privacy": "Privacy Policy",
     "footer.terms": "Terms of Service",
     "footer.security": "Security & NDA",
@@ -372,28 +381,23 @@ const LanguageContext = createContext<LanguageContextType>({
 });
 
 export function LanguageProvider({ children }: { children: React.ReactNode }) {
-  const [lang, setLangState] = useState<Language>("es");
+  const pathname = usePathname();
+  // El idioma se define por la URL: español en "/" y rutas base, inglés bajo "/en".
+  const urlLang: Language =
+    pathname === "/en" || pathname.startsWith("/en/") ? "en" : "es";
+  const [lang, setLangState] = useState<Language>(urlLang);
   const [isTransitioning, setIsTransitioning] = useState(false);
 
   useEffect(() => {
-    // Detect browser preference or saved localStorage
-    const saved = localStorage.getItem("avelor_lang") as Language | null;
-    if (saved && (saved === "es" || saved === "en")) {
-      setLangState(saved);
-      document.documentElement.lang = saved;
-    } else {
-      const browserLang = navigator.language?.toLowerCase().startsWith("es") ? "es" : "en";
-      setLangState(browserLang);
-      document.documentElement.lang = browserLang;
-    }
-  }, []);
+    setLangState(urlLang);
+    document.documentElement.lang = urlLang;
+  }, [urlLang]);
 
   const setLang = (newLang: Language) => {
     if (newLang === lang) return;
     setIsTransitioning(true);
     setTimeout(() => {
       setLangState(newLang);
-      localStorage.setItem("avelor_lang", newLang);
       document.documentElement.lang = newLang;
       setTimeout(() => {
         setIsTransitioning(false);
