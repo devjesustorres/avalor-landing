@@ -126,15 +126,15 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
   const waMsg = encodeURIComponent(`Hola Saventi, estoy revisando el portal de avance de ${project.clientName} y deseo hacer una consulta.`);
 
   return (
-    <div className="min-h-screen bg-[#070b14] text-slate-100 selection:bg-blue-600 selection:text-white pb-16">
-      {/* Top Bar */}
-      <header className="sticky top-0 z-50 border-b border-slate-800/80 bg-[#0a0f1d]/90 backdrop-blur-md">
+    <div className="min-h-screen bg-[#f8fafc] text-slate-800 selection:bg-blue-600 selection:text-white pb-16">
+      {/* Top Bar - Modo Claro */}
+      <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-xs">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <a href="https://avelorglobal.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
-              <img src="/saventi-text-white.png" alt="Saventi" className="h-5 sm:h-6 w-auto object-contain" />
+              <img src="/saventi-text.png" alt="Saventi" className="h-5 sm:h-6 w-auto object-contain" />
             </a>
-            <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
+            <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
               Portal Privado
             </span>
           </div>
@@ -143,7 +143,7 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
             href={`https://wa.me/${project.contactWhatsApp.replace(/[^0-9]/g, '')}?text=${waMsg}`}
             target="_blank"
             rel="noopener noreferrer"
-            className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 text-xs font-bold rounded-xl bg-emerald-500/10 hover:bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 transition-all"
+            className="inline-flex items-center gap-1.5 px-3 sm:px-4 py-1.5 sm:py-2 text-xs font-bold rounded-xl bg-emerald-50 hover:bg-emerald-100 text-emerald-700 border border-emerald-200 transition-all shadow-xs"
           >
             <MessageSquare className="w-3.5 h-3.5" />
             <span>Hablar con Gestor</span>
@@ -151,66 +151,66 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
         </div>
       </header>
 
-      {/* Main Content */}
+      {/* Main Content - Modo Claro */}
       <main className="max-w-5xl mx-auto px-4 sm:px-6 pt-8 sm:pt-12 flex flex-col gap-8">
-        {/* Hero Card */}
-        <div className="relative overflow-hidden rounded-3xl border border-slate-800 bg-gradient-to-b from-[#0f172a] to-[#0a0f1d] p-6 sm:p-10 shadow-2xl">
-          <div className="absolute top-0 right-0 -mt-8 -mr-8 w-64 h-64 bg-blue-600/10 rounded-full blur-3xl pointer-events-none" />
+        {/* Hero Card en Modo Claro */}
+        <div className="relative overflow-hidden rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-10 shadow-sm">
+          <div className="absolute top-0 right-0 -mt-8 -mr-8 w-64 h-64 bg-blue-50 rounded-full blur-3xl pointer-events-none" />
           
           <div className="relative z-10 flex flex-col md:flex-row md:items-center md:justify-between gap-6">
             <div>
-              <div className="inline-flex items-center gap-2 text-xs font-bold text-blue-400 tracking-wide uppercase mb-2">
+              <div className="inline-flex items-center gap-2 text-xs font-bold text-blue-600 tracking-wide uppercase mb-2">
                 <ShieldCheck className="w-4 h-4" />
                 <span>Cliente Verificado · {project.clientName}</span>
               </div>
-              <h1 className="text-2xl sm:text-4xl font-black text-white tracking-tight">
+              <h1 className="text-2xl sm:text-4xl font-black text-slate-900 tracking-tight">
                 {project.title}
               </h1>
-              <p className="text-sm sm:text-base text-slate-400 mt-2 max-w-2xl">
+              <p className="text-sm sm:text-base text-slate-500 mt-2 max-w-2xl">
                 Monitoreo continuo de arquitectura, desarrollo de módulos e hitos de entrega en tiempo real.
               </p>
             </div>
 
             <div className="flex flex-col sm:flex-row md:flex-col items-start md:items-end gap-3 shrink-0">
-              <div className="px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wide bg-blue-500/20 text-blue-300 border border-blue-400/30 flex items-center gap-2">
-                <span className="w-2 h-2 rounded-full bg-blue-400 animate-ping" />
+              <div className="px-3.5 py-1.5 rounded-full text-xs font-extrabold uppercase tracking-wide bg-blue-50 text-blue-700 border border-blue-200 flex items-center gap-2">
+                <span className="w-2 h-2 rounded-full bg-blue-600 animate-ping" />
                 {project.projectStatus}
               </div>
-              <div className="text-xs text-slate-400 flex items-center gap-1.5">
-                <Calendar className="w-3.5 h-3.5 text-slate-500" />
-                Plazo estimado: <strong className="text-slate-200">{project.targetDeliveryDate}</strong>
+              <div className="text-xs text-slate-500 flex items-center gap-1.5">
+                <Calendar className="w-3.5 h-3.5 text-slate-400" />
+                Plazo estimado: <strong className="text-slate-800">{project.targetDeliveryDate}</strong>
               </div>
             </div>
           </div>
 
           {/* Big Progress Bar */}
-          <div className="mt-8 pt-8 border-t border-slate-800/80">
+          <div className="mt-8 pt-8 border-t border-slate-100">
             <div className="flex justify-between items-end mb-3">
               <div>
                 <div className="text-xs font-bold uppercase tracking-wider text-slate-400">Avance General</div>
-                <div className="text-3xl sm:text-4xl font-black text-white mt-1">
-                  {progress}% <span className="text-sm font-semibold text-slate-400">completado</span>
+                <div className="text-3xl sm:text-4xl font-black text-slate-900 mt-1">
+                  {progress}% <span className="text-sm font-semibold text-slate-500">completado</span>
                 </div>
               </div>
-              <div className="text-xs font-bold text-blue-400 bg-blue-500/10 px-3 py-1 rounded-lg border border-blue-500/20">
+              <div className="text-xs font-bold text-blue-700 bg-blue-50 px-3 py-1 rounded-lg border border-blue-200">
                 Fase Activa: {project.fases?.find((f: any) => f.progress > 0 && f.progress < 100)?.name?.split(':')[0] || 'Desarrollo'}
               </div>
             </div>
 
-            <div className="w-full h-3.5 sm:h-4 bg-slate-800/80 rounded-full overflow-hidden p-0.5 border border-slate-700/50">
+            <div className="w-full h-3.5 sm:h-4 bg-slate-100 rounded-full overflow-hidden p-0.5 border border-slate-200">
               <div
-                className="h-full rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-emerald-400 transition-all duration-700 shadow-lg shadow-blue-500/30"
+                className="h-full rounded-full bg-gradient-to-r from-blue-600 via-blue-500 to-emerald-500 transition-all duration-700 shadow-sm"
                 style={{ width: `${progress}%` }}
               />
             </div>
           </div>
         </div>
 
-        {/* Timeline of Phases */}
-        <div className="rounded-3xl border border-slate-800 bg-[#0c1222] p-6 sm:p-8">
+        {/* Timeline of Phases en Modo Claro */}
+        <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-sm">
           <div className="flex items-center gap-2.5 mb-6">
-            <Layers className="w-5 h-5 text-blue-400" />
-            <h2 className="text-lg sm:text-xl font-extrabold text-white">
+            <Layers className="w-5 h-5 text-blue-600" />
+            <h2 className="text-lg sm:text-xl font-extrabold text-slate-900">
               Línea de Tiempo de Fases
             </h2>
           </div>
@@ -225,44 +225,44 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
                   key={idx}
                   className={`rounded-2xl border p-5 flex flex-col justify-between transition-all ${
                     isDone
-                      ? 'border-emerald-500/30 bg-emerald-500/[0.04]'
+                      ? 'border-emerald-200 bg-emerald-50/40'
                       : isInProgress
-                      ? 'border-blue-500/40 bg-blue-500/[0.06] shadow-lg shadow-blue-500/5'
-                      : 'border-slate-800/70 bg-slate-900/30 opacity-70'
+                      ? 'border-blue-200 bg-blue-50/40 shadow-sm'
+                      : 'border-slate-200 bg-slate-50/60 opacity-80'
                   }`}
                 >
                   <div>
                     <div className="flex items-center justify-between mb-3">
-                      <span className="text-xs font-extrabold uppercase tracking-wider text-slate-400">
+                      <span className="text-xs font-extrabold uppercase tracking-wider text-slate-500">
                         {fase.name.split(':')[0]}
                       </span>
                       {isDone ? (
-                        <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-md bg-emerald-500/20 text-emerald-300">
+                        <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-md bg-emerald-100 text-emerald-800 border border-emerald-200">
                           <CheckCircle2 className="w-3 h-3" /> Hecho
                         </span>
                       ) : isInProgress ? (
-                        <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-md bg-blue-500/20 text-blue-300">
+                        <span className="inline-flex items-center gap-1 text-[11px] font-bold px-2 py-0.5 rounded-md bg-blue-100 text-blue-800 border border-blue-200">
                           <Activity className="w-3 h-3 animate-pulse" /> {fase.progress}%
                         </span>
                       ) : (
-                        <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-slate-800 text-slate-400">
+                        <span className="text-[11px] font-semibold px-2 py-0.5 rounded-md bg-slate-200 text-slate-600">
                           Pendiente
                         </span>
                       )}
                     </div>
 
-                    <h3 className="text-base font-bold text-white mb-2">
+                    <h3 className="text-base font-bold text-slate-900 mb-2">
                       {fase.name.includes(':') ? fase.name.split(':')[1].trim() : fase.name}
                     </h3>
-                    <p className="text-xs text-slate-400 leading-relaxed">
+                    <p className="text-xs text-slate-600 leading-relaxed">
                       {fase.desc}
                     </p>
                   </div>
 
-                  <div className="mt-5 pt-4 border-t border-slate-800/60">
-                    <div className="w-full h-1.5 bg-slate-800 rounded-full overflow-hidden">
+                  <div className="mt-5 pt-4 border-t border-slate-200/60">
+                    <div className="w-full h-2 bg-slate-200 rounded-full overflow-hidden">
                       <div
-                        className={`h-full rounded-full ${isDone ? 'bg-emerald-400' : 'bg-blue-500'}`}
+                        className={`h-full rounded-full ${isDone ? 'bg-emerald-500' : 'bg-blue-600'}`}
                         style={{ width: `${fase.progress}%` }}
                       />
                     </div>
@@ -273,12 +273,12 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
           </div>
         </div>
 
-        {/* Deliverables Checklist & Contact */}
+        {/* Deliverables Checklist & Contact en Modo Claro */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
           {/* Deliverables */}
-          <div className="rounded-3xl border border-slate-800 bg-[#0c1222] p-6 sm:p-8">
-            <h3 className="text-base sm:text-lg font-extrabold text-white mb-4 flex items-center gap-2">
-              <CheckCircle2 className="w-5 h-5 text-emerald-400" />
+          <div className="rounded-3xl border border-slate-200/90 bg-white p-6 sm:p-8 shadow-sm">
+            <h3 className="text-base sm:text-lg font-extrabold text-slate-900 mb-4 flex items-center gap-2">
+              <CheckCircle2 className="w-5 h-5 text-emerald-600" />
               <span>Hitos y Entregables del Proyecto</span>
             </h3>
 
@@ -286,16 +286,16 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
               {project.deliverables?.map((item: any, idx: number) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-3 p-3 rounded-xl bg-slate-900/60 border border-slate-800/80"
+                  className="flex items-center gap-3 p-3.5 rounded-xl bg-slate-50 border border-slate-200/80"
                 >
                   <div
                     className={`w-5 h-5 rounded-md flex items-center justify-center shrink-0 ${
-                      item.done ? 'bg-emerald-500 text-white' : 'border border-slate-700 bg-slate-800/40 text-transparent'
+                      item.done ? 'bg-emerald-600 text-white' : 'border border-slate-300 bg-white text-transparent'
                     }`}
                   >
                     <CheckCircle2 className="w-3.5 h-3.5" />
                   </div>
-                  <span className={`text-xs sm:text-sm font-medium ${item.done ? 'text-slate-200' : 'text-slate-400'}`}>
+                  <span className={`text-xs sm:text-sm font-medium ${item.done ? 'text-slate-900 font-semibold' : 'text-slate-500'}`}>
                     {item.name}
                   </span>
                 </div>
@@ -304,26 +304,26 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
           </div>
 
           {/* Support & Direct Line */}
-          <div className="rounded-3xl border border-blue-900/30 bg-gradient-to-b from-blue-950/20 to-[#0c1222] p-6 sm:p-8 flex flex-col justify-between">
+          <div className="rounded-3xl border border-blue-200 bg-gradient-to-b from-blue-50/50 to-white p-6 sm:p-8 flex flex-col justify-between shadow-sm">
             <div>
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold text-blue-300 bg-blue-500/10 border border-blue-500/20 mb-3">
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold text-blue-700 bg-blue-100 border border-blue-200 mb-3">
                 <Sparkles className="w-3.5 h-3.5" />
                 Soporte &amp; Atención Directa
               </div>
-              <h3 className="text-lg sm:text-xl font-black text-white">
+              <h3 className="text-lg sm:text-xl font-black text-slate-900">
                 ¿Deseas agendar una revisión o consultar una duda?
               </h3>
-              <p className="text-xs sm:text-sm text-slate-400 mt-2 leading-relaxed">
+              <p className="text-xs sm:text-sm text-slate-600 mt-2 leading-relaxed">
                 Tu gestor técnico en Saventi está disponible para coordinar avances, demostraciones de los módulos y atender requerimientos especiales.
               </p>
             </div>
 
-            <div className="mt-6 pt-6 border-t border-slate-800/80 flex flex-col sm:flex-row items-center gap-3">
+            <div className="mt-6 pt-6 border-t border-slate-200/80 flex flex-col sm:flex-row items-center gap-3">
               <a
                 href={`https://wa.me/${project.contactWhatsApp.replace(/[^0-9]/g, '')}?text=${waMsg}`}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs sm:text-sm shadow-lg shadow-emerald-500/20 transition-all hover:scale-[1.02]"
+                className="w-full sm:w-auto inline-flex items-center justify-center gap-2 px-5 py-3 rounded-xl bg-emerald-600 hover:bg-emerald-700 text-white font-bold text-xs sm:text-sm shadow-md shadow-emerald-600/20 transition-all hover:scale-[1.02]"
               >
                 <MessageSquare className="w-4 h-4" />
                 <span>Contactar por WhatsApp</span>
@@ -338,8 +338,8 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
       </main>
 
       {/* Footer */}
-      <footer className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 mt-12 border-t border-slate-800/80 text-center">
-        <img src="/saventi-text-white.png" alt="Saventi" className="h-5 w-auto object-contain mx-auto mb-3 opacity-80" />
+      <footer className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 mt-12 border-t border-slate-200 text-center">
+        <img src="/saventi-text.png" alt="Saventi" className="h-6 w-auto object-contain mx-auto mb-3" />
         <p className="text-xs text-slate-500">
           Portal exclusivo de clientes · Saventi Software &amp; Automatización. Todos los derechos reservados.
         </p>
