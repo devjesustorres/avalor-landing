@@ -88,16 +88,25 @@ export default async function ProposalPage({ params }: { params: Promise<{ slug:
       {/* Footer corporativo con Logo Oficial Saventi */}
       <footer className="border-t border-slate-200/80 py-12 bg-white text-center">
         <div className="max-w-2xl mx-auto px-4 flex flex-col items-center">
-          <a href="https://avelorglobal.com" target="_blank" rel="noopener noreferrer" className="inline-block mb-3">
+          <a href="https://www.saventihq.com" target="_blank" rel="noopener noreferrer follow" className="inline-block mb-3">
             <img 
               src="/saventi-text.png" 
-              alt="Saventi Logo" 
+              alt="Saventi — Desarrollo de Software a la Medida" 
               className="h-7 w-auto object-contain mx-auto" 
             />
           </a>
-          <p className="text-xs font-medium text-slate-500 tracking-wide uppercase mb-4">
+          <p className="text-xs font-medium text-slate-500 tracking-wide uppercase mb-3">
             Software diseñado alrededor de operaciones reales.
           </p>
+          <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-[11px] font-semibold text-slate-500 mb-3">
+            <a href="https://www.saventihq.com/servicios" className="hover:text-blue-600 transition-colors">Servicios</a>
+            <span>•</span>
+            <a href="https://www.saventihq.com/desarrollo-erp" className="hover:text-blue-600 transition-colors">Sistemas ERP</a>
+            <span>•</span>
+            <a href="https://www.saventihq.com/aplicaciones-moviles" className="hover:text-blue-600 transition-colors">Apps Móviles</a>
+            <span>•</span>
+            <a href="https://www.saventihq.com/terms" className="hover:text-blue-600 transition-colors">Términos</a>
+          </div>
           <div className="w-12 h-px bg-slate-200 my-2"></div>
           <p className="text-[11px] text-slate-400 mt-2 leading-relaxed">
             Este documento es estrictamente confidencial y ha sido preparado exclusivamente para <strong>{proposal.name}</strong> por Saventi bajo acuerdo de confidencialidad (NDA). Queda prohibida su reproducción o distribución sin previa autorización.

@@ -11,17 +11,17 @@ export const jsonLd = {
   "@graph": [
     {
       "@type": "Organization",
-      "@id": "https://avelorglobal.com/#organization",
+      "@id": "https://www.saventihq.com/#organization",
       "name": "Saventi",
-      "url": "https://avelorglobal.com",
-      "logo": "https://avelorglobal.com/logo.png",
+      "url": "https://www.saventihq.com",
+      "logo": "https://www.saventihq.com/logo.png",
       "description": "Empresa especializada en desarrollo de software a la medida, sistemas empresariales, plataformas SaaS y aplicaciones móviles.",
       "foundingDate": "2026",
       "contactPoint": {
         "@type": "ContactPoint",
         "contactType": "customer service",
         "availableLanguage": ["Spanish", "English"],
-        "url": "https://avelorglobal.com/#contacto"
+        "url": "https://www.saventihq.com/#contacto"
       },
       "sameAs": [
         "https://www.instagram.com/saventihq/",
@@ -30,16 +30,16 @@ export const jsonLd = {
     },
     {
       "@type": "WebSite",
-      "@id": "https://avelorglobal.com/#website",
-      "url": "https://avelorglobal.com",
+      "@id": "https://www.saventihq.com/#website",
+      "url": "https://www.saventihq.com",
       "name": "Saventi",
-      "publisher": { "@id": "https://avelorglobal.com/#organization" },
+      "publisher": { "@id": "https://www.saventihq.com/#organization" },
       "inLanguage": ["es", "en"],
       "dateModified": "2026-09-03"
     },
     {
       "@type": "FAQPage",
-      "@id": "https://avelorglobal.com/#faq",
+      "@id": "https://www.saventihq.com/#faq",
       "mainEntity": [
         {
           "@type": "Question",
@@ -101,11 +101,11 @@ export const jsonLd = {
     },
     {
       "@type": "ProfessionalService",
-      "@id": "https://avelorglobal.com/#service",
-      "parentOrganization": { "@id": "https://avelorglobal.com/#organization" },
+      "@id": "https://www.saventihq.com/#service",
+      "parentOrganization": { "@id": "https://www.saventihq.com/#organization" },
       "name": "Saventi",
-      "url": "https://avelorglobal.com",
-      "image": "https://avelorglobal.com/logo.png",
+      "url": "https://www.saventihq.com",
+      "image": "https://www.saventihq.com/logo.png",
       "description": "Empresa de ingeniería de software que diseña y desarrolla sistemas a la medida, ERPs, plataformas web, aplicaciones móviles e integraciones en la nube para empresas en crecimiento.",
       "foundingDate": "2026",
       "areaServed": [
@@ -149,7 +149,7 @@ export const jsonLd = {
             "itemOffered": {
               "@type": "Service",
               "name": "ERPs y Sistemas de Gestión a la Medida",
-              "url": "https://avelorglobal.com/#servicios",
+              "url": "https://www.saventihq.com/#servicios",
               "description": "Centralizamos inventarios, pedidos, facturación, RRHH y operaciones en una aplicación privada adaptada a los flujos del negocio."
             }
           },
@@ -158,7 +158,7 @@ export const jsonLd = {
             "itemOffered": {
               "@type": "Service",
               "name": "Plataformas Web y Aplicaciones SaaS",
-              "url": "https://avelorglobal.com/#servicios",
+              "url": "https://www.saventihq.com/#servicios",
               "description": "Aplicaciones web rápidas y escalables con paneles de administración e interfaces de usuario optimizadas."
             }
           },
@@ -167,7 +167,7 @@ export const jsonLd = {
             "itemOffered": {
               "@type": "Service",
               "name": "Aplicaciones Móviles iOS y Android",
-              "url": "https://avelorglobal.com/#servicios",
+              "url": "https://www.saventihq.com/#servicios",
               "description": "Apps nativas y multiplataforma con sincronización de datos en tiempo real y notificaciones push."
             }
           },
@@ -176,7 +176,7 @@ export const jsonLd = {
             "itemOffered": {
               "@type": "Service",
               "name": "Integraciones API y Automatización de Flujos",
-              "url": "https://avelorglobal.com/#servicios",
+              "url": "https://www.saventihq.com/#servicios",
               "description": "Conexión de sistemas con pasarelas de pago, WhatsApp API, CRMs y servicios de terceros."
             }
           },
@@ -185,7 +185,7 @@ export const jsonLd = {
             "itemOffered": {
               "@type": "Service",
               "name": "Modernización de Software y Migración de Datos",
-              "url": "https://avelorglobal.com/#servicios",
+              "url": "https://www.saventihq.com/#servicios",
               "description": "Modernización de sistemas legados y migración a arquitectura cloud sin tiempo de inactividad."
             }
           },
@@ -194,7 +194,7 @@ export const jsonLd = {
             "itemOffered": {
               "@type": "Service",
               "name": "Arquitectura Cloud y Consultoría Tecnológica",
-              "url": "https://avelorglobal.com/#servicios",
+              "url": "https://www.saventihq.com/#servicios",
               "description": "Asesoría estratégica en AWS, Azure y Google Cloud para elegir la infraestructura óptima."
             }
           }

@@ -19,7 +19,7 @@ export function FloatingNavbar() {
           <div className="relative h-5 sm:h-6 w-auto flex items-center">
             <Image
               src="/saventi-text.png"
-              alt="Saventi"
+              alt="Saventi — Empresa de Desarrollo de Software a la Medida y ERPs"
               width={400}
               height={54}
               priority
@@ -28,7 +28,7 @@ export function FloatingNavbar() {
             />
             <Image
               src="/saventi-text-white.png"
-              alt="Saventi"
+              alt="Saventi — Empresa de Desarrollo de Software a la Medida y ERPs"
               width={400}
               height={54}
               priority

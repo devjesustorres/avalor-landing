@@ -18,7 +18,7 @@ export function Footer() {
             <div className="relative h-6 w-auto flex items-center">
               <Image
                 src="/saventi-text.png"
-                alt="Saventi"
+                alt="Saventi — Soluciones Digitales y Sistemas a la Medida"
                 width={400}
                 height={54}
                 quality={100}
@@ -26,7 +26,7 @@ export function Footer() {
               />
               <Image
                 src="/saventi-text-white.png"
-                alt="Saventi"
+                alt="Saventi — Soluciones Digitales y Sistemas a la Medida"
                 width={400}
                 height={54}
                 quality={100}

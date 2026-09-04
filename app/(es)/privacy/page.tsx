@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import PrivacyPage from "@/components/privacy-page";
 
-const baseUrl = "https://avelorglobal.com";
+const baseUrl = "https://www.saventihq.com";
 
 export const metadata: Metadata = {
   title: "Política de Privacidad",

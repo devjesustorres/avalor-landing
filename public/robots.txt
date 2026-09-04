@@ -24,8 +24,8 @@ User-agent: anthropic-ai
 Allow: /
 
 # Descripción estructurada del sitio para agentes
-# https://avelorglobal.com/llms.txt
+# https://www.saventihq.com/llms.txt
 
-Sitemap: https://avelorglobal.com/sitemap.xml
+Sitemap: https://www.saventihq.com/sitemap.xml
 
 

@@ -337,9 +337,22 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
         </div>
       </main>
 
-      {/* Footer */}
+      {/* Footer con Enlaces Follow hacia la Landing */}
       <footer className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 mt-12 border-t border-slate-200 text-center">
-        <img src="/saventi-text.png" alt="Saventi" className="h-6 w-auto object-contain mx-auto mb-3" />
+        <a href="https://www.saventihq.com" target="_blank" rel="noopener noreferrer follow" className="inline-block mb-3">
+          <img src="/saventi-text.png" alt="Saventi — Soluciones Digitales y Software a la Medida" className="h-6 w-auto object-contain mx-auto" />
+        </a>
+        <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs font-semibold text-slate-500 mb-3">
+          <a href="https://www.saventihq.com/servicios" className="hover:text-blue-600 transition-colors">Servicios de Software</a>
+          <span>•</span>
+          <a href="https://www.saventihq.com/desarrollo-erp" className="hover:text-blue-600 transition-colors">Desarrollo ERP</a>
+          <span>•</span>
+          <a href="https://www.saventihq.com/aplicaciones-moviles" className="hover:text-blue-600 transition-colors">Apps Móviles</a>
+          <span>•</span>
+          <a href="https://www.saventihq.com/terms" className="hover:text-blue-600 transition-colors">Términos de Servicio</a>
+          <span>•</span>
+          <a href="https://www.saventihq.com/privacy" className="hover:text-blue-600 transition-colors">Política de Privacidad</a>
+        </div>
         <p className="text-xs text-slate-500">
           Portal exclusivo de clientes · Saventi Software &amp; Automatización. Todos los derechos reservados.
         </p>

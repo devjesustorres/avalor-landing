@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import TermsPage from "@/components/terms-page";
 
-const baseUrl = "https://avelorglobal.com";
+const baseUrl = "https://www.saventihq.com";
 
 export const metadata: Metadata = {
   title: "Términos del Servicio",

@@ -22,7 +22,7 @@ export function MobileHome() {
         <a href="#" className="flex items-center">
           <Image
             src="/saventi-text.png"
-            alt="Saventi"
+            alt="Saventi — Software a la Medida, ERPs y Apps Móviles"
             width={280}
             height={40}
             priority
@@ -30,7 +30,7 @@ export function MobileHome() {
           />
           <Image
             src="/saventi-text-white.png"
-            alt="Saventi"
+            alt="Saventi — Software a la Medida, ERPs y Apps Móviles"
             width={280}
             height={40}
             priority
@@ -137,14 +137,14 @@ export function MobileHome() {
         <div className="max-w-xs mx-auto flex flex-col items-center">
           <Image
             src="/saventi-text.png"
-            alt="Saventi Logo"
+            alt="Saventi — Plataforma de Software Empresarial y Automatización"
             width={160}
             height={26}
             className="h-6 w-auto object-contain mx-auto mb-2 dark:hidden"
           />
           <Image
             src="/saventi-text-white.png"
-            alt="Saventi Logo"
+            alt="Saventi — Plataforma de Software Empresarial y Automatización"
             width={160}
             height={26}
             className="hidden h-6 w-auto object-contain mx-auto mb-2 dark:block"

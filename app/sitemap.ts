@@ -1,6 +1,6 @@
 import { MetadataRoute } from "next";
 
-const baseUrl = "https://avelorglobal.com";
+const baseUrl = "https://www.saventihq.com";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const lastModified = new Date();

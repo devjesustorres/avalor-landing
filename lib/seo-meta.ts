@@ -1,6 +1,6 @@
 import type { Metadata } from "next";
 
-const baseUrl = "https://avelorglobal.com";
+const baseUrl = "https://www.saventihq.com";
 
 export interface SeoPageMetaArgs {
   path: string; // ruta absoluta de esta página, p.ej. "/servicios" o "/en/services"

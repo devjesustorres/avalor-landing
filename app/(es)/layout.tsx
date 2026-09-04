@@ -5,7 +5,7 @@ import { jsonLd } from "@/app/schema";
 import { WhatsAppButton } from "@/components/whatsapp-button";
 import { Providers } from "@/app/providers";
 
-const baseUrl = "https://avelorglobal.com";
+const baseUrl = "https://www.saventihq.com";
 
 export const viewport: Viewport = {
   themeColor: "#2563eb",
