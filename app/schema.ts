@@ -24,6 +24,7 @@ export const jsonLd = {
         "url": "https://avelorglobal.com/#contacto"
       },
       "sameAs": [
+        "https://www.instagram.com/saventihq/",
         "https://github.com/devjesustorres/saventi-landing"
       ]
     },
