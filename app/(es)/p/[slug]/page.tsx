@@ -51,18 +51,14 @@ export default async function ProposalPage({ params }: { params: Promise<{ slug:
   }
 
   return (
-    <div className="min-h-screen bg-slate-950 text-slate-100 selection:bg-blue-600 selection:text-white">
     <div className="min-h-screen bg-[#f8fafc] text-slate-800 selection:bg-blue-600 selection:text-white">
       {/* Top Banner de Marca Saventi */}
-      <header className="sticky top-0 z-50 border-b border-slate-800/80 bg-slate-950/80 backdrop-blur-md">
       <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-xs">
         <div className="max-w-6xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
             <a href="https://avelorglobal.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
-              <img src="/saventi-text-white.png" alt="Saventi" className="h-5 sm:h-6 w-auto object-contain" />
               <img src="/saventi-text.png" alt="Saventi" className="h-6 w-auto object-contain" />
             </a>
-            <span className="hidden sm:inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-500/10 text-blue-400 border border-blue-500/20">
             <span className="hidden sm:inline-block text-xs font-semibold px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
               Propuesta Oficial
             </span>
@@ -73,7 +69,6 @@ export default async function ProposalPage({ params }: { params: Promise<{ slug:
               href="https://wa.me/584120000000?text=Hola%20Saventi,%20he%20revisado%20la%20propuesta%20y%20deseo%20comentarla"
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-bold rounded-full bg-blue-600 hover:bg-blue-500 text-white shadow-lg shadow-blue-600/30 transition-all hover:scale-[1.02]"
               className="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-bold rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20 transition-all hover:scale-[1.02]"
             >
               Contactar Asesor
@@ -90,11 +85,6 @@ export default async function ProposalPage({ params }: { params: Promise<{ slug:
         />
       </main>
 
-      {/* Footer confidencial */}
-      <footer className="border-t border-slate-800/80 py-8 text-center text-xs text-slate-400">
-        <p className="max-w-xl mx-auto px-4">
-          Este documento es confidencial y ha sido preparado exclusivamente para <strong>{proposal.name}</strong> por <strong>Saventi</strong> bajo acuerdo NDA.
-        </p>
       {/* Footer corporativo con Logo Oficial Saventi */}
       <footer className="border-t border-slate-200/80 py-12 bg-white text-center">
         <div className="max-w-2xl mx-auto px-4 flex flex-col items-center">
