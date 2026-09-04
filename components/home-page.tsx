@@ -2,15 +2,18 @@ import { FloatingNavbar } from "@/components/navbar";
 import { HeroSection } from "@/components/hero";
 import { StatsCards } from "@/components/stats-cards";
 import { DashboardPreview } from "@/components/dashboard-preview";
+import { MobileDashboardPreview } from "@/components/mobile-dashboard-preview";
 import { SolutionsSection } from "@/components/solutions";
 import { PricingSection } from "@/components/pricing";
 import { FaqSection } from "@/components/faq-section";
 import { CtaSection } from "@/components/cta-section";
+import { MobileNewsletterSection } from "@/components/mobile-newsletter-section";
+import { MobileBottomBar } from "@/components/mobile-bottom-bar";
 import { Footer } from "@/components/footer";
 
 export default function HomePage() {
   return (
-    <div className="min-h-screen relative">
+    <div className="min-h-screen relative pb-16 md:pb-0">
       {/* Background Ambient Glows */}
       <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
         <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] neural-glow rounded-full blur-3xl opacity-80" />
@@ -26,11 +29,16 @@ export default function HomePage() {
         <HeroSection />
         <StatsCards />
         <DashboardPreview />
+        <MobileDashboardPreview />
         <SolutionsSection />
         <PricingSection />
         <FaqSection />
         <CtaSection />
+        <MobileNewsletterSection />
       </main>
+
+      {/* App-like Mobile Bottom Navigation Bar */}
+      <MobileBottomBar />
 
       {/* Footer */}
       <Footer />

@@ -28,7 +28,7 @@ export function WhatsAppButton() {
       target="_blank"
       rel="noopener noreferrer"
       aria-label={label}
-      className="group fixed bottom-5 right-5 sm:bottom-6 sm:right-6 z-[60] flex items-center gap-0 rounded-full shadow-lg shadow-black/20 transition-all duration-300 hover:shadow-xl hover:shadow-black/25"
+      className="group fixed bottom-20 right-4 sm:bottom-6 sm:right-6 z-[60] flex items-center gap-0 rounded-full shadow-lg shadow-black/20 transition-all duration-300 hover:shadow-xl hover:shadow-black/25"
     >
       {/* Etiqueta que aparece en hover (escritorio) */}
       <span className="pointer-events-none hidden sm:inline-flex max-w-0 items-center overflow-hidden whitespace-nowrap rounded-l-full bg-[#25d366] text-white text-xs font-bold opacity-0 transition-all duration-300 group-hover:max-w-[200px] group-hover:pr-4 group-hover:pl-5 group-hover:opacity-100">

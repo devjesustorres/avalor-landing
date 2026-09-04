@@ -19,7 +19,7 @@ export function DashboardPreview() {
   const [selectedTab, setSelectedTab] = useState("backend");
 
   return (
-    <section id="metodologia" className="mt-28 sm:mt-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="metodologia" className="hidden md:block mt-28 sm:mt-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="text-center max-w-3xl mx-auto mb-14">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full neu-badge text-xs font-bold text-brand-700 mb-3 uppercase tracking-wider">
           <Terminal className="w-3.5 h-3.5" /> {t("method.badge")}
