@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -88,8 +88,8 @@ export function FloatingNavbar() {
           </Link>
         </div>
 
-        {/* CTA Button */}
-        <div className="flex items-center gap-2 sm:gap-3">
+        {/* CTA Button — hidden on mobile, shown on md+ */}
+        <div className="hidden md:flex items-center gap-2 sm:gap-3">
           <Button
             as={Link}
             href={contactHref}

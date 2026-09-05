@@ -4,7 +4,6 @@ import React, { useState } from "react";
 import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Terminal,
   Cpu,
   ShieldCheck,
   Zap,
@@ -66,9 +65,8 @@ export function MobileDashboardPreview() {
               <span className="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
               <span className="relative inline-flex rounded-full h-2.5 w-2.5 bg-emerald-500"></span>
             </span>
-            <span className="font-mono text-[11px] font-bold tracking-tight text-slate-600 flex items-center gap-1">
-              <Terminal className="w-3 h-3 text-brand-600" />
-              saventi.kernel::v2.4
+            <span className="text-[11px] font-semibold text-slate-500">
+              Sistema activo
             </span>
           </div>
 
