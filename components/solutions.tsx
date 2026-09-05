@@ -14,7 +14,8 @@ import {
 import { useLanguage } from "@/context/language-context";
 
 export function SolutionsSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const isEn = lang === "en";
 
   const services = [
     {
@@ -22,36 +23,42 @@ export function SolutionsSection() {
       title: t("services.s1.title"),
       description: t("services.s1.desc"),
       cta: t("services.s1.cta"),
+      href: isEn ? "/en/custom-erp-development" : "/desarrollo-erp",
     },
     {
       icon: Globe2,
       title: t("services.s2.title"),
       description: t("services.s2.desc"),
       cta: t("services.s2.cta"),
+      href: isEn ? "/en/services" : "/servicios",
     },
     {
       icon: Smartphone,
       title: t("services.s3.title"),
       description: t("services.s3.desc"),
       cta: t("services.s3.cta"),
+      href: isEn ? "/en/mobile-app-development" : "/aplicaciones-moviles",
     },
     {
       icon: Cpu,
       title: t("services.s4.title"),
       description: t("services.s4.desc"),
       cta: t("services.s4.cta"),
+      href: isEn ? "/en/services" : "/servicios",
     },
     {
       icon: RefreshCw,
       title: t("services.s5.title"),
       description: t("services.s5.desc"),
       cta: t("services.s5.cta"),
+      href: isEn ? "/en/services" : "/servicios",
     },
     {
       icon: Server,
       title: t("services.s6.title"),
       description: t("services.s6.desc"),
       cta: t("services.s6.cta"),
+      href: isEn ? "/en/services" : "/servicios",
     },
   ];
 
@@ -87,7 +94,7 @@ export function SolutionsSection() {
               <CardFooter className="px-6 pb-6 pt-0 border-t border-slate-300/30 flex justify-between items-center">
                 <Button
                   as="a"
-                  href="#contacto"
+                  href={item.href}
                   variant="light"
                   size="sm"
                   endContent={<ArrowRight className="w-4 h-4 ml-0.5 group-hover:translate-x-1 transition-transform" />}

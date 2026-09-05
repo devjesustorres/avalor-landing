@@ -58,7 +58,7 @@ async function getProject(slug: string) {
           { name: 'Módulo de control operativo', done: false },
           { name: 'Capacitación final del personal', done: false }
         ],
-        contactWhatsApp: meta.contactWhatsApp || '584120000000',
+        contactWhatsApp: meta.contactWhatsApp || '584147708179',
         createdAt: data.created_at
       };
     }
@@ -88,7 +88,7 @@ async function getProject(slug: string) {
         { name: 'Localizador de pallets en bodega de 1.200 m³', done: false },
         { name: 'Portal de consulta para clientes de maquila', done: false }
       ],
-      contactWhatsApp: '584120000000',
+      contactWhatsApp: '584147708179',
       createdAt: new Date().toISOString()
     };
   }

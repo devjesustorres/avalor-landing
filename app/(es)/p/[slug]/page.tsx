@@ -66,7 +66,7 @@ export default async function ProposalPage({ params }: { params: Promise<{ slug:
 
           <div className="flex items-center gap-3">
             <a
-              href="https://wa.me/584120000000?text=Hola%20Saventi,%20he%20revisado%20la%20propuesta%20y%20deseo%20comentarla"
+              href="https://wa.me/584147708179?text=Hola%20Saventi,%20he%20revisado%20la%20propuesta%20y%20deseo%20comentarla"
               target="_blank"
               rel="noopener noreferrer"
               className="inline-flex items-center gap-2 px-4 py-2 text-xs sm:text-sm font-bold rounded-full bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20 transition-all hover:scale-[1.02]"

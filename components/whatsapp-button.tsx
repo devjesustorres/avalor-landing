@@ -2,10 +2,8 @@
 
 import React, { useEffect, useState } from "react";
 
-// TODO: reemplazar con el número REAL de WhatsApp de Saventi.
-// Formato internacional sin "+" ni espacios (código de país + número).
-// Ejemplo Venezuela: 58412XXXXXXX
-const WHATSAPP_NUMBER = "584120000000";
+// Número oficial de WhatsApp de Saventi
+const WHATSAPP_NUMBER = "584147708179";
 
 export function WhatsAppButton() {
   const [isEs, setIsEs] = useState(true);

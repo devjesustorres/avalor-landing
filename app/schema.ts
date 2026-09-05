@@ -19,6 +19,8 @@ export const jsonLd = {
       "foundingDate": "2026",
       "contactPoint": {
         "@type": "ContactPoint",
+        "telephone": "+58-414-7708179",
+        "email": "info@saventihq.com",
         "contactType": "customer service",
         "availableLanguage": ["Spanish", "English"],
         "url": "https://www.saventihq.com/#contacto"
@@ -105,6 +107,8 @@ export const jsonLd = {
       "parentOrganization": { "@id": "https://www.saventihq.com/#organization" },
       "name": "Saventi",
       "url": "https://www.saventihq.com",
+      "telephone": "+58-414-7708179",
+      "email": "info@saventihq.com",
       "image": "https://www.saventihq.com/logo.png",
       "description": "Empresa de ingeniería de software que diseña y desarrolla sistemas a la medida, ERPs, plataformas web, aplicaciones móviles e integraciones en la nube para empresas en crecimiento.",
       "foundingDate": "2026",

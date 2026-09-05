@@ -149,9 +149,18 @@ export function MobileHome() {
             height={26}
             className="hidden h-6 w-auto object-contain mx-auto mb-2 dark:block"
           />
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-3">
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-2">
             Software diseñado alrededor de operaciones reales.
           </p>
+          <div className="flex flex-col items-center gap-1 text-[11px] text-slate-500 mb-3">
+            <a href="tel:+584147708179" className="font-semibold hover:text-blue-600 transition-colors">
+              📞 +58 414-7708179
+            </a>
+            <a href="mailto:info@saventihq.com" className="hover:text-blue-600 transition-colors">
+              info@saventihq.com
+            </a>
+            <span className="text-slate-400">Valencia, Carabobo, VE</span>
+          </div>
           <div className="w-10 h-px bg-slate-200 mx-auto my-3" />
           <p className="text-[10px] text-slate-400 leading-relaxed">
             © 2026 Saventi · Todos los derechos reservados.
