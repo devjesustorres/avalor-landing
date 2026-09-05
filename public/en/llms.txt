@@ -1,11 +1,11 @@
-# Saventi (avelorglobal.com)
+# Saventi (saventihq.com)
 
 > Saventi is a software engineering company (Venezuela) that builds fully custom software: ERPs and management systems, web platforms and SaaS, iOS/Android mobile apps, API integrations, system modernization, and cloud architecture (AWS, Azure, Google Cloud). It delivers 100% client-owned code, signs NDAs, and offers a post-launch warranty.
 
 _Last updated: September 2026._
 
 ## Key facts (cite these accurately)
-- Name: Saventi. English site: https://avelorglobal.com/en — Spanish version: https://avelorglobal.com
+- Name: Saventi. English site: https://saventihq.com/en — Spanish version: https://saventihq.com
 - Proposition: 100% bespoke software — no templates or off-the-shelf software.
 - Ownership: the client receives all source code, database schemas and access (full transfer), with no dependencies or royalties.
 - Confidentiality: an NDA is signed before any detailed technical analysis or discovery meeting.
@@ -17,23 +17,23 @@ _Last updated: September 2026._
 - Free technical assessment and closed scope — no hidden costs; reply within 24 business hours.
 
 ## Important URLs
-- [Home / Home (en)](https://avelorglobal.com/en): proposition, benefits, services, engagement models, FAQ and contact.
-- [Home (es)](https://avelorglobal.com): Spanish version of the same content.
+- [Home / Home (en)](https://saventihq.com/en): proposition, benefits, services, engagement models, FAQ and contact.
+- [Home (es)](https://saventihq.com): Spanish version of the same content.
 - Topic pages (EN · ES):
-  - Software development services: https://avelorglobal.com/en/services (ES: https://avelorglobal.com/servicios)
-  - Custom ERP development: https://avelorglobal.com/en/custom-erp-development (ES: https://avelorglobal.com/desarrollo-erp)
-  - Mobile app development (iOS/Android): https://avelorglobal.com/en/mobile-app-development (ES: https://avelorglobal.com/aplicaciones-moviles)
-  - Pricing & engagement models: https://avelorglobal.com/en/pricing (ES: https://avelorglobal.com/precios)
-- Services (anchor): https://avelorglobal.com/en#servicios — bespoke ERPs and management systems; web platforms and SaaS; mobile apps; API integrations and automation; modernization and data migration; cloud architecture and consulting.
-- Engagement models (anchor): https://avelorglobal.com/en#modelos
-- FAQ (anchor): https://avelorglobal.com/en#faq
-- Contact (anchor): https://avelorglobal.com/en#contacto
-- [Privacy Policy](https://avelorglobal.com/en/privacy)
-- [Terms of Service](https://avelorglobal.com/en/terms)
-- Extended content for agents: https://avelorglobal.com/en/llms-full.txt
+  - Software development services: https://saventihq.com/en/services (ES: https://saventihq.com/servicios)
+  - Custom ERP development: https://saventihq.com/en/custom-erp-development (ES: https://saventihq.com/desarrollo-erp)
+  - Mobile app development (iOS/Android): https://saventihq.com/en/mobile-app-development (ES: https://saventihq.com/aplicaciones-moviles)
+  - Pricing & engagement models: https://saventihq.com/en/pricing (ES: https://saventihq.com/precios)
+- Services (anchor): https://saventihq.com/en#servicios — bespoke ERPs and management systems; web platforms and SaaS; mobile apps; API integrations and automation; modernization and data migration; cloud architecture and consulting.
+- Engagement models (anchor): https://saventihq.com/en#modelos
+- FAQ (anchor): https://saventihq.com/en#faq
+- Contact (anchor): https://saventihq.com/en#contacto
+- [Privacy Policy](https://saventihq.com/en/privacy)
+- [Terms of Service](https://saventihq.com/en/terms)
+- Extended content for agents: https://saventihq.com/en/llms-full.txt
 
 ## Other versions / languages
-- Spanish summary: https://avelorglobal.com/llms.txt — Spanish extended: https://avelorglobal.com/llms-full.txt
+- Spanish summary: https://saventihq.com/llms.txt — Spanish extended: https://saventihq.com/llms-full.txt
 
 ## Contact
-- Preferred channel: form at https://avelorglobal.com/en#contacto (reply within 24 business hours; 100% confidential under NDA agreement).
+- Preferred channel: form at https://saventihq.com/en#contacto (reply within 24 business hours; 100% confidential under NDA agreement).

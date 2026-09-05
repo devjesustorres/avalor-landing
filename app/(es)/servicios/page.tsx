@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import SeoPage from "@/components/seo-page";
 
 const content = serviciosContent.es;
-const pageUrl = "https://avelorglobal.com/servicios";
+const pageUrl = "https://saventihq.com/servicios";
 
 export const metadata: Metadata = seoPageMetadata({
   path: "/servicios",
@@ -28,7 +28,7 @@ export default function ServiciosPage() {
         url: pageUrl,
         name: content.title,
         inLanguage: "es",
-        isPartOf: { "@id": "https://avelorglobal.com/#website" },
+        isPartOf: { "@id": "https://saventihq.com/#website" },
       },
       {
         "@type": "FAQPage",

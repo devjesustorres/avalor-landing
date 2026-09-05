@@ -1,11 +1,11 @@
-# Saventi (avelorglobal.com)
+# Saventi (saventihq.com)
 
 > Saventi es una empresa de ingeniería de software (Venezuela) que desarrolla software a la medida: ERPs y sistemas de gestión, plataformas web y SaaS, aplicaciones móviles iOS/Android, integraciones API, modernización de sistemas y arquitectura cloud (AWS, Azure, Google Cloud). Entrega código 100% propiedad del cliente, firma acuerdos NDA y ofrece garantía post-lanzamiento.
 
 _Última actualización: septiembre de 2026._
 
 ## Puntos clave (para citar con precisión)
-- Nombre: Saventi. Sitio principal en español: https://avelorglobal.com — versión en inglés: https://avelorglobal.com/en
+- Nombre: Saventi. Sitio principal en español: https://saventihq.com — versión en inglés: https://saventihq.com/en
 - Propuesta: software 100% a la medida, sin plantillas ni software prefabricado.
 - Propiedad: el cliente recibe todo el código fuente, esquemas de base de datos y accesos (transferencia total).
 - Confidencialidad: se firma NDA antes del análisis técnico detallado.
@@ -17,23 +17,23 @@ _Última actualización: septiembre de 2026._
 - Diagnóstico técnico gratuito y alcance cerrado, sin costos ocultos; respuesta en menos de 24 h hábiles.
 
 ## URLs importantes
-- [Inicio / Home (es)](https://avelorglobal.com): propuesta, beneficios, servicios, modalidades, FAQ y contacto.
-- [Home (en)](https://avelorglobal.com/en): versión en inglés del mismo contenido.
+- [Inicio / Home (es)](https://saventihq.com): propuesta, beneficios, servicios, modalidades, FAQ y contacto.
+- [Home (en)](https://saventihq.com/en): versión en inglés del mismo contenido.
 - Páginas por tema (ES · EN):
-  - Servicios de desarrollo de software: https://avelorglobal.com/servicios (EN: https://avelorglobal.com/en/services)
-  - Desarrollo de ERPs a la medida: https://avelorglobal.com/desarrollo-erp (EN: https://avelorglobal.com/en/custom-erp-development)
-  - Aplicaciones móviles iOS/Android: https://avelorglobal.com/aplicaciones-moviles (EN: https://avelorglobal.com/en/mobile-app-development)
-  - Precios y modalidades: https://avelorglobal.com/precios (EN: https://avelorglobal.com/en/pricing)
-- Servicios (ancla): https://avelorglobal.com/#servicios — ERPs y sistemas de gestión a la medida; plataformas web y SaaS; apps móviles; integraciones API y automatización; modernización y migración de datos; arquitectura cloud y consultoría.
-- Modalidades (ancla): https://avelorglobal.com/#modelos
-- FAQ (ancla): https://avelorglobal.com/#faq
-- Contacto (ancla): https://avelorglobal.com/#contacto
-- [Política de Privacidad](https://avelorglobal.com/privacy)
-- [Términos del Servicio](https://avelorglobal.com/terms)
-- Contenido extendido para agentes: https://avelorglobal.com/llms-full.txt
+  - Servicios de desarrollo de software: https://saventihq.com/servicios (EN: https://saventihq.com/en/services)
+  - Desarrollo de ERPs a la medida: https://saventihq.com/desarrollo-erp (EN: https://saventihq.com/en/custom-erp-development)
+  - Aplicaciones móviles iOS/Android: https://saventihq.com/aplicaciones-moviles (EN: https://saventihq.com/en/mobile-app-development)
+  - Precios y modalidades: https://saventihq.com/precios (EN: https://saventihq.com/en/pricing)
+- Servicios (ancla): https://saventihq.com/#servicios — ERPs y sistemas de gestión a la medida; plataformas web y SaaS; apps móviles; integraciones API y automatización; modernización y migración de datos; arquitectura cloud y consultoría.
+- Modalidades (ancla): https://saventihq.com/#modelos
+- FAQ (ancla): https://saventihq.com/#faq
+- Contacto (ancla): https://saventihq.com/#contacto
+- [Política de Privacidad](https://saventihq.com/privacy)
+- [Términos del Servicio](https://saventihq.com/terms)
+- Contenido extendido para agentes: https://saventihq.com/llms-full.txt
 
 ## Otras versiones / idiomas
-- English summary: https://avelorglobal.com/en/llms.txt — English extended: https://avelorglobal.com/en/llms-full.txt
+- English summary: https://saventihq.com/en/llms.txt — English extended: https://saventihq.com/en/llms-full.txt
 
 ## Contacto
-- Canal preferido: formulario en https://avelorglobal.com/#contacto (respuesta en menos de 24 h hábiles; 100% confidencial bajo acuerdo NDA).
+- Canal preferido: formulario en https://saventihq.com/#contacto (respuesta en menos de 24 h hábiles; 100% confidencial bajo acuerdo NDA).

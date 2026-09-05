@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import SeoPage from "@/components/seo-page";
 
 const content = erpContent.en;
-const pageUrl = "https://avelorglobal.com/en/custom-erp-development";
+const pageUrl = "https://saventihq.com/en/custom-erp-development";
 
 export const metadata: Metadata = seoPageMetadata({
   path: "/en/custom-erp-development",
@@ -28,7 +28,7 @@ export default function CustomErpPage() {
         url: pageUrl,
         name: content.title,
         inLanguage: "en",
-        isPartOf: { "@id": "https://avelorglobal.com/#website" },
+        isPartOf: { "@id": "https://saventihq.com/#website" },
       },
       {
         "@type": "Service",
@@ -37,7 +37,7 @@ export default function CustomErpPage() {
         serviceType: "Custom ERP Development",
         url: pageUrl,
         description: content.lead,
-        provider: { "@id": "https://avelorglobal.com/#organization" },
+        provider: { "@id": "https://saventihq.com/#organization" },
         areaServed: [
           { "@type": "Place", name: "Valencia, Carabobo" },
           { "@type": "Place", name: "Venezuela" },

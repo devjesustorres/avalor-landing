@@ -1,8 +1,8 @@
 # Saventi — Descripción extendida para agentes / LLMs
 
-Versión completa del contenido de https://avelorglobal.com para modelos generativos y agentes.
-Versión resumida: https://avelorglobal.com/llms.txt · Versión en inglés del sitio: https://avelorglobal.com/en
-Versión extendida en inglés de este documento: https://avelorglobal.com/en/llms-full.txt
+Versión completa del contenido de https://saventihq.com para modelos generativos y agentes.
+Versión resumida: https://saventihq.com/llms.txt · Versión en inglés del sitio: https://saventihq.com/en
+Versión extendida en inglés de este documento: https://saventihq.com/en/llms-full.txt
 _Actualizado: septiembre de 2026._
 
 ## Quiénes somos
@@ -51,17 +51,17 @@ Propuesta diferencial:
 7. ¿Integran con mis sistemas actuales? Sí: pasarelas de pago (Stripe, PayPal, bancos locales), WhatsApp Business API, CRMs, sistemas contables y ERPs existentes, con sincronización y automatización de flujos.
 
 ## URLs
-- Home (es): https://avelorglobal.com
-- Home (en): https://avelorglobal.com/en
-- Política de Privacidad: https://avelorglobal.com/privacy (EN: https://avelorglobal.com/en/privacy)
-- Términos del Servicio: https://avelorglobal.com/terms (EN: https://avelorglobal.com/en/terms)
+- Home (es): https://saventihq.com
+- Home (en): https://saventihq.com/en
+- Política de Privacidad: https://saventihq.com/privacy (EN: https://saventihq.com/en/privacy)
+- Términos del Servicio: https://saventihq.com/terms (EN: https://saventihq.com/en/terms)
 
 ## Páginas por tema (contenido dedicado y citable)
-- Servicios de desarrollo de software: https://avelorglobal.com/servicios (EN: /en/services). Resumen de los 6 servicios: ERPs, plataformas web/SaaS, apps móviles, integraciones API, modernización y arquitectura cloud.
-- Desarrollo de ERPs a la medida: https://avelorglobal.com/desarrollo-erp (EN: /en/custom-erp-development). Qué es un ERP a la medida, módulos típicos (inventario, ventas y facturación, compras, RRHH, contabilidad), beneficios, migración de datos e integraciones, tiempos y costos.
-- Aplicaciones móviles iOS/Android: https://avelorglobal.com/aplicaciones-moviles (EN: /en/mobile-app-development). Apps nativas y multiplataforma, notificaciones push, sincronización en tiempo real, publicación en tiendas, tiempos y mantenimiento.
-- Precios y modalidades: https://avelorglobal.com/precios (EN: /en/pricing). Cómo se calcula el costo de un software a la medida, modelos (llave en mano, squad, bolsa de horas) y formas de pago.
+- Servicios de desarrollo de software: https://saventihq.com/servicios (EN: /en/services). Resumen de los 6 servicios: ERPs, plataformas web/SaaS, apps móviles, integraciones API, modernización y arquitectura cloud.
+- Desarrollo de ERPs a la medida: https://saventihq.com/desarrollo-erp (EN: /en/custom-erp-development). Qué es un ERP a la medida, módulos típicos (inventario, ventas y facturación, compras, RRHH, contabilidad), beneficios, migración de datos e integraciones, tiempos y costos.
+- Aplicaciones móviles iOS/Android: https://saventihq.com/aplicaciones-moviles (EN: /en/mobile-app-development). Apps nativas y multiplataforma, notificaciones push, sincronización en tiempo real, publicación en tiendas, tiempos y mantenimiento.
+- Precios y modalidades: https://saventihq.com/precios (EN: /en/pricing). Cómo se calcula el costo de un software a la medida, modelos (llave en mano, squad, bolsa de horas) y formas de pago.
 
 ## Contacto
-- Formulario: https://avelorglobal.com/#contacto
+- Formulario: https://saventihq.com/#contacto
 - Respuesta en menos de 24 horas hábiles · 100% confidencial bajo acuerdo NDA.

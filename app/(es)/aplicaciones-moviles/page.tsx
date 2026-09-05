@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import SeoPage from "@/components/seo-page";
 
 const content = appsContent.es;
-const pageUrl = "https://avelorglobal.com/aplicaciones-moviles";
+const pageUrl = "https://saventihq.com/aplicaciones-moviles";
 
 export const metadata: Metadata = seoPageMetadata({
   path: "/aplicaciones-moviles",
@@ -28,7 +28,7 @@ export default function AplicacionesMovilesPage() {
         url: pageUrl,
         name: content.title,
         inLanguage: "es",
-        isPartOf: { "@id": "https://avelorglobal.com/#website" },
+        isPartOf: { "@id": "https://saventihq.com/#website" },
       },
       {
         "@type": "Service",
@@ -37,7 +37,7 @@ export default function AplicacionesMovilesPage() {
         serviceType: "Mobile App Development",
         url: pageUrl,
         description: content.lead,
-        provider: { "@id": "https://avelorglobal.com/#organization" },
+        provider: { "@id": "https://saventihq.com/#organization" },
         areaServed: [
           { "@type": "Place", name: "Valencia, Carabobo" },
           { "@type": "Place", name: "Venezuela" },

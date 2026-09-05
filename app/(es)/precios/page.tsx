@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import SeoPage from "@/components/seo-page";
 
 const content = preciosContent.es;
-const pageUrl = "https://avelorglobal.com/precios";
+const pageUrl = "https://saventihq.com/precios";
 
 export const metadata: Metadata = seoPageMetadata({
   path: "/precios",
@@ -28,7 +28,7 @@ export default function PreciosPage() {
         url: pageUrl,
         name: content.title,
         inLanguage: "es",
-        isPartOf: { "@id": "https://avelorglobal.com/#website" },
+        isPartOf: { "@id": "https://saventihq.com/#website" },
       },
       {
         "@type": "Service",
@@ -38,7 +38,7 @@ export default function PreciosPage() {
         url: pageUrl,
         description: content.lead,
         priceRange: "Desde USD $1.500 por proyecto",
-        provider: { "@id": "https://avelorglobal.com/#organization" },
+        provider: { "@id": "https://saventihq.com/#organization" },
         areaServed: [
           { "@type": "Place", name: "Valencia, Carabobo" },
           { "@type": "Place", name: "Venezuela" },

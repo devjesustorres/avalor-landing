@@ -1,7 +1,7 @@
 # Saventi — Extended description for agents / LLMs
 
-Full English version of the content at https://avelorglobal.com/en for generative models and agents.
-Summary version: https://avelorglobal.com/en/llms.txt · Spanish site: https://avelorglobal.com · Spanish extended version: https://avelorglobal.com/llms-full.txt
+Full English version of the content at https://saventihq.com/en for generative models and agents.
+Summary version: https://saventihq.com/en/llms.txt · Spanish site: https://saventihq.com · Spanish extended version: https://saventihq.com/llms-full.txt
 _Last updated: September 2026._
 
 ## Who we are
@@ -50,17 +50,17 @@ Differentiating proposition:
 7. Can you integrate with my current systems? Yes: payment gateways (Stripe, PayPal, local banks), WhatsApp Business API, CRMs, accounting systems and existing ERPs, with synchronization and workflow automation.
 
 ## URLs
-- Home (en): https://avelorglobal.com/en
-- Home (es): https://avelorglobal.com
-- Privacy Policy: https://avelorglobal.com/en/privacy (ES: https://avelorglobal.com/privacy)
-- Terms of Service: https://avelorglobal.com/en/terms (ES: https://avelorglobal.com/terms)
+- Home (en): https://saventihq.com/en
+- Home (es): https://saventihq.com
+- Privacy Policy: https://saventihq.com/en/privacy (ES: https://saventihq.com/privacy)
+- Terms of Service: https://saventihq.com/en/terms (ES: https://saventihq.com/terms)
 
 ## Dedicated topic pages (indexable, citable content)
-- Software development services: https://avelorglobal.com/en/services (ES: /servicios). Overview of the 6 services: bespoke ERPs, web/SaaS platforms, mobile apps, API integrations, modernization and cloud architecture.
-- Custom ERP development: https://avelorglobal.com/en/custom-erp-development (ES: /desarrollo-erp). What a bespoke ERP is, typical modules (inventory, sales & invoicing, purchasing, HR, accounting), benefits, data migration and integrations, timelines and cost.
-- Mobile app development (iOS/Android): https://avelorglobal.com/en/mobile-app-development (ES: /aplicaciones-moviles). Native and cross-platform apps, push notifications, real-time sync, app store publishing, timelines and maintenance.
-- Pricing & engagement models: https://avelorglobal.com/en/pricing (ES: /precios). How custom software cost is estimated, models (turnkey, dedicated squad, hours retainer) and payment structures.
+- Software development services: https://saventihq.com/en/services (ES: /servicios). Overview of the 6 services: bespoke ERPs, web/SaaS platforms, mobile apps, API integrations, modernization and cloud architecture.
+- Custom ERP development: https://saventihq.com/en/custom-erp-development (ES: /desarrollo-erp). What a bespoke ERP is, typical modules (inventory, sales & invoicing, purchasing, HR, accounting), benefits, data migration and integrations, timelines and cost.
+- Mobile app development (iOS/Android): https://saventihq.com/en/mobile-app-development (ES: /aplicaciones-moviles). Native and cross-platform apps, push notifications, real-time sync, app store publishing, timelines and maintenance.
+- Pricing & engagement models: https://saventihq.com/en/pricing (ES: /precios). How custom software cost is estimated, models (turnkey, dedicated squad, hours retainer) and payment structures.
 
 ## Contact
-- Form: https://avelorglobal.com/en#contacto
+- Form: https://saventihq.com/en#contacto
 - Reply within 24 business hours · 100% confidential under NDA agreement.

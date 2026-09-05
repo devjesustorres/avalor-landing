@@ -23,7 +23,7 @@ export function breadcrumbList(items: { name: string; path: string }[]) {
       "@type": "ListItem" as const,
       position: index + 1,
       name: item.name,
-      item: `https://avelorglobal.com${item.path}`,
+      item: `https://saventihq.com${item.path}`,
     })),
   };
 }

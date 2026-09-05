@@ -1,7 +1,7 @@
 import type { Metadata } from "next";
 import HomePage from "@/components/home-page";
 
-const baseUrl = "https://avelorglobal.com";
+const baseUrl = "https://saventihq.com";
 
 export const metadata: Metadata = {
   title: "Saventi — Custom Software Development & Digital Solutions",
