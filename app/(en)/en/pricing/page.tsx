@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import SeoPage from "@/components/seo-page";
 
 const content = preciosContent.en;
-const pageUrl = "https://saventihq.com/en/pricing";
+const pageUrl = "https://www.saventihq.com/en/pricing";
 
 export const metadata: Metadata = seoPageMetadata({
   path: "/en/pricing",
@@ -28,7 +28,7 @@ export default function PricingPage() {
         url: pageUrl,
         name: content.title,
         inLanguage: "en",
-        isPartOf: { "@id": "https://saventihq.com/#website" },
+        isPartOf: { "@id": "https://www.saventihq.com/#website" },
       },
       {
         "@type": "Service",
@@ -38,7 +38,7 @@ export default function PricingPage() {
         url: pageUrl,
         description: content.lead,
         priceRange: "From USD $1,500 per project",
-        provider: { "@id": "https://saventihq.com/#organization" },
+        provider: { "@id": "https://www.saventihq.com/#organization" },
         areaServed: [
           { "@type": "Place", name: "Valencia, Carabobo" },
           { "@type": "Place", name: "Venezuela" },

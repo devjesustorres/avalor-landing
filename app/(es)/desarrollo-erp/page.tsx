@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import SeoPage from "@/components/seo-page";
 
 const content = erpContent.es;
-const pageUrl = "https://saventihq.com/desarrollo-erp";
+const pageUrl = "https://www.saventihq.com/desarrollo-erp";
 
 export const metadata: Metadata = seoPageMetadata({
   path: "/desarrollo-erp",
@@ -28,7 +28,7 @@ export default function DesarrolloErpPage() {
         url: pageUrl,
         name: content.title,
         inLanguage: "es",
-        isPartOf: { "@id": "https://saventihq.com/#website" },
+        isPartOf: { "@id": "https://www.saventihq.com/#website" },
       },
       {
         "@type": "Service",
@@ -37,7 +37,7 @@ export default function DesarrolloErpPage() {
         serviceType: "Custom ERP Development",
         url: pageUrl,
         description: content.lead,
-        provider: { "@id": "https://saventihq.com/#organization" },
+        provider: { "@id": "https://www.saventihq.com/#organization" },
         areaServed: [
           { "@type": "Place", name: "Valencia, Carabobo" },
           { "@type": "Place", name: "Venezuela" },

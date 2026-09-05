@@ -29,6 +29,7 @@ export function seoPageMetadata({
       languages: {
         es: `${baseUrl}${esPath}`,
         en: `${baseUrl}${enPath}`,
+        "x-default": `${baseUrl}${esPath}`,
       },
     },
     openGraph: {

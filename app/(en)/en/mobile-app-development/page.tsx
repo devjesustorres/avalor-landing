@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import SeoPage from "@/components/seo-page";
 
 const content = appsContent.en;
-const pageUrl = "https://saventihq.com/en/mobile-app-development";
+const pageUrl = "https://www.saventihq.com/en/mobile-app-development";
 
 export const metadata: Metadata = seoPageMetadata({
   path: "/en/mobile-app-development",
@@ -28,7 +28,7 @@ export default function MobileAppPage() {
         url: pageUrl,
         name: content.title,
         inLanguage: "en",
-        isPartOf: { "@id": "https://saventihq.com/#website" },
+        isPartOf: { "@id": "https://www.saventihq.com/#website" },
       },
       {
         "@type": "Service",
@@ -37,7 +37,7 @@ export default function MobileAppPage() {
         serviceType: "Mobile App Development",
         url: pageUrl,
         description: content.lead,
-        provider: { "@id": "https://saventihq.com/#organization" },
+        provider: { "@id": "https://www.saventihq.com/#organization" },
         areaServed: [
           { "@type": "Place", name: "Valencia, Carabobo" },
           { "@type": "Place", name: "Venezuela" },

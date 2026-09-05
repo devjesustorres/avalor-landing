@@ -131,7 +131,7 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
       <header className="sticky top-0 z-50 border-b border-slate-200/80 bg-white/90 backdrop-blur-md shadow-xs">
         <div className="max-w-5xl mx-auto px-4 sm:px-6 h-16 flex items-center justify-between">
           <div className="flex items-center gap-3">
-            <a href="https://saventihq.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
+            <a href="https://www.saventihq.com" target="_blank" rel="noopener noreferrer" className="flex items-center">
               <img src="/saventi-text.png" alt="Saventi" className="h-5 sm:h-6 w-auto object-contain" />
             </a>
             <span className="text-[10px] sm:text-xs font-extrabold uppercase tracking-wider px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
@@ -340,19 +340,19 @@ export default async function ProjectPortalPage({ params }: { params: Promise<{ 
       {/* Footer */}
       {/* Footer con Enlaces Follow hacia la Landing */}
       <footer className="max-w-5xl mx-auto px-4 sm:px-6 pt-12 mt-12 border-t border-slate-200 text-center">
-        <a href="https://saventihq.com" target="_blank" rel="noopener noreferrer follow" className="inline-block mb-3">
+        <a href="https://www.saventihq.com" target="_blank" rel="noopener noreferrer follow" className="inline-block mb-3">
           <img src="/saventi-text.png" alt="Saventi — Soluciones Digitales y Software a la Medida" className="h-6 w-auto object-contain mx-auto" />
         </a>
         <div className="flex flex-wrap items-center justify-center gap-x-4 gap-y-1 text-xs font-semibold text-slate-500 mb-3">
-          <a href="https://saventihq.com/servicios" className="hover:text-blue-600 transition-colors">Servicios de Software</a>
+          <a href="https://www.saventihq.com/servicios" className="hover:text-blue-600 transition-colors">Servicios de Software</a>
           <span>•</span>
-          <a href="https://saventihq.com/desarrollo-erp" className="hover:text-blue-600 transition-colors">Desarrollo ERP</a>
+          <a href="https://www.saventihq.com/desarrollo-erp" className="hover:text-blue-600 transition-colors">Desarrollo ERP</a>
           <span>•</span>
-          <a href="https://saventihq.com/aplicaciones-moviles" className="hover:text-blue-600 transition-colors">Apps Móviles</a>
+          <a href="https://www.saventihq.com/aplicaciones-moviles" className="hover:text-blue-600 transition-colors">Apps Móviles</a>
           <span>•</span>
-          <a href="https://saventihq.com/terms" className="hover:text-blue-600 transition-colors">Términos de Servicio</a>
+          <a href="https://www.saventihq.com/terms" className="hover:text-blue-600 transition-colors">Términos de Servicio</a>
           <span>•</span>
-          <a href="https://saventihq.com/privacy" className="hover:text-blue-600 transition-colors">Política de Privacidad</a>
+          <a href="https://www.saventihq.com/privacy" className="hover:text-blue-600 transition-colors">Política de Privacidad</a>
         </div>
         <p className="text-xs text-slate-500">
           Portal exclusivo de clientes · Saventi Software &amp; Automatización. Todos los derechos reservados.

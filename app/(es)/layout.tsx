@@ -42,6 +42,7 @@ export const metadata: Metadata = {
     languages: {
       es: baseUrl,
       en: `${baseUrl}/en`,
+      "x-default": baseUrl,
     },
   },
   openGraph: {
@@ -98,7 +99,7 @@ export default function EsRootLayout({
         {/* Google tag (gtag.js) */}
         <script
           async
-          src="https://www.googletagmanager.com/gtag/js?id=G-8346W6GKF9"
+          src="https://www.googletagmanager.com/gtag/js?id=G-70EV2FQM66"
         />
         <script
           dangerouslySetInnerHTML={{
@@ -106,7 +107,7 @@ export default function EsRootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
-              gtag('config', 'G-8346W6GKF9');
+              gtag('config', 'G-70EV2FQM66');
             `,
           }}
         />

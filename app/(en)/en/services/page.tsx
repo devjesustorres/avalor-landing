@@ -6,7 +6,7 @@ import { JsonLd } from "@/components/json-ld";
 import SeoPage from "@/components/seo-page";
 
 const content = serviciosContent.en;
-const pageUrl = "https://saventihq.com/en/services";
+const pageUrl = "https://www.saventihq.com/en/services";
 
 export const metadata: Metadata = seoPageMetadata({
   path: "/en/services",
@@ -28,7 +28,7 @@ export default function ServicesPage() {
         url: pageUrl,
         name: content.title,
         inLanguage: "en",
-        isPartOf: { "@id": "https://saventihq.com/#website" },
+        isPartOf: { "@id": "https://www.saventihq.com/#website" },
       },
       {
         "@type": "FAQPage",
