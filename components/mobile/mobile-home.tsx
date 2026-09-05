@@ -1,4 +1,4 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Image from "next/image";
@@ -7,7 +7,6 @@ import { Button } from "@heroui/react";
 import { Zap, ArrowRight, Sparkles } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 import { BusinessImpactSection } from "@/components/business-impact-section";
-import { MobileDashboardPreview } from "@/components/mobile-dashboard-preview";
 import { SolutionsSection } from "@/components/solutions";
 import { PricingSection } from "@/components/pricing";
 import { StatsCards } from "@/components/stats-cards";
@@ -118,12 +117,7 @@ export function MobileHome() {
         <BusinessImpactSection />
       </div>
 
-      {/* 4. Interactive Mobile Dashboard / Architecture Component */}
-      <div className="w-full">
-        <MobileDashboardPreview />
-      </div>
-
-      {/* 5. Soluciones Adaptadas */}
+      {/* 4. Soluciones Adaptadas */}
       <div className="w-full">
         <SolutionsSection />
       </div>
