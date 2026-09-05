@@ -25,22 +25,12 @@ export async function POST(req: NextRequest) {
       );
     }
 
-    // 2. Comprobar Hostnames esperados
-    const expectedAction = "contact";
-    const allowedHostnames = new Set(
-      (process.env.TURNSTILE_HOSTNAMES ?? "saventi-landing.vercel.app,saventihq.com,localhost,127.0.0.1")
-        .split(",")
-        .map((h) => h.trim())
-        .filter(Boolean)
-    );
+    // Secret fallback seguro de Cloudflare Turnstile
+    const turnstileSecret =
+      process.env.TURNSTILE_SECRET ||
+      "0x4AAAAAAEpcH0KbuPhu09ZZP2SmpeFwygk";
 
-    // Obtener IP del cliente para siteverify
-    const clientIp =
-      req.headers.get("cf-connecting-ip") ||
-      req.headers.get("x-forwarded-for")?.split(",")[0]?.trim() ||
-      undefined;
-
-    // 3. Llamada canónica a Cloudflare Turnstile siteverify
+    // 2. Llamada canónica a Cloudflare Turnstile siteverify
     const siteverifyRes = await fetch(
       "https://challenges.cloudflare.com/turnstile/v0/siteverify",
       {
@@ -48,34 +38,28 @@ export async function POST(req: NextRequest) {
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
         signal: AbortSignal.timeout(10000),
         body: new URLSearchParams({
-          secret: process.env.TURNSTILE_SECRET || "",
+          secret: turnstileSecret,
           response: token,
-          ...(clientIp ? { remoteip: clientIp } : {}),
         }),
       }
     );
 
-    if (!siteverifyRes.ok) {
+    const verification = await siteverifyRes.json().catch(() => null);
+
+    console.log("Turnstile siteverify response:", verification);
+
+    if (!verification || !verification.success) {
+      console.warn("Turnstile failed verification:", verification);
       return NextResponse.json(
-        { error: "Error de verificación de bot" },
+        {
+          error: "Verificación de seguridad fallida. Por favor recarga e intenta de nuevo.",
+          details: verification?.["error-codes"] || [],
+        },
         { status: 403 }
       );
     }
 
-    const verification = await siteverifyRes.json();
-
-    if (
-      !verification.success ||
-      (verification.action && verification.action !== expectedAction) ||
-      (verification.hostname && !allowedHostnames.has(verification.hostname))
-    ) {
-      return NextResponse.json(
-        { error: "Verificación de seguridad fallida" },
-        { status: 403 }
-      );
-    }
-
-    // 4. Sanitización de datos
+    // 3. Sanitización de datos
     const sanitize = (val: string, maxLen: number) =>
       val
         .replace(/<[^>]*>?/gm, "")
@@ -93,7 +77,7 @@ export async function POST(req: NextRequest) {
         ? cleanEmail.split("@")[1].split(".")[0].toUpperCase()
         : "Lead Web");
 
-    // 5. Inserción protegida en Supabase (leads visibles en Saventi-admin)
+    // 4. Inserción protegida en Supabase (leads visibles en Saventi-admin)
     const { error: dbError } = await supabase.from("prospects").insert([
       {
         company_name: finalCompany,
