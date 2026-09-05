@@ -1,4 +1,4 @@
-import { MetadataRoute } from "next";
+﻿import { MetadataRoute } from "next";
 
 const baseUrl = "https://www.saventihq.com";
 
@@ -51,6 +51,54 @@ export default function sitemap(): MetadataRoute.Sitemap {
         languages: {
           es: `${baseUrl}/servicios`,
           en: `${baseUrl}/en/services`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/metodologia`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/metodologia`,
+          en: `${baseUrl}/en/methodology`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/en/methodology`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.7,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/metodologia`,
+          en: `${baseUrl}/en/methodology`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/beneficios`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/beneficios`,
+          en: `${baseUrl}/en/benefits`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/en/benefits`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.7,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/beneficios`,
+          en: `${baseUrl}/en/benefits`,
         },
       },
     },
@@ -127,6 +175,54 @@ export default function sitemap(): MetadataRoute.Sitemap {
       },
     },
     {
+      url: `${baseUrl}/faq`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/faq`,
+          en: `${baseUrl}/en/faq`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/en/faq`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.7,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/faq`,
+          en: `${baseUrl}/en/faq`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/contacto`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.8,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/contacto`,
+          en: `${baseUrl}/en/contact`,
+        },
+      },
+    },
+    {
+      url: `${baseUrl}/en/contact`,
+      lastModified,
+      changeFrequency: "weekly",
+      priority: 0.7,
+      alternates: {
+        languages: {
+          es: `${baseUrl}/contacto`,
+          en: `${baseUrl}/en/contact`,
+        },
+      },
+    },
+    {
       url: `${baseUrl}/privacy`,
       lastModified,
       changeFrequency: "monthly",
@@ -176,4 +272,3 @@ export default function sitemap(): MetadataRoute.Sitemap {
     },
   ];
 }
-

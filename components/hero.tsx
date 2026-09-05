@@ -1,13 +1,18 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@heroui/react";
 import { Zap, ArrowRight, Cpu, ShieldCheck, Globe, Layers, Database } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 
 export function HeroSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const isEn = lang === "en";
+
+  const contactHref = isEn ? "/en/contact" : "/contacto";
+  const servicesHref = isEn ? "/en/services" : "/servicios";
 
   return (
     <section className="relative z-10 pt-36 pb-16 sm:pt-44 sm:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -28,8 +33,8 @@ export function HeroSection() {
         {/* HeroUI CTA Button Group */}
         <div className="flex flex-col sm:flex-row items-center justify-center gap-4 w-full sm:w-auto mb-16">
           <Button
-            as="a"
-            href="#contacto"
+            as={Link}
+            href={contactHref}
             color="primary"
             radius="full"
             size="lg"
@@ -40,8 +45,8 @@ export function HeroSection() {
           </Button>
 
           <Button
-            as="a"
-            href="#servicios"
+            as={Link}
+            href={servicesHref}
             radius="full"
             size="lg"
             variant="light"
@@ -80,4 +85,3 @@ export function HeroSection() {
     </section>
   );
 }
-

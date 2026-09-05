@@ -9,25 +9,25 @@ export function StatsCards() {
   const { t } = useLanguage();
 
   return (
-    <section id="beneficios" className="relative z-10 py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <section id="beneficios" className="relative z-10 py-10 sm:py-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
       {/* Section Header */}
-      <div className="text-center max-w-3xl mx-auto mb-16">
+      <div className="text-center max-w-3xl mx-auto mb-10 sm:mb-16">
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full neu-badge text-xs font-bold text-brand-700 uppercase tracking-widest mb-3">
           {t("benefits.badge")}
         </div>
-        <h2 className="text-3xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
+        <h2 className="text-2xl sm:text-4xl font-extrabold text-slate-900 tracking-tight">
           {t("benefits.title")}
         </h2>
-        <p className="mt-3 text-base sm:text-lg text-slate-600">
+        <p className="mt-3 text-sm sm:text-lg text-slate-600">
           {t("benefits.subtitle")}
         </p>
       </div>
 
       {/* Grid Cards */}
-      <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8 w-full">
         
         {/* Card 1: Emerald glow */}
-        <div className="neu-extruded neu-extruded-hover rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group border border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300">
+        <div className="neu-extruded neu-extruded-hover rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group border border-emerald-500/20 hover:border-emerald-500/40 transition-all duration-300 w-full">
           <div className="absolute top-0 right-0 w-40 h-40 bg-emerald-500/10 rounded-full blur-2xl group-hover:bg-emerald-500/20 group-hover:scale-125 transition-all duration-500 pointer-events-none" />
           
           <div>
@@ -67,7 +67,7 @@ export function StatsCards() {
         </div>
 
         {/* Card 2: Blue & Indigo glow (Highlighted) */}
-        <div className="neu-extruded neu-extruded-hover rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group border-2 border-brand-500/30 hover:border-brand-500/60 bg-gradient-to-b from-white/60 via-[#e8edf3] to-slate-200/50 shadow-md">
+        <div className="neu-extruded neu-extruded-hover rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group border-2 border-brand-500/30 hover:border-brand-500/60 bg-gradient-to-b from-white/60 via-[#e8edf3] to-slate-200/50 shadow-md w-full">
           <div className="absolute top-0 right-0 w-44 h-44 bg-brand-600/15 rounded-full blur-2xl group-hover:bg-brand-600/25 group-hover:scale-125 transition-all duration-500 pointer-events-none" />
           
           <div>
@@ -107,7 +107,7 @@ export function StatsCards() {
         </div>
 
         {/* Card 3: Violet & Purple glow */}
-        <div className="neu-extruded neu-extruded-hover rounded-3xl p-8 flex flex-col justify-between relative overflow-hidden group border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300">
+        <div className="neu-extruded neu-extruded-hover rounded-3xl p-6 sm:p-8 flex flex-col justify-between relative overflow-hidden group border border-purple-500/20 hover:border-purple-500/40 transition-all duration-300 w-full">
           <div className="absolute top-0 right-0 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl group-hover:bg-purple-500/20 group-hover:scale-125 transition-all duration-500 pointer-events-none" />
           
           <div>

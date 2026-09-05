@@ -2,6 +2,7 @@
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Card, CardBody, Button } from "@heroui/react";
 import { TrendingUp, ShieldCheck, Zap, ArrowRight, BarChart3, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
@@ -103,8 +104,8 @@ export function BusinessImpactSection() {
             </ul>
 
             <Button
-              as="a"
-              href="#contacto"
+              as={Link}
+              href={isEn ? "/en/contact" : "/contacto"}
               color="primary"
               radius="full"
               size="lg"

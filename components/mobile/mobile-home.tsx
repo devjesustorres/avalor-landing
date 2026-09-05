@@ -1,10 +1,12 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { Button } from "@heroui/react";
 import { Zap, ArrowRight, Sparkles } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
+import { StatsCards } from "@/components/stats-cards";
 import { MobileDashboardPreview } from "@/components/mobile-dashboard-preview";
 import { SolutionsSection } from "@/components/solutions";
 import { BusinessImpactSection } from "@/components/business-impact-section";
@@ -13,34 +15,49 @@ import { FaqSection } from "@/components/faq-section";
 import { MobileNewsletterSection } from "@/components/mobile-newsletter-section";
 
 export function MobileHome() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const isEn = lang === "en";
+
+  const homeHref = isEn ? "/en" : "/";
+  const contactHref = isEn ? "/en/contact" : "/contacto";
+  const servicesHref = isEn ? "/en/services" : "/servicios";
+  const methodologyHref = isEn ? "/en/methodology" : "/metodologia";
+  const benefitsHref = isEn ? "/en/benefits" : "/beneficios";
+  const pricingHref = isEn ? "/en/pricing" : "/precios";
+  const faqHref = isEn ? "/en/faq" : "/faq";
 
   return (
     <div className="min-h-screen bg-[#f1f5f9] text-slate-800 pb-16">
-      {/* 1. Mobile Top Brand Bar (Logo Centrado Limpio) */}
-      <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-4 py-3.5 shadow-xs flex items-center justify-center">
-        <a href="#" className="flex items-center justify-center">
+      {/* 1. Mobile Top Brand Bar (Logo Centrado y Link a Home) */}
+      <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-4 py-3.5 shadow-xs flex items-center justify-between">
+        <Link href={homeHref} className="flex items-center">
           <Image
             src="/saventi-text.png"
             alt="Saventi — Software a la Medida, ERPs y Apps Móviles"
-            width={280}
-            height={40}
+            width={240}
+            height={36}
             priority
             className="h-5 sm:h-6 w-auto object-contain dark:hidden"
           />
           <Image
             src="/saventi-text-white.png"
             alt="Saventi — Software a la Medida, ERPs y Apps Móviles"
-            width={280}
-            height={40}
+            width={240}
+            height={36}
             priority
             className="hidden h-5 sm:h-6 w-auto object-contain dark:block"
           />
-        </a>
+        </Link>
+        <Link
+          href={contactHref}
+          className="text-xs font-bold px-3 py-1.5 rounded-full bg-brand-600 text-white shadow-xs"
+        >
+          {t("nav.quote")}
+        </Link>
       </header>
 
-      {/* 2. Mobile Hero Section */}
-      <section className="px-4 pt-8 pb-6 text-center relative overflow-hidden">
+      {/* 2. Mobile Hero Section - Toma todo el ancho disponible */}
+      <section className="w-full px-4 pt-8 pb-6 text-center relative overflow-hidden">
         {/* Subtle mobile glows */}
         <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-72 h-36 bg-brand-500/15 rounded-full blur-2xl pointer-events-none" />
         <div className="absolute top-24 -right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl pointer-events-none" />
@@ -57,10 +74,10 @@ export function MobileHome() {
         </p>
 
         {/* Action Buttons */}
-        <div className="flex flex-col gap-3 max-w-xs mx-auto mb-6">
+        <div className="flex flex-col gap-3 w-full max-w-sm mx-auto mb-6">
           <Button
-            as="a"
-            href="#contacto"
+            as={Link}
+            href={contactHref}
             color="primary"
             radius="full"
             size="lg"
@@ -71,8 +88,8 @@ export function MobileHome() {
           </Button>
 
           <Button
-            as="a"
-            href="#servicios"
+            as={Link}
+            href={servicesHref}
             radius="full"
             size="lg"
             variant="flat"
@@ -83,63 +100,91 @@ export function MobileHome() {
           </Button>
         </div>
 
-        {/* Mini Trust Metrics Strip */}
-        <div className="grid grid-cols-3 gap-2 pt-4 border-t border-slate-200 text-center">
-          <div className="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs">
-            <div className="text-base font-extrabold text-slate-900">100%</div>
-            <div className="text-[10px] font-semibold text-slate-500">Gestionado</div>
+        {/* Mini Trust Metrics Strip: 100% full width responsive */}
+        <div className="grid grid-cols-3 gap-2 pt-4 border-t border-slate-200 text-center w-full">
+          <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-center">
+            <div className="text-lg font-extrabold text-slate-900">100%</div>
+            <div className="text-[10px] font-semibold text-slate-500 uppercase tracking-tight">Gestionado</div>
           </div>
-          <div className="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs">
-            <div className="text-base font-extrabold text-slate-900">2-4 Sem</div>
-            <div className="text-[10px] font-semibold text-slate-500">En Línea</div>
+          <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-center">
+            <div className="text-lg font-extrabold text-slate-900">2-4 Sem</div>
+            <div className="text-[10px] font-semibold text-slate-500 uppercase tracking-tight">En Línea</div>
           </div>
-          <div className="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs">
-            <div className="text-base font-extrabold text-slate-900">Soporte</div>
-            <div className="text-[10px] font-semibold text-slate-500">Continuo</div>
+          <div className="bg-white p-3 rounded-xl border border-slate-200 shadow-xs flex flex-col justify-center">
+            <div className="text-lg font-extrabold text-slate-900">Soporte</div>
+            <div className="text-[10px] font-semibold text-slate-500 uppercase tracking-tight">Continuo</div>
           </div>
         </div>
       </section>
 
-      {/* 3. Crecimiento Empresarial & Confianza (Aparece más rápido) */}
-      <BusinessImpactSection />
+      {/* 3. Beneficios & Tarjetas de Valor (Aprovechan todo el espacio en pantalla) */}
+      <div className="w-full">
+        <StatsCards />
+      </div>
 
-      {/* 4. Interactive Mobile Dashboard / Architecture Component */}
-      <MobileDashboardPreview />
+      {/* 4. Crecimiento Empresarial & Confianza (Business Impact) */}
+      <div className="w-full">
+        <BusinessImpactSection />
+      </div>
 
-      {/* 5. Soluciones Adaptadas */}
-      <SolutionsSection />
+      {/* 5. Interactive Mobile Dashboard / Architecture Component */}
+      <div className="w-full">
+        <MobileDashboardPreview />
+      </div>
 
-      {/* 6. Precios y Modelos de Trabajo */}
-      <PricingSection />
+      {/* 6. Soluciones Adaptadas */}
+      <div className="w-full">
+        <SolutionsSection />
+      </div>
 
-      {/* 6. Formulario de Diagnóstico Rápido */}
-      <section id="contacto">
+      {/* 7. Precios y Modelos de Trabajo */}
+      <div className="w-full">
+        <PricingSection />
+      </div>
+
+      {/* 8. Formulario de Diagnóstico Rápido */}
+      <div className="w-full px-2 mt-8">
         <MobileNewsletterSection />
-      </section>
+      </div>
 
-      {/* 7. Preguntas Frecuentes */}
-      <FaqSection />
+      {/* 9. Preguntas Frecuentes */}
+      <div className="w-full">
+        <FaqSection />
+      </div>
 
-      {/* 8. Footer Móvil Limpio con Logo Oficial en Imagen */}
-      <footer className="border-t border-slate-200 bg-white py-10 px-4 text-center mt-8">
-        <div className="max-w-xs mx-auto flex flex-col items-center">
-          <Image
-            src="/saventi-text.png"
-            alt="Saventi — Plataforma de Software Empresarial y Automatización"
-            width={160}
-            height={26}
-            className="h-6 w-auto object-contain mx-auto mb-2 dark:hidden"
-          />
-          <Image
-            src="/saventi-text-white.png"
-            alt="Saventi — Plataforma de Software Empresarial y Automatización"
-            width={160}
-            height={26}
-            className="hidden h-6 w-auto object-contain mx-auto mb-2 dark:block"
-          />
-          <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-2">
+      {/* 10. Footer Móvil Limpio con Links a Páginas Específicas */}
+      <footer className="border-t border-slate-200 bg-white py-10 px-4 text-center mt-12 w-full">
+        <div className="max-w-md mx-auto flex flex-col items-center">
+          <Link href={homeHref}>
+            <Image
+              src="/saventi-text.png"
+              alt="Saventi — Plataforma de Software Empresarial y Automatización"
+              width={160}
+              height={26}
+              className="h-6 w-auto object-contain mx-auto mb-2 dark:hidden"
+            />
+            <Image
+              src="/saventi-text-white.png"
+              alt="Saventi — Plataforma de Software Empresarial y Automatización"
+              width={160}
+              height={26}
+              className="hidden h-6 w-auto object-contain mx-auto mb-2 dark:block"
+            />
+          </Link>
+          <p className="text-[11px] font-semibold uppercase tracking-wider text-slate-500 mb-4">
             Software diseñado alrededor de operaciones reales.
           </p>
+
+          {/* Quick links to dedicated pages */}
+          <div className="flex flex-wrap justify-center gap-x-4 gap-y-2 text-xs font-semibold text-slate-600 mb-5">
+            <Link href={servicesHref} className="hover:text-brand-600">{t("nav.services")}</Link>
+            <Link href={methodologyHref} className="hover:text-brand-600">{t("nav.methodology")}</Link>
+            <Link href={benefitsHref} className="hover:text-brand-600">{t("nav.benefits")}</Link>
+            <Link href={pricingHref} className="hover:text-brand-600">{t("nav.models")}</Link>
+            <Link href={faqHref} className="hover:text-brand-600">{t("nav.faq")}</Link>
+            <Link href={contactHref} className="hover:text-brand-600">{t("nav.contact")}</Link>
+          </div>
+
           <div className="flex flex-col items-center gap-1 text-[11px] text-slate-500 mb-3">
             <a href="tel:+584147708179" className="font-semibold hover:text-blue-600 transition-colors">
               📞 +58 414-7708179
@@ -163,7 +208,3 @@ export function MobileHome() {
 export function MobileBottomBar() {
   return null;
 }
-
-// No bottom bar for mobile on Saventi-landing as per user request
-
-

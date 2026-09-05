@@ -1,13 +1,21 @@
-"use client";
+﻿"use client";
 
 import React from "react";
 import Image from "next/image";
+import Link from "next/link";
 import { useLanguage } from "@/context/language-context";
 
 export function Footer() {
   const { t, lang } = useLanguage();
   const base = lang === "en" ? "/en" : "";
   const isEn = lang === "en";
+
+  const servicesHref = isEn ? "/en/services" : "/servicios";
+  const methodologyHref = isEn ? "/en/methodology" : "/metodologia";
+  const benefitsHref = isEn ? "/en/benefits" : "/beneficios";
+  const modelsHref = isEn ? "/en/pricing" : "/precios";
+  const faqHref = isEn ? "/en/faq" : "/faq";
+  const contactHref = isEn ? "/en/contact" : "/contacto";
 
   return (
     <footer className="mt-28 border-t border-slate-300/40 py-12 relative z-10">
@@ -40,21 +48,22 @@ export function Footer() {
 
           <div className="flex flex-col items-center gap-3">
             <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:gap-x-6 text-xs font-semibold text-slate-500">
-              <a href="#servicios" className="hover:text-slate-900 transition-colors">{t("nav.services")}</a>
-              <a href="#metodologia" className="hover:text-slate-900 transition-colors">{t("nav.methodology")}</a>
-              <a href="#beneficios" className="hover:text-slate-900 transition-colors">{t("nav.benefits")}</a>
-              <a href="#modelos" className="hover:text-slate-900 transition-colors">{t("nav.models")}</a>
-              <a href="#faq" className="hover:text-slate-900 transition-colors">{t("nav.faq")}</a>
+              <Link href={servicesHref} className="hover:text-slate-900 transition-colors">{t("nav.services")}</Link>
+              <Link href={methodologyHref} className="hover:text-slate-900 transition-colors">{t("nav.methodology")}</Link>
+              <Link href={benefitsHref} className="hover:text-slate-900 transition-colors">{t("nav.benefits")}</Link>
+              <Link href={modelsHref} className="hover:text-slate-900 transition-colors">{t("nav.models")}</Link>
+              <Link href={faqHref} className="hover:text-slate-900 transition-colors">{t("nav.faq")}</Link>
+              <Link href={contactHref} className="hover:text-slate-900 transition-colors">{t("nav.contact")}</Link>
             </div>
 
             <div className="flex flex-wrap items-center justify-center gap-x-5 gap-y-2 sm:gap-x-6 text-xs font-semibold text-slate-500 border-t border-slate-300/30 pt-3">
-              <a href={isEn ? "/en/services" : "/servicios"} className="hover:text-slate-900 transition-colors">{t("nav.services")}</a>
-              <a href={isEn ? "/en/custom-erp-development" : "/desarrollo-erp"} className="hover:text-slate-900 transition-colors">{isEn ? "Custom ERP" : "ERP a la Medida"}</a>
-              <a href={isEn ? "/en/mobile-app-development" : "/aplicaciones-moviles"} className="hover:text-slate-900 transition-colors">{isEn ? "Mobile Apps" : "Apps Móviles"}</a>
-              <a href={isEn ? "/en/pricing" : "/precios"} className="hover:text-slate-900 transition-colors">{isEn ? "Pricing" : "Precios"}</a>
+              <Link href={servicesHref} className="hover:text-slate-900 transition-colors">{t("nav.services")}</Link>
+              <Link href={isEn ? "/en/custom-erp-development" : "/desarrollo-erp"} className="hover:text-slate-900 transition-colors">{isEn ? "Custom ERP" : "ERP a la Medida"}</Link>
+              <Link href={isEn ? "/en/mobile-app-development" : "/aplicaciones-moviles"} className="hover:text-slate-900 transition-colors">{isEn ? "Mobile Apps" : "Apps Móviles"}</Link>
+              <Link href={modelsHref} className="hover:text-slate-900 transition-colors">{isEn ? "Pricing" : "Precios"}</Link>
               <span className="w-px h-4 bg-slate-300/60 hidden sm:inline-block" />
-              <a href={`${base}/privacy`} className="hover:text-slate-900 transition-colors">{t("footer.privacy")}</a>
-              <a href={`${base}/terms`} className="hover:text-slate-900 transition-colors">{t("footer.terms")}</a>
+              <Link href={`${base}/privacy`} className="hover:text-slate-900 transition-colors">{t("footer.privacy")}</Link>
+              <Link href={`${base}/terms`} className="hover:text-slate-900 transition-colors">{t("footer.terms")}</Link>
             </div>
           </div>
 

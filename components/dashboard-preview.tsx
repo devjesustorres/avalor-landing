@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { Tabs, Tab, Progress, Button, Chip } from "@heroui/react";
 import {
   Terminal,
@@ -15,7 +16,7 @@ import {
 import { useLanguage } from "@/context/language-context";
 
 export function DashboardPreview() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [selectedTab, setSelectedTab] = useState("backend");
 
   return (
@@ -239,8 +240,8 @@ export function DashboardPreview() {
               <h5 className="text-sm font-bold text-slate-900 mb-1">{t("method.callout.title")}</h5>
               <p className="text-xs text-slate-500 mb-4">{t("method.callout.desc")}</p>
               <Button
-                as="a"
-                href="#contacto"
+                as={Link}
+                href={lang === "en" ? "/en/contact" : "/contacto"}
                 color="primary"
                 radius="full"
                 size="sm"

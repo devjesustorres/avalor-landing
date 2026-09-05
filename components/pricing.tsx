@@ -1,12 +1,15 @@
-"use client";
+﻿"use client";
 
 import React from "react";
+import Link from "next/link";
 import { Card, CardBody, CardFooter, Button, Chip } from "@heroui/react";
 import { Check, CheckCircle2 } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 
 export function PricingSection() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
+  const isEn = lang === "en";
+  const contactHref = isEn ? "/en/contact" : "/contacto";
 
   return (
     <section id="modelos" className="mt-28 sm:mt-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -53,8 +56,8 @@ export function PricingSection() {
           </CardBody>
           <CardFooter className="p-6 pt-0">
             <Button
-              as="a"
-              href="#contacto"
+              as={Link}
+              href={contactHref}
               radius="full"
               variant="flat"
               className="w-full py-3 neu-extruded neu-extruded-hover text-xs font-bold text-slate-800 bg-transparent"
@@ -98,8 +101,8 @@ export function PricingSection() {
           </CardBody>
           <CardFooter className="p-6 pt-0">
             <Button
-              as="a"
-              href="#contacto"
+              as={Link}
+              href={contactHref}
               color="primary"
               radius="full"
               className="w-full py-3.5 font-bold text-xs bg-brand-600 hover:bg-brand-500 shadow-neu-btn-blue text-white"
@@ -109,7 +112,7 @@ export function PricingSection() {
           </CardFooter>
         </Card>
 
-        {/* Tier 3: Support & Consulting */}
+        {/* Tier 3: Bolsa de Horas */}
         <Card className="neu-extruded rounded-3xl p-3 border-none bg-transparent shadow-none flex flex-col justify-between">
           <CardBody className="p-6">
             <h3 className="text-xl font-bold text-slate-900">{t("pricing.t3.title")}</h3>
@@ -138,8 +141,8 @@ export function PricingSection() {
           </CardBody>
           <CardFooter className="p-6 pt-0">
             <Button
-              as="a"
-              href="#contacto"
+              as={Link}
+              href={contactHref}
               radius="full"
               variant="flat"
               className="w-full py-3 neu-extruded neu-extruded-hover text-xs font-bold text-slate-800 bg-transparent"

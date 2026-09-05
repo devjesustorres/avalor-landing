@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import Link from "next/link";
 import { motion, AnimatePresence } from "framer-motion";
 import {
   Terminal,
@@ -20,7 +21,7 @@ import {
 import { useLanguage } from "@/context/language-context";
 
 export function MobileDashboardPreview() {
-  const { t } = useLanguage();
+  const { t, lang } = useLanguage();
   const [activeTab, setActiveTab] = useState<"backend" | "frontend" | "qa">("backend");
 
   const metrics = [
@@ -271,13 +272,13 @@ export function MobileDashboardPreview() {
         </div>
 
         {/* Action CTA Button inside app */}
-        <a
-          href="#contacto"
+        <Link
+          href={lang === "en" ? "/en/contact" : "/contacto"}
           className="mt-3.5 w-full py-3 rounded-xl bg-brand-600 text-white font-bold text-xs flex items-center justify-center gap-2 shadow-neu-btn-blue active:scale-[0.98] transition-transform"
         >
           <span>{t("method.callout.btn")}</span>
           <ChevronRight className="w-4 h-4" />
-        </a>
+        </Link>
       </div>
     </div>
   );
