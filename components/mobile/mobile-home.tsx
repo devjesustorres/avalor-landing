@@ -5,9 +5,9 @@ import Image from "next/image";
 import { Button } from "@heroui/react";
 import { Zap, ArrowRight, Sparkles } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
-import { LanguageSelector } from "@/components/language-selector";
 import { MobileDashboardPreview } from "@/components/mobile-dashboard-preview";
 import { SolutionsSection } from "@/components/solutions";
+import { BusinessImpactSection } from "@/components/business-impact-section";
 import { PricingSection } from "@/components/pricing";
 import { FaqSection } from "@/components/faq-section";
 import { MobileNewsletterSection } from "@/components/mobile-newsletter-section";
@@ -17,16 +17,16 @@ export function MobileHome() {
 
   return (
     <div className="min-h-screen bg-[#f1f5f9] text-slate-800 pb-16">
-      {/* 1. Mobile Top Brand Bar */}
-      <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-4 py-3 shadow-xs flex items-center justify-between">
-        <a href="#" className="flex items-center">
+      {/* 1. Mobile Top Brand Bar (Logo Centrado Limpio) */}
+      <header className="sticky top-0 z-40 bg-white/90 backdrop-blur-md border-b border-slate-200/80 px-4 py-3.5 shadow-xs flex items-center justify-center">
+        <a href="#" className="flex items-center justify-center">
           <Image
             src="/saventi-text.png"
             alt="Saventi — Software a la Medida, ERPs y Apps Móviles"
             width={280}
             height={40}
             priority
-            className="h-5 w-auto object-contain dark:hidden"
+            className="h-5 sm:h-6 w-auto object-contain dark:hidden"
           />
           <Image
             src="/saventi-text-white.png"
@@ -34,23 +34,9 @@ export function MobileHome() {
             width={280}
             height={40}
             priority
-            className="hidden h-5 w-auto object-contain dark:block"
+            className="hidden h-5 sm:h-6 w-auto object-contain dark:block"
           />
         </a>
-
-        <div className="flex items-center gap-2">
-          <LanguageSelector />
-          <Button
-            as="a"
-            href="#contacto"
-            size="sm"
-            color="primary"
-            radius="full"
-            className="font-bold text-xs bg-brand-600 text-white px-3.5 shadow-sm"
-          >
-            {t("nav.quote")}
-          </Button>
-        </div>
       </header>
 
       {/* 2. Mobile Hero Section */}
@@ -102,26 +88,29 @@ export function MobileHome() {
         <div className="grid grid-cols-3 gap-2 pt-4 border-t border-slate-200 text-center">
           <div className="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs">
             <div className="text-base font-extrabold text-slate-900">100%</div>
-            <div className="text-[10px] font-semibold text-slate-500">Propiedad</div>
+            <div className="text-[10px] font-semibold text-slate-500">Gestionado</div>
           </div>
           <div className="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs">
-            <div className="text-base font-extrabold text-slate-900">4-8 Sem</div>
-            <div className="text-[10px] font-semibold text-slate-500">MVP Listo</div>
+            <div className="text-base font-extrabold text-slate-900">2-4 Sem</div>
+            <div className="text-[10px] font-semibold text-slate-500">En Línea</div>
           </div>
           <div className="bg-white p-2.5 rounded-xl border border-slate-200 shadow-xs">
-            <div className="text-base font-extrabold text-slate-900">NDA</div>
-            <div className="text-[10px] font-semibold text-slate-500">Protección</div>
+            <div className="text-base font-extrabold text-slate-900">Soporte</div>
+            <div className="text-[10px] font-semibold text-slate-500">Continuo</div>
           </div>
         </div>
       </section>
 
-      {/* 3. Interactive Mobile Dashboard / Architecture Component */}
+      {/* 3. Crecimiento Empresarial & Confianza (Aparece más rápido) */}
+      <BusinessImpactSection />
+
+      {/* 4. Interactive Mobile Dashboard / Architecture Component */}
       <MobileDashboardPreview />
 
-      {/* 4. Soluciones Adaptadas */}
+      {/* 5. Soluciones Adaptadas */}
       <SolutionsSection />
 
-      {/* 5. Precios y Modelos de Trabajo */}
+      {/* 6. Precios y Modelos de Trabajo */}
       <PricingSection />
 
       {/* 6. Formulario de Diagnóstico Rápido */}

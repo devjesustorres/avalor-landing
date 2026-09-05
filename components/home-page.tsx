@@ -3,6 +3,7 @@ import { HeroSection } from "@/components/hero";
 import { StatsCards } from "@/components/stats-cards";
 import { DashboardPreview } from "@/components/dashboard-preview";
 import { SolutionsSection } from "@/components/solutions";
+import { BusinessImpactSection } from "@/components/business-impact-section";
 import { PricingSection } from "@/components/pricing";
 import { FaqSection } from "@/components/faq-section";
 import { CtaSection } from "@/components/cta-section";
@@ -33,6 +34,7 @@ export default function HomePage() {
         <main className="relative z-10">
           <HeroSection />
           <StatsCards />
+          <BusinessImpactSection />
           <DashboardPreview />
           <SolutionsSection />
           <PricingSection />

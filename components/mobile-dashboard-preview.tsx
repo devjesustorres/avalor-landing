@@ -257,12 +257,12 @@ export function MobileDashboardPreview() {
                   </div>
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center justify-between">
-                      <h4 className="text-xs font-bold text-slate-800 truncate">NDA & Propiedad 100%</h4>
+                      <h4 className="text-xs font-bold text-slate-800 truncate">Privacidad y Datos Seguros</h4>
                       <span className="text-[10px] font-bold text-amber-600 bg-amber-50 px-1.5 py-0.5 rounded-md">
                         Garantizado
                       </span>
                     </div>
-                    <p className="text-[11px] text-slate-500 truncate">Repositorios privados transferidos al cliente</p>
+                    <p className="text-[11px] text-slate-500 truncate">Bases de datos aisladas y encriptadas</p>
                   </div>
                 </div>
               </motion.div>

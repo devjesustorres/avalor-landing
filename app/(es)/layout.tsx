@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Saventi",
   },
   description:
-    "Desarrollamos sistemas a la medida, ERPs, plataformas web y aplicaciones móviles para empresas en crecimiento. Código 100% propio, acuerdos NDA, arquitectura escalable y soporte garantizado.",
+    "Desarrollamos y gestionamos sistemas a la medida, ERPs y plataformas web para empresas en crecimiento. Planes mensuales todo incluido, servidores seguros, soporte técnico y mantenimiento continuo.",
   keywords: [
     "desarrollo de software a la medida",
     "software empresarial",
@@ -107,6 +107,7 @@ export default function EsRootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
+              gtag('config', 'G-8346W6GKF9');
               gtag('config', 'G-70EV2FQM66');
             `,
           }}

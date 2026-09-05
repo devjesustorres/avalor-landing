@@ -10,23 +10,40 @@ import {
   Check,
   ArrowRight,
   Clock,
-  FileCheck,
+  Zap,
 } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
+import { supabase } from "@/lib/supabase";
 
 export function MobileNewsletterSection() {
   const { t } = useLanguage();
   const [email, setEmail] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
     if (!email || !email.includes("@")) return;
 
     setStatus("loading");
-    setTimeout(() => {
+    try {
+      await supabase.from("prospects").insert([
+        {
+          company_name: email.split("@")[1] ? email.split("@")[1].split(".")[0].toUpperCase() : "Lead Móvil",
+          email_primary: email.trim().toLowerCase(),
+          sector: "Mobile Landing",
+          location: "Mobile",
+          custom_subject: "Interesado en Plan Mensual - Vista Móvil",
+          custom_message: "Prospecto registrado a través del formulario móvil de Saventi-landing.",
+          stage: "nuevo",
+          lead_status: "warm",
+          lead_score: 50,
+        },
+      ]);
+    } catch (err) {
+      console.warn("Supabase lead error:", err);
+    } finally {
       setStatus("success");
-    }, 600);
+    }
   };
 
   return (
@@ -50,7 +67,7 @@ export function MobileNewsletterSection() {
 
         {/* Subtitle */}
         <p className="text-xs text-slate-600 mt-2 leading-relaxed">
-          Recibe en tu correo una estimación de tiempos, stack recomendado y propuesta técnica sin compromiso.
+          Recibe en tu correo una estimación de tiempos, propuesta técnica y presupuesto mensual sin compromiso.
         </p>
 
         {/* Trust Badges Chips (Horizontal Scrollable / Row) */}
@@ -61,11 +78,11 @@ export function MobileNewsletterSection() {
           </div>
           <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-200/60 neu-badge shrink-0 text-[10px] font-bold text-slate-600">
             <ShieldCheck className="w-3 h-3 text-emerald-600" />
-            <span>Acuerdo NDA</span>
+            <span>Datos Seguros</span>
           </div>
           <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-200/60 neu-badge shrink-0 text-[10px] font-bold text-slate-600">
-            <FileCheck className="w-3 h-3 text-blue-600" />
-            <span>Código 100% Tuyo</span>
+            <Zap className="w-3 h-3 text-blue-600" />
+            <span>Todo Incluido</span>
           </div>
         </div>
 

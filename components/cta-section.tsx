@@ -4,15 +4,37 @@ import React, { useState } from "react";
 import { Input, Button } from "@heroui/react";
 import { Rocket, Mail } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
+import { supabase } from "@/lib/supabase";
 
 export function CtaSection() {
   const { t } = useLanguage();
   const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
 
-  const handleSubmit = (e: React.FormEvent) => {
+  const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (email) {
+    if (!email || !email.includes("@")) return;
+
+    setLoading(true);
+    try {
+      await supabase.from("prospects").insert([
+        {
+          company_name: email.split("@")[1] ? email.split("@")[1].split(".")[0].toUpperCase() : "Lead Web",
+          email_primary: email.trim().toLowerCase(),
+          sector: "Inbound Landing",
+          location: "Web",
+          custom_subject: "Interesado en Plan Mensual Gestionado",
+          custom_message: "Prospecto registrado a través del formulario principal de Saventi-landing.",
+          stage: "nuevo",
+          lead_status: "warm",
+          lead_score: 50,
+        },
+      ]);
+    } catch (err) {
+      console.warn("Supabase lead error:", err);
+    } finally {
+      setLoading(false);
       setSubmitted(true);
     }
   };

@@ -1,6 +1,7 @@
 "use client";
 
 import React from "react";
+import Image from "next/image";
 import { Button } from "@heroui/react";
 import { Zap, ArrowRight, Cpu, ShieldCheck, Globe, Layers, Database } from "lucide-react";
 import { useLanguage } from "@/context/language-context";

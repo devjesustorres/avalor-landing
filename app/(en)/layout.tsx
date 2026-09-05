@@ -21,7 +21,7 @@ export const metadata: Metadata = {
     template: "%s | Saventi",
   },
   description:
-    "We engineer bespoke ERPs, web platforms and mobile apps for growing companies. 100% owned code, NDA agreements, scalable architecture and guaranteed support.",
+    "We build and manage custom ERPs, business platforms and mobile apps for growing companies. All-inclusive monthly plans, secure cloud hosting, direct support and continuous maintenance.",
   keywords: [
     "desarrollo de software a la medida",
     "software empresarial",
@@ -107,6 +107,7 @@ export default function EnRootLayout({
               window.dataLayer = window.dataLayer || [];
               function gtag(){dataLayer.push(arguments);}
               gtag('js', new Date());
+              gtag('config', 'G-8346W6GKF9');
               gtag('config', 'G-70EV2FQM66');
             `,
           }}
