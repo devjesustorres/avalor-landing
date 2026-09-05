@@ -112,6 +112,12 @@ export default function EsRootLayout({
             `,
           }}
         />
+        {/* Cloudflare Turnstile */}
+        <script
+          src="https://challenges.cloudflare.com/turnstile/v0/api.js"
+          async
+          defer
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}

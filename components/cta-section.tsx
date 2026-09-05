@@ -1,18 +1,100 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { Input, Textarea, Button } from "@heroui/react";
-import { Rocket, Mail, Building2, MessageSquare } from "lucide-react";
+import { Rocket, Mail, Building2, MessageSquare, ShieldCheck } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
-import { supabase } from "@/lib/supabase";
+
+declare global {
+  interface Window {
+    turnstile?: {
+      render: (
+        container: string | HTMLElement,
+        params: {
+          sitekey: string;
+          action?: string;
+          callback?: (token: string) => void;
+          "error-callback"?: () => void;
+          "expired-callback"?: () => void;
+          theme?: "light" | "dark" | "auto";
+        }
+      ) => string;
+      reset: (widgetId: string) => void;
+      remove: (widgetId: string) => void;
+    };
+  }
+}
 
 export function CtaSection() {
   const { t } = useLanguage();
   const [companyName, setCompanyName] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileError, setTurnstileError] = useState("");
   const [loading, setLoading] = useState(false);
   const [submitted, setSubmitted] = useState(false);
+
+  const turnstileContainerRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<string | null>(null);
+
+  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAAEpcH8uTYeZTY5jr";
+
+  // Render widget explicitly once turnstile is loaded
+  useEffect(() => {
+    let checkInterval: NodeJS.Timeout;
+
+    const renderWidget = () => {
+      if (
+        window.turnstile &&
+        turnstileContainerRef.current &&
+        !widgetIdRef.current
+      ) {
+        try {
+          const id = window.turnstile.render(turnstileContainerRef.current, {
+            sitekey: siteKey,
+            action: "contact",
+            theme: "light",
+            callback: (token: string) => {
+              setTurnstileToken(token);
+              setTurnstileError("");
+            },
+            "expired-callback": () => {
+              setTurnstileToken("");
+            },
+            "error-callback": () => {
+              setTurnstileToken("");
+              setTurnstileError("Error al cargar verificación.");
+            },
+          });
+          widgetIdRef.current = id;
+        } catch (e) {
+          console.warn("Turnstile render error:", e);
+        }
+      }
+    };
+
+    if (window.turnstile) {
+      renderWidget();
+    } else {
+      checkInterval = setInterval(() => {
+        if (window.turnstile) {
+          renderWidget();
+          clearInterval(checkInterval);
+        }
+      }, 300);
+    }
+
+    return () => {
+      if (checkInterval) clearInterval(checkInterval);
+      if (window.turnstile && widgetIdRef.current) {
+        try {
+          window.turnstile.remove(widgetIdRef.current);
+        } catch {}
+        widgetIdRef.current = null;
+      }
+    };
+  }, [siteKey]);
 
   // Sanitización de entrada (limpieza de tags HTML, caracteres invisibles y recorte de espacios)
   const sanitize = (text: string, maxLen = 500): string => {
@@ -31,28 +113,43 @@ export function CtaSection() {
 
     if (!cleanEmail || !cleanEmail.includes("@")) return;
 
-    setLoading(true);
-    try {
-      const finalCompany = cleanCompany || (cleanEmail.split("@")[1] ? cleanEmail.split("@")[1].split(".")[0].toUpperCase() : "Prospecto Web");
+    if (!turnstileToken) {
+      setTurnstileError("Por favor completa la verificación de seguridad.");
+      return;
+    }
 
-      await supabase.from("prospects").insert([
-        {
-          company_name: finalCompany,
-          email_primary: cleanEmail,
-          sector: "Inbound Landing",
-          location: "Web",
-          custom_subject: "Interesado en Plan Mensual Gestionado",
-          custom_message: cleanDesc || "Prospecto registrado a través del formulario principal de Saventi-landing.",
-          stage: "nuevo",
-          lead_status: "warm",
-          lead_score: 50,
-        },
-      ]);
-    } catch (err) {
-      console.warn("Supabase lead error:", err);
+    setLoading(true);
+    setTurnstileError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          token: turnstileToken,
+          companyName: cleanCompany,
+          email: cleanEmail,
+          description: cleanDesc,
+          source: "desktop",
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "No se pudo procesar la solicitud");
+      }
+
+      setSubmitted(true);
+    } catch (err: any) {
+      setTurnstileError(err.message || "Error al enviar. Intenta de nuevo.");
+      // Token Turnstile es de un solo uso: resetear widget tras error
+      if (window.turnstile && widgetIdRef.current) {
+        window.turnstile.reset(widgetIdRef.current);
+        setTurnstileToken("");
+      }
     } finally {
       setLoading(false);
-      setSubmitted(true);
     }
   };
 
@@ -140,6 +237,16 @@ export function CtaSection() {
                 />
               </div>
 
+              {/* Cloudflare Turnstile verification widget */}
+              <div className="flex flex-col items-center justify-center my-1">
+                <div ref={turnstileContainerRef} className="min-h-[65px] flex items-center justify-center" />
+                {turnstileError && (
+                  <p className="text-xs text-rose-500 font-semibold mt-1 text-center">
+                    {turnstileError}
+                  </p>
+                )}
+              </div>
+
               {/* Submit CTA Button */}
               <Button
                 type="submit"
@@ -147,7 +254,7 @@ export function CtaSection() {
                 radius="full"
                 size="lg"
                 isLoading={loading}
-                className="w-full mt-2 font-bold text-sm bg-brand-600 hover:bg-brand-500 shadow-neu-btn-blue text-white h-12"
+                className="w-full mt-1 font-bold text-sm bg-brand-600 hover:bg-brand-500 shadow-neu-btn-blue text-white h-12"
               >
                 {t("cta.btn")}
               </Button>

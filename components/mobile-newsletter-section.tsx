@@ -1,10 +1,8 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
 import {
-  Send,
-  Mail,
   ShieldCheck,
   Sparkles,
   Check,
@@ -13,14 +11,75 @@ import {
   Zap,
 } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
-import { supabase } from "@/lib/supabase";
 
 export function MobileNewsletterSection() {
   const { t } = useLanguage();
   const [companyName, setCompanyName] = useState("");
   const [email, setEmail] = useState("");
   const [description, setDescription] = useState("");
+  const [turnstileToken, setTurnstileToken] = useState("");
+  const [turnstileError, setTurnstileError] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+
+  const turnstileContainerRef = useRef<HTMLDivElement>(null);
+  const widgetIdRef = useRef<string | null>(null);
+
+  const siteKey = process.env.NEXT_PUBLIC_TURNSTILE_SITE_KEY || "0x4AAAAAAEpcH8uTYeZTY5jr";
+
+  useEffect(() => {
+    let checkInterval: NodeJS.Timeout;
+
+    const renderWidget = () => {
+      if (
+        window.turnstile &&
+        turnstileContainerRef.current &&
+        !widgetIdRef.current
+      ) {
+        try {
+          const id = window.turnstile.render(turnstileContainerRef.current, {
+            sitekey: siteKey,
+            action: "contact",
+            theme: "light",
+            callback: (token: string) => {
+              setTurnstileToken(token);
+              setTurnstileError("");
+            },
+            "expired-callback": () => {
+              setTurnstileToken("");
+            },
+            "error-callback": () => {
+              setTurnstileToken("");
+              setTurnstileError("Error al cargar verificación.");
+            },
+          });
+          widgetIdRef.current = id;
+        } catch (e) {
+          console.warn("Turnstile mobile render error:", e);
+        }
+      }
+    };
+
+    if (window.turnstile) {
+      renderWidget();
+    } else {
+      checkInterval = setInterval(() => {
+        if (window.turnstile) {
+          renderWidget();
+          clearInterval(checkInterval);
+        }
+      }, 300);
+    }
+
+    return () => {
+      if (checkInterval) clearInterval(checkInterval);
+      if (window.turnstile && widgetIdRef.current) {
+        try {
+          window.turnstile.remove(widgetIdRef.current);
+        } catch {}
+        widgetIdRef.current = null;
+      }
+    };
+  }, [siteKey]);
 
   const sanitize = (text: string, maxLen = 500): string => {
     return text
@@ -38,27 +97,41 @@ export function MobileNewsletterSection() {
 
     if (!cleanEmail || !cleanEmail.includes("@")) return;
 
-    setStatus("loading");
-    try {
-      const finalCompany = cleanCompany || (cleanEmail.split("@")[1] ? cleanEmail.split("@")[1].split(".")[0].toUpperCase() : "Lead Móvil");
+    if (!turnstileToken) {
+      setTurnstileError("Por favor completa la verificación de seguridad.");
+      return;
+    }
 
-      await supabase.from("prospects").insert([
-        {
-          company_name: finalCompany,
-          email_primary: cleanEmail,
-          sector: "Mobile Landing",
-          location: "Mobile",
-          custom_subject: "Interesado en Plan Mensual - Vista Móvil",
-          custom_message: cleanDesc || "Prospecto registrado a través del formulario móvil de Saventi-landing.",
-          stage: "nuevo",
-          lead_status: "warm",
-          lead_score: 50,
-        },
-      ]);
-    } catch (err) {
-      console.warn("Supabase lead error:", err);
-    } finally {
+    setStatus("loading");
+    setTurnstileError("");
+
+    try {
+      const res = await fetch("/api/contact", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          token: turnstileToken,
+          companyName: cleanCompany,
+          email: cleanEmail,
+          description: cleanDesc,
+          source: "mobile",
+        }),
+      });
+
+      const data = await res.json();
+
+      if (!res.ok || !data.success) {
+        throw new Error(data.error || "No se pudo procesar la solicitud");
+      }
+
       setStatus("success");
+    } catch (err: any) {
+      setTurnstileError(err.message || "Error al enviar solicitud.");
+      if (window.turnstile && widgetIdRef.current) {
+        window.turnstile.reset(widgetIdRef.current);
+        setTurnstileToken("");
+      }
+      setStatus("idle");
     }
   };
 
@@ -66,7 +139,6 @@ export function MobileNewsletterSection() {
     <div className="block md:hidden my-12 px-3">
       {/* Mobile Card Container with Soft Neumorphism */}
       <div className="relative rounded-[2.2rem] bg-gradient-to-b from-[#edf3fa] to-[#e4eaf2] p-5 shadow-neu-flat border border-white/80 overflow-hidden">
-        
         {/* Glow Accent */}
         <div className="absolute -top-16 -right-16 w-36 h-36 bg-brand-500/10 rounded-full blur-2xl pointer-events-none" />
 
@@ -86,7 +158,7 @@ export function MobileNewsletterSection() {
           Recibe en tu correo una estimación de tiempos, propuesta técnica y presupuesto mensual sin compromiso.
         </p>
 
-        {/* Trust Badges Chips (Horizontal Scrollable / Row) */}
+        {/* Trust Badges Chips */}
         <div className="flex items-center gap-2 mt-3.5 mb-5 overflow-x-auto no-scrollbar py-0.5">
           <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-200/60 neu-badge shrink-0 text-[10px] font-bold text-slate-600">
             <Clock className="w-3 h-3 text-brand-600" />
@@ -166,6 +238,16 @@ export function MobileNewsletterSection() {
                 />
               </div>
 
+              {/* Cloudflare Turnstile Verification Widget */}
+              <div className="flex flex-col items-center justify-center my-2">
+                <div ref={turnstileContainerRef} className="min-h-[65px] flex items-center justify-center" />
+                {turnstileError && (
+                  <p className="text-[11px] text-rose-500 font-semibold mt-1 text-center">
+                    {turnstileError}
+                  </p>
+                )}
+              </div>
+
               {/* Big Touch-Friendly Button with Haptic Feel */}
               <button
                 type="submit"
@@ -196,4 +278,3 @@ export function MobileNewsletterSection() {
     </div>
   );
 }
-
