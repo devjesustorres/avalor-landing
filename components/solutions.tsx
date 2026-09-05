@@ -106,16 +106,13 @@ export function SolutionsSection() {
           return (
             <Card
               key={index}
-              className="neu-extruded neu-extruded-hover rounded-3xl p-2 border-none bg-transparent shadow-none transition-all duration-300 group"
               className={`neu-extruded neu-extruded-hover rounded-3xl p-2 border border-white/80 ${item.borderHover} bg-gradient-to-b from-white/40 via-transparent to-transparent shadow-none transition-all duration-300 group relative overflow-hidden`}
             >
               <div className={`absolute -top-12 -right-12 w-28 h-28 bg-gradient-to-br ${item.glow} to-transparent rounded-full blur-xl group-hover:scale-150 transition-all duration-500 pointer-events-none`} />
               <CardBody className="p-6">
-                <div className="w-12 h-12 rounded-2xl neu-pressed flex items-center justify-center text-brand-600 mb-6 group-hover:scale-105 transition-transform">
                 <div className={`w-12 h-12 rounded-2xl neu-pressed flex items-center justify-center ${item.color} mb-6 group-hover:scale-110 transition-transform shadow-inner`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2">{item.title}</h3>
                 <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-700 transition-colors">{item.title}</h3>
                 <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
               </CardBody>
@@ -125,8 +122,6 @@ export function SolutionsSection() {
                   href={item.href}
                   variant="light"
                   size="sm"
-                  endContent={<ArrowRight className="w-4 h-4 ml-0.5 group-hover:translate-x-1 transition-transform" />}
-                  className="px-0 font-bold text-xs text-brand-600 hover:text-brand-700 data-[hover=true]:bg-transparent"
                   endContent={<ArrowRight className="w-4 h-4 ml-0.5 group-hover:translate-x-1.5 transition-transform" />}
                   className={`px-0 font-bold text-xs ${item.color} hover:opacity-80 data-[hover=true]:bg-transparent`}
                 >

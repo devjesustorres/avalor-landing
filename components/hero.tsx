@@ -13,7 +13,6 @@ export function HeroSection() {
     <section className="relative z-10 pt-36 pb-16 sm:pt-44 sm:pb-24 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="flex flex-col items-center text-center max-w-4xl mx-auto">
 
-        {/* Hero Headline */}
         {/* Animated Top Pill / Chip */}
         <div className="inline-flex items-center gap-2 px-4 py-1.5 rounded-full neu-badge text-xs font-bold text-brand-700 uppercase tracking-widest mb-6 border border-brand-500/20 bg-white/60 backdrop-blur-md animate-float-slow shadow-xs">
           <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
@@ -25,7 +24,6 @@ export function HeroSection() {
         {/* Hero Headline with Animated Vibrant Gradient */}
         <h1 className="text-4xl sm:text-6xl lg:text-7xl font-extrabold text-slate-900 tracking-tight leading-[1.08] mb-6">
           {t("hero.title_prefix")}
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-slate-950 via-brand-700 to-brand-600">
           <span className="block sm:inline mt-1 bg-clip-text text-transparent bg-gradient-to-r from-brand-700 via-indigo-600 to-purple-600 animate-gradient-text drop-shadow-xs">
             {t("hero.title_highlight")}
           </span>

@@ -42,7 +42,6 @@ body {
 }
 
 .neural-glow {
-  background: radial-gradient(circle at 50% 50%, rgba(59, 130, 246, 0.12) 0%, rgba(232, 237, 243, 0) 70%);
   background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.18) 0%, rgba(99, 102, 241, 0.12) 35%, rgba(232, 237, 243, 0) 70%);
 }
 

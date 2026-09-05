@@ -40,10 +40,6 @@ export function MobileHome() {
       </header>
 
       {/* 2. Mobile Hero Section */}
-      <section className="px-4 pt-8 pb-6 text-center">
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-[11px] font-bold mb-4">
-          <Sparkles className="w-3 h-3 text-blue-600" />
-          <span>Ingeniería de Software Empresarial</span>
       <section className="px-4 pt-8 pb-6 text-center relative overflow-hidden">
         {/* Subtle mobile glows */}
         <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-72 h-36 bg-brand-500/15 rounded-full blur-2xl pointer-events-none" />
@@ -58,7 +54,6 @@ export function MobileHome() {
 
         <h1 className="text-3xl font-black text-slate-900 tracking-tight leading-tight mb-4">
           {t("hero.title_prefix")}{" "}
-          <span className="text-brand-600 block mt-1">
           <span className="block mt-1 bg-clip-text text-transparent bg-gradient-to-r from-brand-600 via-indigo-600 to-purple-600 animate-gradient-text">
             {t("hero.title_highlight")}
           </span>

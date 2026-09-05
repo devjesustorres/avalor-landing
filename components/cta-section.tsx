@@ -41,15 +41,12 @@ export function CtaSection() {
 
   return (
     <section id="contacto" className="hidden md:block mt-28 sm:mt-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-      <div className="neu-extruded rounded-[2.5rem] p-8 sm:p-14 text-center max-w-5xl mx-auto relative overflow-hidden">
       <div className="neu-extruded rounded-[2.5rem] p-8 sm:p-14 text-center max-w-5xl mx-auto relative overflow-hidden border border-white/90 bg-gradient-to-b from-white/70 via-[#e8edf3] to-slate-200/60 shadow-xl">
         {/* Colorful Ambient Glows inside CTA */}
         <div className="absolute -top-24 -left-24 w-72 h-72 bg-gradient-to-br from-brand-500/20 to-indigo-500/20 rounded-full blur-3xl pointer-events-none" />
         <div className="absolute -bottom-24 -right-24 w-72 h-72 bg-gradient-to-tl from-purple-500/20 to-pink-500/20 rounded-full blur-3xl pointer-events-none" />
 
         <div className="max-w-2xl mx-auto relative z-10">
-          <div className="w-14 h-14 rounded-2xl neu-pressed flex items-center justify-center text-brand-600 mx-auto mb-6">
-            <Rocket className="w-7 h-7" />
           <div className="w-16 h-16 rounded-2xl neu-pressed flex items-center justify-center text-brand-600 mx-auto mb-6 shadow-inner animate-float-slow bg-gradient-to-tr from-brand-50 to-white border border-brand-200/50">
             <Rocket className="w-8 h-8 text-brand-600" />
           </div>

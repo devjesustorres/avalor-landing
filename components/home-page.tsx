@@ -20,12 +20,8 @@ export default function HomePage() {
 
       {/* Vista de Escritorio / Pantallas Grandes */}
       <div className="hidden md:block min-h-screen relative">
-        {/* Background Ambient Glows */}
         {/* Background Ambient Glows with Richer Colors & Subtle Motion */}
         <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-          <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[900px] h-[500px] neural-glow rounded-full blur-3xl opacity-80" />
-          <div className="absolute top-[600px] -right-32 w-[600px] h-[600px] neural-glow rounded-full blur-3xl opacity-50" />
-          <div className="absolute top-[1400px] -left-32 w-[600px] h-[600px] neural-glow rounded-full blur-3xl opacity-40" />
           <div className="absolute -top-40 left-1/2 -translate-x-1/2 w-[950px] h-[550px] neural-glow rounded-full blur-3xl opacity-90 animate-pulse-glow" />
           <div className="absolute top-[450px] -right-24 w-[650px] h-[650px] neural-glow-purple rounded-full blur-3xl opacity-75 animate-float-slow" />
           <div className="absolute top-[1200px] -left-32 w-[650px] h-[650px] neural-glow-cyan rounded-full blur-3xl opacity-75 animate-float-delayed" />
