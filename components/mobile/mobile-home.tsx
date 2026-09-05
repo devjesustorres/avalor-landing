@@ -45,13 +45,6 @@ export function MobileHome() {
         <div className="absolute -top-12 left-1/2 -translate-x-1/2 w-72 h-36 bg-brand-500/15 rounded-full blur-2xl pointer-events-none" />
         <div className="absolute top-24 -right-10 w-40 h-40 bg-purple-500/10 rounded-full blur-2xl pointer-events-none" />
 
-        <div className="inline-flex items-center gap-1.5 px-3.5 py-1.5 rounded-full bg-white/80 border border-brand-200/80 text-brand-700 text-[11px] font-bold mb-4 shadow-xs backdrop-blur-sm">
-          <span className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-          <span className="bg-clip-text text-transparent bg-gradient-to-r from-brand-700 to-indigo-600 font-extrabold">
-            {t("hero.badge_chip")}
-          </span>
-        </div>
-
         <h1 className="text-3xl font-black text-slate-900 tracking-tight leading-tight mb-4">
           {t("hero.title_prefix")}{" "}
           <span className="block mt-1 bg-clip-text text-transparent bg-gradient-to-r from-brand-600 via-indigo-600 to-purple-600 animate-gradient-text">
