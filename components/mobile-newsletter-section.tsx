@@ -17,23 +17,39 @@ import { supabase } from "@/lib/supabase";
 
 export function MobileNewsletterSection() {
   const { t } = useLanguage();
+  const [companyName, setCompanyName] = useState("");
   const [email, setEmail] = useState("");
+  const [description, setDescription] = useState("");
   const [status, setStatus] = useState<"idle" | "loading" | "success">("idle");
+
+  const sanitize = (text: string, maxLen = 500): string => {
+    return text
+      .replace(/<[^>]*>?/gm, "")
+      .replace(/[\u0000-\u001F\u007F-\u009F]/g, "")
+      .trim()
+      .slice(0, maxLen);
+  };
 
   const handleSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!email || !email.includes("@")) return;
+    const cleanEmail = sanitize(email, 120).toLowerCase();
+    const cleanCompany = sanitize(companyName, 120);
+    const cleanDesc = sanitize(description, 1000);
+
+    if (!cleanEmail || !cleanEmail.includes("@")) return;
 
     setStatus("loading");
     try {
+      const finalCompany = cleanCompany || (cleanEmail.split("@")[1] ? cleanEmail.split("@")[1].split(".")[0].toUpperCase() : "Lead Móvil");
+
       await supabase.from("prospects").insert([
         {
-          company_name: email.split("@")[1] ? email.split("@")[1].split(".")[0].toUpperCase() : "Lead Móvil",
-          email_primary: email.trim().toLowerCase(),
+          company_name: finalCompany,
+          email_primary: cleanEmail,
           sector: "Mobile Landing",
           location: "Mobile",
           custom_subject: "Interesado en Plan Mensual - Vista Móvil",
-          custom_message: "Prospecto registrado a través del formulario móvil de Saventi-landing.",
+          custom_message: cleanDesc || "Prospecto registrado a través del formulario móvil de Saventi-landing.",
           stage: "nuevo",
           lead_status: "warm",
           lead_score: 50,
@@ -101,23 +117,52 @@ export function MobileNewsletterSection() {
                 ¡Solicitud Recibida con Éxito!
               </h4>
               <p className="text-xs text-emerald-700 mt-1">
-                Un ingeniero de soluciones revisará tu requerimiento y te contactará en breve.
+                Un asesor revisará tu requerimiento y te contactará hoy mismo.
               </p>
             </motion.div>
           ) : (
-            <form onSubmit={handleSubmit} className="space-y-2.5">
-              {/* Native Mobile Input Field */}
-              <div className="relative">
-                <div className="absolute inset-y-0 left-0 pl-3.5 flex items-center pointer-events-none text-slate-400">
-                  <Mail className="w-4 h-4" />
-                </div>
+            <form onSubmit={handleSubmit} className="space-y-3 text-left">
+              {/* Nombre / Razón Social */}
+              <div>
+                <label className="block text-[11px] font-bold text-slate-700 mb-1 ml-1">
+                  Nombre / Razón Social
+                </label>
+                <input
+                  type="text"
+                  required
+                  value={companyName}
+                  onChange={(e) => setCompanyName(e.target.value)}
+                  placeholder="Ej. Distribuidora del Centro, C.A."
+                  className="w-full px-3.5 py-3 rounded-xl neu-pressed bg-[#e5ebf3] text-xs font-semibold text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/30 transition-all"
+                />
+              </div>
+
+              {/* Correo Electrónico */}
+              <div>
+                <label className="block text-[11px] font-bold text-slate-700 mb-1 ml-1">
+                  Correo Electrónico
+                </label>
                 <input
                   type="email"
                   required
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="tu-correo@empresa.com"
-                  className="w-full pl-10 pr-4 py-3.5 rounded-2xl neu-pressed bg-[#e5ebf3] text-xs font-semibold text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/30 transition-all"
+                  className="w-full px-3.5 py-3 rounded-xl neu-pressed bg-[#e5ebf3] text-xs font-semibold text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/30 transition-all"
+                />
+              </div>
+
+              {/* Descripción breve */}
+              <div>
+                <label className="block text-[11px] font-bold text-slate-700 mb-1 ml-1">
+                  Descripción de lo que necesitas
+                </label>
+                <textarea
+                  rows={2}
+                  value={description}
+                  onChange={(e) => setDescription(e.target.value)}
+                  placeholder="Describe brevemente qué proceso deseas resolver..."
+                  className="w-full px-3.5 py-2.5 rounded-xl neu-pressed bg-[#e5ebf3] text-xs font-semibold text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/30 transition-all resize-none"
                 />
               </div>
 
@@ -125,7 +170,7 @@ export function MobileNewsletterSection() {
               <button
                 type="submit"
                 disabled={status === "loading"}
-                className="w-full py-3.5 px-4 rounded-2xl bg-brand-600 hover:bg-brand-500 active:scale-[0.98] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-neu-btn-blue transition-all disabled:opacity-75 cursor-pointer"
+                className="w-full py-3.5 px-4 rounded-2xl bg-brand-600 hover:bg-brand-500 active:scale-[0.98] text-white font-bold text-xs flex items-center justify-center gap-2 shadow-neu-btn-blue transition-all disabled:opacity-75 cursor-pointer mt-1"
               >
                 {status === "loading" ? (
                   <span className="inline-block animate-spin w-4 h-4 border-2 border-white border-t-transparent rounded-full" />

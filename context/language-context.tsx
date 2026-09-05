@@ -182,7 +182,9 @@ const translations = {
     "cta.title": "Hagamos Realidad el Software que tu Empresa Necesita",
     "cta.subtitle": "Cuéntanos sobre tu proyecto o necesidad operativa y te entregamos un diagnóstico y propuesta técnica a la medida en menos de 24 horas.",
     "cta.success": "¡Gracias! Nos pondremos en contacto contigo hoy mismo.",
-    "cta.placeholder": "Ingresa tu correo empresarial",
+    "cta.placeholder_company": "Nombre / Razón Social",
+    "cta.placeholder": "Ingresa tu correo",
+    "cta.placeholder_desc": "Describe brevemente qué necesitas o qué problema quieres resolver...",
     "cta.btn": "Solicitar Propuesta",
     "cta.disclaimer": "Respuesta en menos de 24 horas hábiles. Tus datos y procesos están 100% protegidos.",
 
@@ -362,7 +364,9 @@ const translations = {
     "cta.title": "Let's Build the Solution Your Enterprise Needs",
     "cta.subtitle": "Tell us about your operational challenge and receive a tailored managed proposal within 24 hours.",
     "cta.success": "Thank you! We will get in touch with you today.",
-    "cta.placeholder": "Enter your work email",
+    "cta.placeholder_company": "Company / Business Name",
+    "cta.placeholder": "Enter your email",
+    "cta.placeholder_desc": "Briefly describe your project or operational requirements...",
     "cta.btn": "Request Proposal",
     "cta.disclaimer": "Fast response in under 24 business hours. Your data and processes are 100% protected.",
 
