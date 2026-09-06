@@ -17,10 +17,6 @@ async function getProposal(slug: string) {
       .eq('subject', slug)
       .maybeSingle();
 
-    if (error || !data) return null;
-    return data;
-  } catch {
-    return null;
     if (!error && data) return data;
   } catch (err) {
     console.warn('Notice querying proposal in landing:', err);
