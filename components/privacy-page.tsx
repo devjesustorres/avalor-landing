@@ -1,9 +1,8 @@
 "use client";
 
 import React, { useState, useEffect } from "react";
-import { FloatingNavbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
-import { ShieldCheck, Lock, Eye, FileText, ArrowLeft } from "lucide-react";
+import { PageLayout } from "@/components/page-layout";
+import { ShieldCheck, Lock } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 import { createClient } from "@supabase/supabase-js";
 
@@ -36,7 +35,6 @@ const DEFAULT_PRIVACY_DATA = {
 export default function PrivacyPage() {
   const { lang } = useLanguage();
   const isEs = lang === "es";
-  const homeHref = lang === "en" ? "/en" : "/";
   const [privacyData, setPrivacyData] = useState(DEFAULT_PRIVACY_DATA);
   const [loading, setLoading] = useState(true);
 
@@ -66,50 +64,38 @@ export default function PrivacyPage() {
   }, []);
 
   return (
-    <div className="min-h-screen relative bg-[#f8fafc]">
-      <FloatingNavbar />
-
-      <main className="relative z-10 pt-36 pb-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
-        <a
-          href={homeHref}
-          className="inline-flex items-center gap-2 text-xs font-bold text-brand-600 mb-8 neu-badge px-3.5 py-1.5 rounded-full hover:text-brand-700"
-        >
-          <ArrowLeft className="w-3.5 h-3.5" />
-          {isEs ? "Volver al inicio" : "Back to home"}
-        </a>
-
-        <div className="neu-extruded rounded-3xl p-8 sm:p-12 bg-white border border-slate-200/80 shadow-sm">
+    <PageLayout>
+      <div className="pt-20 sm:pt-36 pb-20 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="neu-extruded rounded-3xl p-8 sm:p-12 bg-white/70 dark:bg-slate-900/70 border border-slate-200/80 dark:border-slate-800 shadow-sm backdrop-blur-md">
           <div className="flex items-center gap-3 mb-6">
-            <div className="w-12 h-12 rounded-2xl neu-pressed flex items-center justify-center text-brand-600 bg-blue-50">
-              <ShieldCheck className="w-6 h-6 text-blue-600" />
+            <div className="w-12 h-12 rounded-2xl neu-pressed flex items-center justify-center text-brand-600 dark:text-brand-400 bg-blue-50 dark:bg-blue-950/40">
+              <ShieldCheck className="w-6 h-6 text-brand-600 dark:text-brand-400" />
             </div>
             <div>
-              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900">
+              <h1 className="text-2xl sm:text-4xl font-extrabold text-slate-900 dark:text-white">
                 {isEs ? "Política de Privacidad" : "Privacy Policy"}
               </h1>
-              <p className="text-xs text-slate-500 mt-1">
+              <p className="text-xs text-slate-500 dark:text-slate-400 mt-1">
                 Saventi • {privacyData.lastUpdated || "Septiembre 2026"}
               </p>
             </div>
           </div>
 
-          <div className="space-y-6 text-sm text-slate-600 leading-relaxed">
+          <div className="space-y-6 text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
             {privacyData.sections?.map((sec, idx) => (
-              <section key={idx} className="border-b border-slate-100 pb-5 last:border-b-0">
-                <h2 className="text-base sm:text-lg font-bold text-slate-900 mb-2 flex items-center gap-2">
-                  <Lock className="w-4 h-4 text-blue-600 shrink-0" />
+              <section key={idx} className="border-b border-slate-200/60 dark:border-slate-800/80 pb-5 last:border-b-0">
+                <h2 className="text-base sm:text-lg font-bold text-slate-900 dark:text-white mb-2 flex items-center gap-2">
+                  <Lock className="w-4 h-4 text-brand-600 dark:text-brand-400 shrink-0" />
                   {sec.title}
                 </h2>
-                <p className="text-slate-600 leading-relaxed text-sm">
+                <p className="text-slate-600 dark:text-slate-300 leading-relaxed text-sm">
                   {sec.content}
                 </p>
               </section>
             ))}
           </div>
         </div>
-      </main>
-
-      <Footer />
-    </div>
+      </div>
+    </PageLayout>
   );
 }

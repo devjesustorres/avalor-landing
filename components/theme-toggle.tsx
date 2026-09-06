@@ -18,7 +18,7 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
         className={`w-9 h-9 shrink-0 rounded-full bg-slate-200/80 dark:bg-slate-800/90 neu-badge flex items-center justify-center border border-slate-300/40 dark:border-white/10 ${className}`}
         aria-hidden="true"
       >
-        <Moon className="w-4 h-4 text-slate-700 opacity-60" />
+        <Moon className="w-4 h-4 text-slate-700 dark:text-slate-300 opacity-60" />
       </div>
     );
   }
@@ -41,4 +41,3 @@ export function ThemeToggle({ className = "" }: { className?: string }) {
     </button>
   );
 }
-
