@@ -78,6 +78,44 @@ body {
   border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
+/* Corrección de sombras neumórficas en Modo Oscuro (elimina destellos y halos blancos en botones) */
+.dark .shadow-neu-btn-blue {
+  box-shadow: 0 10px 25px -4px rgba(37, 99, 235, 0.5), 0 0 20px -2px rgba(59, 130, 246, 0.3) !important;
+}
+
+.dark .shadow-neu-btn-blue:hover {
+  box-shadow: 0 12px 28px -2px rgba(37, 99, 235, 0.65), 0 0 25px rgba(59, 130, 246, 0.45) !important;
+}
+
+.dark .shadow-neu-btn-blue:active,
+.dark .shadow-neu-btn-blue-active {
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.7), 0 0 12px rgba(37, 99, 235, 0.3) !important;
+}
+
+.dark .shadow-neu-flat {
+  box-shadow: 0 16px 32px -8px rgba(0, 0, 0, 0.7), 0 0 0 1px rgba(255, 255, 255, 0.06) !important;
+}
+
+.dark .shadow-neu-flat-sm {
+  box-shadow: 0 8px 16px -4px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(255, 255, 255, 0.05) !important;
+}
+
+.dark .shadow-neu-flat-lg {
+  box-shadow: 0 24px 48px -12px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.07) !important;
+}
+
+.dark .shadow-neu-inset {
+  box-shadow: inset 3px 3px 8px rgba(0, 0, 0, 0.8), inset -1px -1px 3px rgba(255, 255, 255, 0.03) !important;
+}
+
+.dark .shadow-neu-inset-sm {
+  box-shadow: inset 2px 2px 5px rgba(0, 0, 0, 0.7), inset -1px -1px 2px rgba(255, 255, 255, 0.02) !important;
+}
+
+.dark .shadow-neu-pill {
+  box-shadow: 0 16px 36px -10px rgba(0, 0, 0, 0.8), 0 0 0 1px rgba(255, 255, 255, 0.08) !important;
+}
+
 .neural-glow {
   background: radial-gradient(circle at 50% 50%, rgba(37, 99, 235, 0.18) 0%, rgba(99, 102, 241, 0.12) 35%, rgba(232, 237, 243, 0) 70%);
 }

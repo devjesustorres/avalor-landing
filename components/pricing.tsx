@@ -70,7 +70,7 @@ export function PricingSection() {
         {/* Tier 2: Dedicated Squad (Highlighted) */}
         <Card className="neu-extruded rounded-3xl p-3 border-2 border-brand-500 relative bg-gradient-to-b from-white/80 via-[#e2e8f0] to-[#e8edf3] dark:from-slate-900/90 dark:via-slate-800/80 dark:to-slate-900/90 shadow-2xl flex flex-col justify-between overflow-visible group hover:-translate-y-1 transition-all duration-300">
           <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 z-20">
-            <Chip color="primary" size="sm" className="font-extrabold text-[11px] uppercase shadow-lg px-3.5 bg-gradient-to-r from-brand-600 to-indigo-600 text-white animate-pulse-glow border border-white/40">
+            <Chip color="primary" size="sm" className="font-extrabold text-[11px] uppercase shadow-lg px-3.5 bg-gradient-to-r from-brand-600 to-indigo-600 text-white animate-pulse-glow border border-white/40 dark:border-white/15">
               {t("pricing.t2.badge")}
             </Chip>
           </div>
