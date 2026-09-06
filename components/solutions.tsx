@@ -92,10 +92,10 @@ export function SolutionsSection() {
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full neu-badge text-xs font-bold text-brand-700 mb-3 uppercase tracking-wider">
           {t("services.badge")}
         </div>
-        <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           {t("services.title")}
         </h2>
-        <p className="text-slate-600 mt-4 text-base sm:text-lg">
+        <p className="text-slate-600 dark:text-slate-300 mt-4 text-base sm:text-lg">
           {t("services.subtitle")}
         </p>
       </div>
@@ -106,17 +106,17 @@ export function SolutionsSection() {
           return (
             <Card
               key={index}
-              className={`neu-extruded neu-extruded-hover rounded-3xl p-2 border border-white/80 ${item.borderHover} bg-gradient-to-b from-white/40 via-transparent to-transparent shadow-none transition-all duration-300 group relative overflow-hidden`}
+              className={`neu-extruded neu-extruded-hover rounded-3xl p-2 border border-white/80 dark:border-white/10 ${item.borderHover} bg-gradient-to-b from-white/40 dark:from-white/5 via-transparent to-transparent shadow-none transition-all duration-300 group relative overflow-hidden`}
             >
               <div className={`absolute -top-12 -right-12 w-28 h-28 bg-gradient-to-br ${item.glow} to-transparent rounded-full blur-xl group-hover:scale-150 transition-all duration-500 pointer-events-none`} />
               <CardBody className="p-6">
                 <div className={`w-12 h-12 rounded-2xl neu-pressed flex items-center justify-center ${item.color} mb-6 group-hover:scale-110 transition-transform shadow-inner`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900 mb-2 group-hover:text-brand-700 transition-colors">{item.title}</h3>
-                <p className="text-sm text-slate-600 leading-relaxed">{item.description}</p>
+                <h3 className="text-lg font-bold text-slate-900 dark:text-white mb-2 group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">{item.title}</h3>
+                <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed">{item.description}</p>
               </CardBody>
-              <CardFooter className="px-6 pb-6 pt-0 border-t border-slate-300/30 flex justify-between items-center">
+              <CardFooter className="px-6 pb-6 pt-0 border-t border-slate-300/30 dark:border-slate-800 flex justify-between items-center">
                 <Button
                   as="a"
                   href={item.href}

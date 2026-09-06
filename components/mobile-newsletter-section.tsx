@@ -39,7 +39,7 @@ export function MobileNewsletterSection() {
           const id = window.turnstile.render(turnstileContainerRef.current, {
             sitekey: siteKey,
             action: "contact",
-            theme: "light",
+            theme: "auto",
             callback: (token: string) => {
               setTurnstileToken(token);
               setTurnstileError("");
@@ -138,38 +138,38 @@ export function MobileNewsletterSection() {
   return (
     <div className="block md:hidden my-12 px-3">
       {/* Mobile Card Container with Soft Neumorphism */}
-      <div className="relative rounded-[2.2rem] bg-gradient-to-b from-[#edf3fa] to-[#e4eaf2] p-5 shadow-neu-flat border border-white/80 overflow-hidden">
+      <div className="relative rounded-[2.2rem] bg-gradient-to-b from-[#edf3fa] to-[#e4eaf2] dark:from-slate-900/90 dark:to-[#0b0f19] p-5 shadow-neu-flat border border-white/80 dark:border-white/10 overflow-hidden">
         {/* Glow Accent */}
-        <div className="absolute -top-16 -right-16 w-36 h-36 bg-brand-500/10 rounded-full blur-2xl pointer-events-none" />
+        <div className="absolute -top-16 -right-16 w-36 h-36 bg-brand-500/10 dark:bg-brand-500/20 rounded-full blur-2xl pointer-events-none" />
 
         {/* Top Header Badge */}
-        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 border border-brand-200/60 text-brand-700 text-[11px] font-bold mb-3">
-          <Sparkles className="w-3 h-3 text-brand-600" />
+        <div className="inline-flex items-center gap-1.5 px-3 py-1 rounded-full bg-brand-50 dark:bg-brand-950/60 border border-brand-200/60 dark:border-brand-800/60 text-brand-700 dark:text-brand-300 text-[11px] font-bold mb-3">
+          <Sparkles className="w-3 h-3 text-brand-600 dark:text-brand-400" />
           <span>Diagnóstico Tecnológico Gratuito</span>
         </div>
 
         {/* Title */}
-        <h3 className="text-xl font-black text-slate-900 leading-tight tracking-tight">
+        <h3 className="text-xl font-black text-slate-900 dark:text-white leading-tight tracking-tight">
           ¿Tienes una idea o proyecto en mente?
         </h3>
 
         {/* Subtitle */}
-        <p className="text-xs text-slate-600 mt-2 leading-relaxed">
+        <p className="text-xs text-slate-600 dark:text-slate-300 mt-2 leading-relaxed">
           Recibe en tu correo una estimación de tiempos, propuesta técnica y presupuesto mensual sin compromiso.
         </p>
 
         {/* Trust Badges Chips */}
         <div className="flex items-center gap-2 mt-3.5 mb-5 overflow-x-auto no-scrollbar py-0.5">
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-200/60 neu-badge shrink-0 text-[10px] font-bold text-slate-600">
-            <Clock className="w-3 h-3 text-brand-600" />
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-200/60 dark:bg-slate-800/60 neu-badge shrink-0 text-[10px] font-bold text-slate-600 dark:text-slate-300">
+            <Clock className="w-3 h-3 text-brand-600 dark:text-brand-400" />
             <span>Respuesta &lt; 24h</span>
           </div>
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-200/60 neu-badge shrink-0 text-[10px] font-bold text-slate-600">
-            <ShieldCheck className="w-3 h-3 text-emerald-600" />
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-200/60 dark:bg-slate-800/60 neu-badge shrink-0 text-[10px] font-bold text-slate-600 dark:text-slate-300">
+            <ShieldCheck className="w-3 h-3 text-emerald-600 dark:text-emerald-400" />
             <span>Datos Seguros</span>
           </div>
-          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-200/60 neu-badge shrink-0 text-[10px] font-bold text-slate-600">
-            <Zap className="w-3 h-3 text-blue-600" />
+          <div className="flex items-center gap-1.5 px-2.5 py-1 rounded-xl bg-slate-200/60 dark:bg-slate-800/60 neu-badge shrink-0 text-[10px] font-bold text-slate-600 dark:text-slate-300">
+            <Zap className="w-3 h-3 text-blue-600 dark:text-blue-400" />
             <span>Todo Incluido</span>
           </div>
         </div>
@@ -180,15 +180,15 @@ export function MobileNewsletterSection() {
             <motion.div
               initial={{ opacity: 0, scale: 0.95 }}
               animate={{ opacity: 1, scale: 1 }}
-              className="p-4 rounded-2xl bg-emerald-50 border border-emerald-200 text-center"
+              className="p-4 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 border border-emerald-200 dark:border-emerald-800 text-center"
             >
               <div className="w-10 h-10 rounded-full bg-emerald-500 text-white flex items-center justify-center mx-auto mb-2 shadow-sm">
                 <Check className="w-5 h-5 stroke-[3]" />
               </div>
-              <h4 className="text-sm font-extrabold text-emerald-900">
+              <h4 className="text-sm font-extrabold text-emerald-900 dark:text-emerald-200">
                 ¡Solicitud Recibida con Éxito!
               </h4>
-              <p className="text-xs text-emerald-700 mt-1">
+              <p className="text-xs text-emerald-700 dark:text-emerald-300 mt-1">
                 Un asesor revisará tu requerimiento y te contactará hoy mismo.
               </p>
             </motion.div>
@@ -196,7 +196,7 @@ export function MobileNewsletterSection() {
             <form onSubmit={handleSubmit} className="space-y-3 text-left">
               {/* Nombre / Razón Social */}
               <div>
-                <label className="block text-[11px] font-bold text-slate-700 mb-1 ml-1">
+                <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1 ml-1">
                   Nombre / Razón Social
                 </label>
                 <input
@@ -205,13 +205,13 @@ export function MobileNewsletterSection() {
                   value={companyName}
                   onChange={(e) => setCompanyName(e.target.value)}
                   placeholder="Ej. Distribuidora del Centro, C.A."
-                  className="w-full px-3.5 py-3 rounded-xl neu-pressed bg-[#e5ebf3] text-xs font-semibold text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/30 transition-all"
+                  className="w-full px-3.5 py-3 rounded-xl neu-pressed bg-[#e5ebf3] dark:bg-[#090d16] text-xs font-semibold text-slate-800 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30 transition-all"
                 />
               </div>
 
               {/* Correo Electrónico */}
               <div>
-                <label className="block text-[11px] font-bold text-slate-700 mb-1 ml-1">
+                <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1 ml-1">
                   Correo Electrónico
                 </label>
                 <input
@@ -220,13 +220,13 @@ export function MobileNewsletterSection() {
                   value={email}
                   onChange={(e) => setEmail(e.target.value)}
                   placeholder="tu-correo@empresa.com"
-                  className="w-full px-3.5 py-3 rounded-xl neu-pressed bg-[#e5ebf3] text-xs font-semibold text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/30 transition-all"
+                  className="w-full px-3.5 py-3 rounded-xl neu-pressed bg-[#e5ebf3] dark:bg-[#090d16] text-xs font-semibold text-slate-800 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30 transition-all"
                 />
               </div>
 
               {/* Descripción breve */}
               <div>
-                <label className="block text-[11px] font-bold text-slate-700 mb-1 ml-1">
+                <label className="block text-[11px] font-bold text-slate-700 dark:text-slate-300 mb-1 ml-1">
                   Descripción de lo que necesitas
                 </label>
                 <textarea
@@ -234,7 +234,7 @@ export function MobileNewsletterSection() {
                   value={description}
                   onChange={(e) => setDescription(e.target.value)}
                   placeholder="Describe brevemente qué proceso deseas resolver..."
-                  className="w-full px-3.5 py-2.5 rounded-xl neu-pressed bg-[#e5ebf3] text-xs font-semibold text-slate-800 placeholder:text-slate-400 focus:outline-none focus:ring-2 focus:ring-brand-500/30 transition-all resize-none"
+                  className="w-full px-3.5 py-2.5 rounded-xl neu-pressed bg-[#e5ebf3] dark:bg-[#090d16] text-xs font-semibold text-slate-800 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 focus:outline-none focus:ring-2 focus:ring-brand-500/30 transition-all resize-none"
                 />
               </div>
 

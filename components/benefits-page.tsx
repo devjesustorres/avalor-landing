@@ -1,32 +1,22 @@
-﻿"use client";
+"use client";
 
 import React from "react";
 import Link from "next/link";
-import { FloatingNavbar } from "@/components/navbar";
-import { Footer } from "@/components/footer";
+import { PageLayout } from "@/components/page-layout";
 import { StatsCards } from "@/components/stats-cards";
 import { BusinessImpactSection } from "@/components/business-impact-section";
 import { useLanguage } from "@/context/language-context";
 import { ArrowLeft, ArrowRight } from "lucide-react";
 
 export function BenefitsPage() {
-  const { lang, t } = useLanguage();
+  const { lang } = useLanguage();
   const isEs = lang === "es";
   const homeHref = isEs ? "/" : "/en";
   const contactHref = isEs ? "/contacto" : "/en/contact";
 
   return (
-    <div className="min-h-screen relative bg-[#edf2f7] text-slate-800 selection:bg-brand-600 selection:text-white">
-      {/* Background Ambient Glows */}
-      <div className="fixed inset-0 pointer-events-none z-0 overflow-hidden">
-        <div className="absolute -top-32 left-1/2 -translate-x-1/2 w-[900px] h-[500px] neural-glow rounded-full blur-3xl opacity-80" />
-        <div className="absolute top-[500px] -right-24 w-[600px] h-[600px] neural-glow-purple rounded-full blur-3xl opacity-60" />
-        <div className="absolute bottom-10 -left-20 w-[600px] h-[600px] neural-glow-cyan rounded-full blur-3xl opacity-60" />
-      </div>
-
-      <FloatingNavbar />
-
-      <main className="relative z-10 pt-28 sm:pt-40 pb-16 sm:pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+    <PageLayout>
+      <div className="pt-20 sm:pt-36 pb-16 sm:pb-20 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Back link */}
         <div className="mb-6 sm:mb-8 max-w-6xl mx-auto">
           <Link
@@ -66,9 +56,7 @@ export function BenefitsPage() {
             </div>
           </div>
         </div>
-      </main>
-
-      <Footer />
-    </div>
+      </div>
+    </PageLayout>
   );
 }

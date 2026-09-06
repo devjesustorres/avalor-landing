@@ -55,6 +55,15 @@ const config: Config = {
             background: "#e8edf3",
           },
         },
+        dark: {
+          colors: {
+            primary: {
+              DEFAULT: "#3b82f6",
+              foreground: "#ffffff",
+            },
+            background: "#0b0f19",
+          },
+        },
       },
     }),
   ],

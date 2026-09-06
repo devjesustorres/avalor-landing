@@ -21,7 +21,124 @@ async function getProposal(slug: string) {
     return data;
   } catch {
     return null;
+    if (!error && data) return data;
+  } catch (err) {
+    console.warn('Notice querying proposal in landing:', err);
   }
+
+  // Fallback demo for 'quiserma'
+  if (slug.toLowerCase() === 'quiserma') {
+    return {
+      id: 'prop_quiserma_001',
+      name: 'Servicios Industriales Quiserma, C.A.',
+      subject: 'quiserma',
+      template: `<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Propuesta Comercial - Servicios Industriales Quiserma, C.A.</title>
+  <style>
+    .prop-container { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif; color: #1e293b; max-width: 900px; margin: 0 auto; line-height: 1.6; }
+    .prop-card { background: #ffffff; border-radius: 24px; border: 1px solid #e2e8f0; box-shadow: 0 10px 30px -10px rgba(0, 0, 0, 0.05); padding: 36px 40px; margin-bottom: 24px; }
+    .badge-chip { display: inline-flex; align-items: center; gap: 6px; background: #eff6ff; color: #2563eb; font-size: 11.5px; font-weight: 800; text-transform: uppercase; letter-spacing: 0.8px; padding: 6px 14px; border-radius: 9999px; border: 1px solid #bfdbfe; }
+    .gradient-title { font-size: 32px; font-weight: 900; color: #0f172a; letter-spacing: -0.5px; margin: 16px 0 10px 0; line-height: 1.25; }
+    .subtitle { font-size: 16px; color: #64748b; margin: 0 0 24px 0; }
+    .feature-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(260px, 1fr)); gap: 16px; margin-top: 24px; }
+    .feature-item { background: #f8fafc; border-radius: 16px; padding: 22px; border: 1px solid #e2e8f0; }
+    .feature-icon { width: 36px; height: 36px; border-radius: 10px; background: #eff6ff; color: #2563eb; display: flex; align-items: center; justify-content: center; font-size: 18px; margin-bottom: 12px; }
+    .feature-item h4 { margin: 0 0 8px 0; color: #0f172a; font-size: 15px; font-weight: 700; }
+    .feature-item p { font-size: 13.5px; color: #64748b; margin: 0; line-height: 1.5; }
+    .timeline-step { display: flex; gap: 16px; margin-bottom: 20px; }
+    .step-number { width: 32px; height: 32px; border-radius: 50%; background: #2563eb; color: #fff; display: flex; align-items: center; justify-content: center; font-weight: 800; font-size: 13px; shrink: 0; }
+    .price-banner { background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%); color: #ffffff; border-radius: 24px; padding: 36px 40px; display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 24px; box-shadow: 0 16px 36px -12px rgba(15, 23, 42, 0.25); }
+    .cta-btn { background: #2563eb; color: #ffffff; font-weight: 800; text-decoration: none; padding: 16px 36px; border-radius: 9999px; display: inline-flex; align-items: center; gap: 8px; font-size: 15px; box-shadow: 0 10px 20px -5px rgba(37, 99, 235, 0.4); }
+    @media (max-width: 640px) { .prop-card { padding: 24px 20px; } .gradient-title { font-size: 24px; } .price-banner { padding: 28px 24px; } }
+  </style>
+</head>
+<body>
+  <div class="prop-container">
+    <div class="prop-card">
+      <span class="badge-chip">Propuesta Técnica &amp; Económica · Exclusiva</span>
+      <h1 class="gradient-title">Sistema de Trazabilidad de Lotes y Control de Maquila Química</h1>
+      <p class="subtitle">Preparado exclusivamente para <strong>Servicios Industriales Quiserma, C.A.</strong> por el equipo de ingeniería de Saventi.</p>
+      
+      <div style="background: #f1f5f9; padding: 18px 22px; border-radius: 14px; border-left: 4px solid #2563eb; margin-bottom: 24px;">
+        <p style="margin: 0; font-size: 14px; color: #334155;">
+          <strong>Diagnóstico Operativo:</strong> Digitalización y control de la operación de maquila (fabricación, formulado, mezclado y envasado de productos químicos y cosméticos), automatizando el seguimiento por lote desde la recepción de materias primas hasta el almacenamiento en sus 1.200 m³ de racks y despacho final.
+        </p>
+      </div>
+
+      <h3 style="font-size: 18px; font-weight: 800; color: #0f172a; margin: 28px 0 6px 0;">Alcance y Módulos de la Solución</h3>
+      <div class="feature-grid">
+        <div class="feature-item">
+          <div class="feature-icon">⚗️</div>
+          <h4>Módulo de Formulación &amp; Mezcla</h4>
+          <p>Catálogo maestro de fórmulas, recetas y dosificaciones con control de mermas y validaciones para operarios.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🏷️</div>
+          <h4>Generador de Lotes &amp; QR</h4>
+          <p>Asignación automática de identificador de lote, impresión de etiquetas con código QR y ficha técnica del lote.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">📦</div>
+          <h4>Control de Racks (1.200 m³)</h4>
+          <p>Mapa interactivo de almacenamiento para localizar pallets, fechas de ingreso y lotes listos para entrega.</p>
+        </div>
+        <div class="feature-item">
+          <div class="feature-icon">🌐</div>
+          <h4>Portal de Clientes de Maquila</h4>
+          <p>Acceso seguro para que las marcas cliente consulten el estado de su orden, stock elaborado y descargas de certificados.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="prop-card">
+      <h3 style="font-size: 18px; font-weight: 800; color: #0f172a; margin: 0 0 20px 0;">Cronograma de Entrega (5 a 7 Semanas)</h3>
+      <div class="timeline-step">
+        <div class="step-number">1</div>
+        <div>
+          <h4 style="margin: 0 0 4px 0; color: #0f172a; font-size: 15px;">Fase 1: Levantamiento Técnico &amp; Arquitectura</h4>
+          <p style="margin: 0; font-size: 13.5px; color: #64748b;">Modelado relacional en base de datos PostgreSQL, definición de fórmulas y catálogo de materias primas.</p>
+        </div>
+      </div>
+      <div class="timeline-step">
+        <div class="step-number">2</div>
+        <div>
+          <h4 style="margin: 0 0 4px 0; color: #0f172a; font-size: 15px;">Fase 2: Motor de Lotes y Mapeo de Bodega</h4>
+          <p style="margin: 0; font-size: 13.5px; color: #64748b;">Desarrollo del panel de operario, generación de lotes, control de mezclas y visualizador de racks.</p>
+        </div>
+      </div>
+      <div class="timeline-step" style="margin-bottom: 0;">
+        <div class="step-number">3</div>
+        <div>
+          <h4 style="margin: 0 0 4px 0; color: #0f172a; font-size: 15px;">Fase 3: Portal Web, Pruebas en Planta &amp; Despliegue</h4>
+          <p style="margin: 0; font-size: 13.5px; color: #64748b;">Pruebas de estrés, despliegue en la nube, capacitación del personal de Quiserma y entrega del 100% del código fuente.</p>
+        </div>
+      </div>
+    </div>
+
+    <div class="price-banner">
+      <div>
+        <div style="font-size: 12px; color: #94a3b8; font-weight: 700; text-transform: uppercase; letter-spacing: 0.5px;">Inversión Proyecto Llave en Mano</div>
+        <div style="font-size: 38px; font-weight: 900; color: #ffffff; margin: 4px 0 2px 0;">$2,400 <span style="font-size: 16px; color: #94a3b8; font-weight: 600;">USD</span></div>
+        <div style="font-size: 12.5px; color: #cbd5e1;">Código 100% de Quiserma · Sin mensualidades de licencia · Garantía post-entrega</div>
+      </div>
+      <div>
+        <a href="https://wa.me/584147708179?text=Hola%20Saventi,%20he%20revisado%20la%20propuesta%20de%20Quiserma%20y%20deseo%20aprobarla" target="_blank" class="cta-btn">
+          <span>Aprobar Propuesta</span>
+          <span>→</span>
+        </a>
+      </div>
+    </div>
+  </div>
+</body>
+</html>`
+    };
+  }
+
+  return null;
 }
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }) {

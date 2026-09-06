@@ -54,7 +54,7 @@ export function CtaSection() {
           const id = window.turnstile.render(turnstileContainerRef.current, {
             sitekey: siteKey,
             action: "contact",
-            theme: "light",
+            theme: "auto",
             callback: (token: string) => {
               setTurnstileToken(token);
               setTurnstileError("");
@@ -157,20 +157,20 @@ export function CtaSection() {
     <section id="contacto" className="hidden md:block mt-28 sm:mt-36 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
       <div className="neu-extruded rounded-[2.5rem] p-8 sm:p-14 text-center max-w-5xl mx-auto relative overflow-hidden">
         <div className="max-w-2xl mx-auto relative z-10">
-          <div className="w-14 h-14 rounded-2xl neu-pressed flex items-center justify-center text-brand-600 mx-auto mb-6">
+          <div className="w-14 h-14 rounded-2xl neu-pressed flex items-center justify-center text-brand-600 dark:text-brand-400 mx-auto mb-6">
             <Rocket className="w-7 h-7" />
           </div>
           
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
             {t("cta.title")}
           </h2>
           
-          <p className="text-slate-600 mt-4 text-base sm:text-lg mb-8">
+          <p className="text-slate-600 dark:text-slate-300 mt-4 text-base sm:text-lg mb-8">
             {t("cta.subtitle")}
           </p>
 
           {submitted ? (
-            <div className="neu-pressed rounded-2xl py-6 px-8 text-sm font-bold text-emerald-700 bg-emerald-50/50 max-w-md mx-auto shadow-inner border border-emerald-200/50">
+            <div className="neu-pressed rounded-2xl py-6 px-8 text-sm font-bold text-emerald-700 dark:text-emerald-300 bg-emerald-50/50 dark:bg-emerald-950/40 max-w-md mx-auto shadow-inner border border-emerald-200/50 dark:border-emerald-800/50">
               <span className="text-xl block mb-1">✨</span>
               {t("cta.success")}
             </div>
@@ -178,7 +178,7 @@ export function CtaSection() {
             <form onSubmit={handleSubmit} className="flex flex-col gap-3.5 max-w-lg mx-auto text-left">
               {/* Nombre / Razón Social */}
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5 ml-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 ml-1">
                   {t("cta.placeholder_company")}
                 </label>
                 <Input
@@ -191,15 +191,15 @@ export function CtaSection() {
                   radius="full"
                   variant="flat"
                   classNames={{
-                    inputWrapper: "neu-pressed bg-[#e4e9ef] shadow-none h-12 px-4",
-                    input: "text-xs sm:text-sm text-slate-800 placeholder:text-slate-400",
+                    inputWrapper: "neu-pressed bg-[#e4e9ef] dark:bg-[#090d16] shadow-none h-12 px-4",
+                    input: "text-xs sm:text-sm text-slate-800 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500",
                   }}
                 />
               </div>
 
               {/* Correo Electrónico */}
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5 ml-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 ml-1">
                   {t("cta.placeholder")}
                 </label>
                 <Input
@@ -212,15 +212,15 @@ export function CtaSection() {
                   radius="full"
                   variant="flat"
                   classNames={{
-                    inputWrapper: "neu-pressed bg-[#e4e9ef] shadow-none h-12 px-4",
-                    input: "text-xs sm:text-sm text-slate-800 placeholder:text-slate-400",
+                    inputWrapper: "neu-pressed bg-[#e4e9ef] dark:bg-[#090d16] shadow-none h-12 px-4",
+                    input: "text-xs sm:text-sm text-slate-800 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500",
                   }}
                 />
               </div>
 
               {/* Descripción de necesidad operativa */}
               <div>
-                <label className="block text-xs font-bold text-slate-700 mb-1.5 ml-1">
+                <label className="block text-xs font-bold text-slate-700 dark:text-slate-300 mb-1.5 ml-1">
                   Descripción del Proyecto o Necesidad
                 </label>
                 <Textarea
@@ -231,8 +231,8 @@ export function CtaSection() {
                   radius="lg"
                   variant="flat"
                   classNames={{
-                    inputWrapper: "neu-pressed bg-[#e4e9ef] shadow-none p-3",
-                    input: "text-xs sm:text-sm text-slate-800 placeholder:text-slate-400 resize-none",
+                    inputWrapper: "neu-pressed bg-[#e4e9ef] dark:bg-[#090d16] shadow-none p-3",
+                    input: "text-xs sm:text-sm text-slate-800 dark:text-slate-100 placeholder:text-slate-400 dark:placeholder:text-slate-500 resize-none",
                   }}
                 />
               </div>
@@ -261,7 +261,7 @@ export function CtaSection() {
             </form>
           )}
 
-          <p className="text-[11px] text-slate-400 mt-5 font-medium">
+          <p className="text-[11px] text-slate-400 dark:text-slate-500 mt-5 font-medium">
             {t("cta.disclaimer")}
           </p>
         </div>

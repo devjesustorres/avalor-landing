@@ -7,6 +7,7 @@ import { Button } from "@heroui/react";
 import { ArrowRight } from "lucide-react";
 import { useLanguage } from "@/context/language-context";
 import { LanguageSelector } from "@/components/language-selector";
+import { ThemeToggle } from "@/components/theme-toggle";
 
 export function FloatingNavbar() {
   const { t, lang } = useLanguage();
@@ -52,37 +53,37 @@ export function FloatingNavbar() {
         <div className="hidden md:flex items-center gap-1 lg:gap-2">
           <Link
             href={servicesHref}
-            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
+            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:neu-badge transition-all"
           >
             {t("nav.services")}
           </Link>
           <Link
             href={methodologyHref}
-            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
+            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:neu-badge transition-all"
           >
             {t("nav.methodology")}
           </Link>
           <Link
             href={benefitsHref}
-            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
+            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:neu-badge transition-all"
           >
             {t("nav.benefits")}
           </Link>
           <Link
             href={modelsHref}
-            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
+            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:neu-badge transition-all"
           >
             {t("nav.models")}
           </Link>
           <Link
             href={faqHref}
-            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
+            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:neu-badge transition-all"
           >
             {t("nav.faq")}
           </Link>
           <Link
             href={contactHref}
-            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 hover:text-slate-900 hover:neu-badge transition-all"
+            className="px-3.5 py-1.5 rounded-full text-xs lg:text-sm font-semibold text-slate-600 dark:text-slate-300 hover:text-slate-900 dark:hover:text-white hover:neu-badge transition-all"
           >
             {t("nav.contact")}
           </Link>
@@ -103,9 +104,10 @@ export function FloatingNavbar() {
           </Button>
         </div>
         </nav>
-        {/* Selector de idioma: fuera del pill del navbar */}
-        <div className="shrink-0">
+        {/* Controles de Idioma y Tema: fuera del pill del navbar */}
+        <div className="shrink-0 flex items-center gap-1.5">
           <LanguageSelector />
+          <ThemeToggle />
         </div>
       </div>
     </header>

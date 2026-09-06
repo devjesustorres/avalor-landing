@@ -57,10 +57,10 @@ export function FaqSection() {
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full neu-badge text-xs font-bold text-brand-700 mb-3 uppercase tracking-wider">
           <HelpCircle className="w-3.5 h-3.5" /> {t("faq.badge")}
         </div>
-        <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+        <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight">
           {t("faq.title")}
         </h2>
-        <p className="text-slate-600 mt-4 text-base sm:text-lg">
+        <p className="text-slate-600 dark:text-slate-300 mt-4 text-base sm:text-lg">
           {t("faq.subtitle")}
         </p>
       </div>
@@ -74,7 +74,7 @@ export function FaqSection() {
             <div
               key={index}
               className={`neu-extruded rounded-2xl sm:rounded-3xl p-5 sm:p-6 transition-all duration-300 ${
-                isOpen ? "bg-gradient-to-b from-[#e8edf3] to-[#e1e7ee] border border-brand-500/20" : ""
+                isOpen ? "bg-gradient-to-b from-[#e8edf3] to-[#e1e7ee] dark:from-slate-900/90 dark:to-slate-900/60 border border-brand-500/30" : ""
               }`}
             >
               <button
@@ -87,19 +87,19 @@ export function FaqSection() {
                   <div
                     className={`w-10 h-10 rounded-xl flex items-center justify-center transition-all ${
                       isOpen
-                        ? "neu-pressed text-brand-600 bg-brand-50"
-                        : "neu-badge text-slate-500 group-hover:text-brand-600"
+                        ? "neu-pressed text-brand-600 dark:text-brand-400 bg-brand-50 dark:bg-brand-950/60"
+                        : "neu-badge text-slate-500 dark:text-slate-400 group-hover:text-brand-600 dark:group-hover:text-brand-400"
                     }`}
                   >
                     <Icon className="w-5 h-5" />
                   </div>
-                  <span className="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-600 transition-colors">
+                  <span className="text-base sm:text-lg font-bold text-slate-900 dark:text-white group-hover:text-brand-600 dark:group-hover:text-brand-400 transition-colors">
                     {faq.question}
                   </span>
                 </div>
                 <div
                   className={`w-8 h-8 rounded-full flex items-center justify-center neu-badge transition-transform duration-300 flex-shrink-0 ${
-                    isOpen ? "rotate-180 text-brand-600" : "text-slate-500"
+                    isOpen ? "rotate-180 text-brand-600 dark:text-brand-400" : "text-slate-500 dark:text-slate-400"
                   }`}
                 >
                   <ChevronDown className="w-4 h-4" />
@@ -117,8 +117,8 @@ export function FaqSection() {
                 <div className="overflow-hidden min-h-0">
                   <div
                     className={`${
-                      isOpen ? "mt-4 pt-4 border-t border-slate-300/40" : ""
-                    } pl-0 sm:pl-14 text-sm sm:text-base text-slate-600 leading-relaxed`}
+                      isOpen ? "mt-4 pt-4 border-t border-slate-300/40 dark:border-slate-800" : ""
+                    } pl-0 sm:pl-14 text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed`}
                   >
                     {faq.answer}
                   </div>

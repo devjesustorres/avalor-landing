@@ -18,7 +18,7 @@ export function BusinessImpactSection() {
         <div className="inline-flex items-center gap-2 px-3.5 py-1 rounded-full neu-badge text-xs font-bold text-brand-700 mb-3 uppercase tracking-wider">
           {isEn ? "Business Scale & ROI" : "Impulso & Rentabilidad Real"}
         </div>
-        <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight leading-tight">
+        <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-tight">
           {isEn ? (
             <>
               Designed to Make Your Enterprise{" "}
@@ -35,7 +35,7 @@ export function BusinessImpactSection() {
             </>
           )}
         </h2>
-        <p className="text-slate-600 mt-4 text-base sm:text-lg">
+        <p className="text-slate-600 dark:text-slate-300 mt-4 text-base sm:text-lg">
           {isEn
             ? "Technology is not an expense—it is your unfair competitive advantage. We replace manual friction with automated systems that scale revenue and streamline operations."
             : "La tecnología a la medida no es un gasto, es tu mayor ventaja competitiva. Eliminamos cuellos de botella para que tu empresa multiplique su capacidad operativa y facture con total tranquilidad."}
@@ -43,7 +43,7 @@ export function BusinessImpactSection() {
       </div>
 
       {/* Main Growth Showcase Feature (Boardroom & Metrics) */}
-      <div className="neu-extruded rounded-[2.5rem] p-6 sm:p-10 mb-12 bg-white/70 backdrop-blur-md">
+      <div className="neu-extruded rounded-[2.5rem] p-6 sm:p-10 mb-12 bg-white/70 dark:bg-slate-900/60 backdrop-blur-md">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-center">
           {/* Image side */}
           <div className="lg:col-span-7 relative rounded-3xl overflow-hidden aspect-[16/10] shadow-xl group">
@@ -73,18 +73,18 @@ export function BusinessImpactSection() {
 
           {/* Text and Value Props side */}
           <div className="lg:col-span-5 flex flex-col justify-center">
-            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 text-emerald-700 text-xs font-bold w-fit mb-4 border border-emerald-200">
+            <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-emerald-50 dark:bg-emerald-950/60 text-emerald-700 dark:text-emerald-300 text-xs font-bold w-fit mb-4 border border-emerald-200 dark:border-emerald-800/60">
               <BarChart3 className="w-3.5 h-3.5" />
               {isEn ? "Scalability Focused" : "Enfoque en Rentabilidad"}
             </div>
 
-            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight leading-snug mb-4">
+            <h3 className="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white tracking-tight leading-snug mb-4">
               {isEn
                 ? "Gain full control of your numbers and business operations."
                 : "Toma el control absoluto de tus números y operaciones."}
             </h3>
 
-            <p className="text-sm text-slate-600 leading-relaxed mb-6">
+            <p className="text-sm text-slate-600 dark:text-slate-300 leading-relaxed mb-6">
               {isEn
                 ? "When your software adapts to your exact business rules, decisions become instant, inventory and billing synchronize effortlessly, and team productivity skyrockets."
                 : "Cuando tu software se adapta milimétricamente a tus reglas de negocio, los errores humanos desaparecen, los presupuestos se envían al instante y tu capacidad de entrega se multiplica."}
@@ -96,7 +96,7 @@ export function BusinessImpactSection() {
                 isEn ? "Custom dashboards accessible from any device anywhere" : "Paneles de control accesibles desde cualquier lugar y dispositivo",
                 isEn ? "Elimination of repetitive manual data entry tasks" : "Eliminación radical de tareas manuales repetitivas",
               ].map((item, idx) => (
-                <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 font-medium">
+                <li key={idx} className="flex items-start gap-2.5 text-xs sm:text-sm text-slate-700 dark:text-slate-200 font-medium">
                   <CheckCircle2 className="w-4 h-4 text-emerald-600 shrink-0 mt-0.5" />
                   <span>{item}</span>
                 </li>
@@ -121,7 +121,7 @@ export function BusinessImpactSection() {
       {/* Trust & Confidence Grid (3 Complementary Pillars) */}
       <div className="grid grid-cols-1 md:grid-cols-3 gap-6 sm:gap-8">
         {/* Card 1: Partnership & Trust Handshake */}
-        <Card className="neu-extruded neu-extruded-hover rounded-3xl overflow-hidden border-none bg-white/60 transition-all duration-300 group">
+        <Card className="neu-extruded neu-extruded-hover rounded-3xl overflow-hidden border-none bg-white/60 dark:bg-slate-900/60 transition-all duration-300 group">
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <Image
               src="/business/business-partnership-trust.jpg"
@@ -130,16 +130,16 @@ export function BusinessImpactSection() {
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-slate-800 shadow-xs flex items-center gap-1.5">
+            <div className="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-slate-800 dark:text-slate-100 shadow-xs flex items-center gap-1.5">
               <ShieldCheck className="w-3.5 h-3.5 text-brand-600" />
               {isEn ? "Total Confidentiality" : "Confidencialidad & Respaldo"}
             </div>
           </div>
           <CardBody className="p-6">
-            <h4 className="text-lg font-bold text-slate-900 mb-2">
+            <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
               {isEn ? "A Reliable Long-Term Partner" : "Un Aliado Tecnológico de Confianza"}
             </h4>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
               {isEn
                 ? "Your company data and internal records remain strictly confidential. We maintain, optimize, and protect your software under a managed monthly plan."
                 : "Tus datos y registros operativos están completamente protegidos con la máxima reserva. Mantenemos, optimizamos y resolvemos todo en tu sistema bajo un plan mensual sin complicaciones."}
@@ -148,7 +148,7 @@ export function BusinessImpactSection() {
         </Card>
 
         {/* Card 2: Executive with Analytics */}
-        <Card className="neu-extruded neu-extruded-hover rounded-3xl overflow-hidden border-none bg-white/60 transition-all duration-300 group">
+        <Card className="neu-extruded neu-extruded-hover rounded-3xl overflow-hidden border-none bg-white/60 dark:bg-slate-900/60 transition-all duration-300 group">
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <Image
               src="/business/business-analytics-executive.jpg"
@@ -157,16 +157,16 @@ export function BusinessImpactSection() {
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-slate-800 shadow-xs flex items-center gap-1.5">
+            <div className="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-slate-800 dark:text-slate-100 shadow-xs flex items-center gap-1.5">
               <Zap className="w-3.5 h-3.5 text-amber-500" />
               {isEn ? "Real-Time Clarity" : "Claridad en Tiempo Real"}
             </div>
           </div>
           <CardBody className="p-6">
-            <h4 className="text-lg font-bold text-slate-900 mb-2">
+            <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
               {isEn ? "Real-Time Strategic Visibility" : "Visibilidad Estratégica en Vivo"}
             </h4>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
               {isEn
                 ? "Say goodbye to scattered Excel sheets. Centralize your financial metrics, operations, and orders in a sleek, tailored dashboard."
                 : "Despídete de hojas de cálculo dispersas. Monitorea ventas, márgenes, pedidos y rendimiento operativo en un solo lugar con total exactitud."}
@@ -175,7 +175,7 @@ export function BusinessImpactSection() {
         </Card>
 
         {/* Card 3: Logistics & Industrial Operations */}
-        <Card className="neu-extruded neu-extruded-hover rounded-3xl overflow-hidden border-none bg-white/60 transition-all duration-300 group">
+        <Card className="neu-extruded neu-extruded-hover rounded-3xl overflow-hidden border-none bg-white/60 dark:bg-slate-900/60 transition-all duration-300 group">
           <div className="relative aspect-[4/3] w-full overflow-hidden">
             <Image
               src="/business/business-operations-warehouse.jpg"
@@ -184,16 +184,16 @@ export function BusinessImpactSection() {
               sizes="(max-width: 768px) 100vw, 33vw"
               className="object-cover group-hover:scale-105 transition-transform duration-500"
             />
-            <div className="absolute top-3 left-3 bg-white/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-slate-800 shadow-xs flex items-center gap-1.5">
+            <div className="absolute top-3 left-3 bg-white/90 dark:bg-slate-900/90 backdrop-blur-md px-3 py-1 rounded-full text-[11px] font-bold text-slate-800 dark:text-slate-100 shadow-xs flex items-center gap-1.5">
               <BarChart3 className="w-3.5 h-3.5 text-emerald-600" />
               {isEn ? "Built for Scale" : "Preparado para Escalar"}
             </div>
           </div>
           <CardBody className="p-6">
-            <h4 className="text-lg font-bold text-slate-900 mb-2">
+            <h4 className="text-lg font-bold text-slate-900 dark:text-white mb-2">
               {isEn ? "Built to Handle Enterprise Scale" : "Preparado para Alta Exigencia"}
             </h4>
-            <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">
+            <p className="text-xs sm:text-sm text-slate-600 dark:text-slate-300 leading-relaxed">
               {isEn
                 ? "From logistics hubs to retail networks, our architectures handle heavy transactional loads with uninterrupted 99.9% uptime."
                 : "Desde centros de distribución hasta cadenas comerciales, diseñamos sistemas de alto volumen que operan sin caídas ni lentitud."}

@@ -94,7 +94,7 @@ export default function EsRootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="es" className="scroll-smooth">
+    <html lang="es" className="scroll-smooth" suppressHydrationWarning>
       <head>
         {/* Google tag (gtag.js) */}
         <script
@@ -123,7 +123,7 @@ export default function EsRootLayout({
           dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
         />
       </head>
-      <body className={`${plusJakartaSans.variable} font-sans antialiased selection:bg-brand-600 selection:text-white`}>
+      <body className={`${plusJakartaSans.variable} font-sans antialiased bg-[#e8edf3] dark:bg-[#0b0f19] text-slate-800 dark:text-slate-100 selection:bg-brand-600 selection:text-white transition-colors duration-300`}>
         <Providers>{children}</Providers>
         <WhatsAppButton />
       </body>
